@@ -1,0 +1,1765 @@
+/*
+	Reference Stylesheet for a Typical HTML5 Website Template
+*/
+/*
+	Definitions
+*/
+/*
+	FONTS - Externally referenced typefaces
+*/
+@font-face {
+  font-family: 'MerriweatherRegular';
+  src: url("../fonts/merriweather-webfont.eot");
+  src: url("../fonts/merriweather-webfont.eot?#iefix") format("embedded-opentype"), url("../fonts/merriweather-webfont.svg#MerriweatherRegular") format("svg"), url("../fonts/merriweather-webfont.woff") format("woff"), url("../fonts/merriweather-webfont.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'FontAwesome';
+  src: url("../font/fontawesome-webfont.eot?v=3.0.1");
+  src: url("../font/fontawesome-webfont.eot?#iefix&v=3.0.1") format("embedded-opentype"), url("../font/fontawesome-webfont.woff?v=3.0.1") format("woff"), url("../font/fontawesome-webfont.ttf?v=3.0.1") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+/*
+	Font Rendering Tweaks
+*/
+* {
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: none;
+}
+
+/*
+	Icon Fonts Legend
+*/
+.icon {
+  font-family: FontAwesome;
+}
+
+.icon-glass:before {
+  content: "\f000";
+}
+
+.icon-music:before {
+  content: "\f001";
+}
+
+.icon-search:before {
+  content: "\f002";
+}
+
+.icon-envelope:before {
+  content: "\f003";
+}
+
+.icon-heart:before {
+  content: "\f004";
+}
+
+.icon-star:before {
+  content: "\f005";
+}
+
+.icon-star-empty:before {
+  content: "\f006";
+}
+
+.icon-user:before {
+  content: "\f007";
+}
+
+.icon-film:before {
+  content: "\f008";
+}
+
+.icon-th-large:before {
+  content: "\f009";
+}
+
+.icon-th:before {
+  content: "\f00a";
+}
+
+.icon-th-list:before {
+  content: "\f00b";
+}
+
+.icon-ok:before {
+  content: "\f00c";
+}
+
+.icon-remove:before {
+  content: "\f00d";
+}
+
+.icon-zoom-in:before {
+  content: "\f00e";
+}
+
+.icon-zoom-out:before {
+  content: "\f010";
+}
+
+.icon-off:before {
+  content: "\f011";
+}
+
+.icon-signal:before {
+  content: "\f012";
+}
+
+.icon-cog:before {
+  content: "\f013";
+}
+
+.icon-trash:before {
+  content: "\f014";
+}
+
+.icon-home:before {
+  content: "\f015";
+}
+
+.icon-file:before {
+  content: "\f016";
+}
+
+.icon-time:before {
+  content: "\f017";
+}
+
+.icon-road:before {
+  content: "\f018";
+}
+
+.icon-download-alt:before {
+  content: "\f019";
+}
+
+.icon-download:before {
+  content: "\f01a";
+}
+
+.icon-upload:before {
+  content: "\f01b";
+}
+
+.icon-inbox:before {
+  content: "\f01c";
+}
+
+.icon-play-circle:before {
+  content: "\f01d";
+}
+
+.icon-repeat:before {
+  content: "\f01e";
+}
+
+.icon-refresh:before {
+  content: "\f021";
+}
+
+.icon-list-alt:before {
+  content: "\f022";
+}
+
+.icon-lock:before {
+  content: "\f023";
+}
+
+.icon-flag:before {
+  content: "\f024";
+}
+
+.icon-headphones:before {
+  content: "\f025";
+}
+
+.icon-volume-off:before {
+  content: "\f026";
+}
+
+.icon-volume-down:before {
+  content: "\f027";
+}
+
+.icon-volume-up:before {
+  content: "\f028";
+}
+
+.icon-qrcode:before {
+  content: "\f029";
+}
+
+.icon-barcode:before {
+  content: "\f02a";
+}
+
+.icon-tag:before {
+  content: "\f02b";
+}
+
+.icon-tags:before {
+  content: "\f02c";
+}
+
+.icon-book:before {
+  content: "\f02d";
+}
+
+.icon-bookmark:before {
+  content: "\f02e";
+}
+
+.icon-print:before {
+  content: "\f02f";
+}
+
+.icon-camera:before {
+  content: "\f030";
+}
+
+.icon-font:before {
+  content: "\f031";
+}
+
+.icon-bold:before {
+  content: "\f032";
+}
+
+.icon-italic:before {
+  content: "\f033";
+}
+
+.icon-text-height:before {
+  content: "\f034";
+}
+
+.icon-text-width:before {
+  content: "\f035";
+}
+
+.icon-align-left:before {
+  content: "\f036";
+}
+
+.icon-align-center:before {
+  content: "\f037";
+}
+
+.icon-align-right:before {
+  content: "\f038";
+}
+
+.icon-align-justify:before {
+  content: "\f039";
+}
+
+.icon-list:before {
+  content: "\f03a";
+}
+
+.icon-indent-left:before {
+  content: "\f03b";
+}
+
+.icon-indent-right:before {
+  content: "\f03c";
+}
+
+.icon-facetime-video:before {
+  content: "\f03d";
+}
+
+.icon-picture:before {
+  content: "\f03e";
+}
+
+.icon-pencil:before {
+  content: "\f040";
+}
+
+.icon-map-marker:before {
+  content: "\f041";
+}
+
+.icon-adjust:before {
+  content: "\f042";
+}
+
+.icon-tint:before {
+  content: "\f043";
+}
+
+.icon-edit:before {
+  content: "\f044";
+}
+
+.icon-share:before {
+  content: "\f045";
+}
+
+.icon-check:before {
+  content: "\f046";
+}
+
+.icon-move:before {
+  content: "\f047";
+}
+
+.icon-step-backward:before {
+  content: "\f048";
+}
+
+.icon-fast-backward:before {
+  content: "\f049";
+}
+
+.icon-backward:before {
+  content: "\f04a";
+}
+
+.icon-play:before {
+  content: "\f04b";
+}
+
+.icon-pause:before {
+  content: "\f04c";
+}
+
+.icon-stop:before {
+  content: "\f04d";
+}
+
+.icon-forward:before {
+  content: "\f04e";
+}
+
+.icon-fast-forward:before {
+  content: "\f050";
+}
+
+.icon-step-forward:before {
+  content: "\f051";
+}
+
+.icon-eject:before {
+  content: "\f052";
+}
+
+.icon-chevron-left:before {
+  content: "\f053";
+}
+
+.icon-chevron-right:before {
+  content: "\f054";
+}
+
+.icon-plus-sign:before {
+  content: "\f055";
+}
+
+.icon-minus-sign:before {
+  content: "\f056";
+}
+
+.icon-remove-sign:before {
+  content: "\f057";
+}
+
+.icon-ok-sign:before {
+  content: "\f058";
+}
+
+.icon-question-sign:before {
+  content: "\f059";
+}
+
+.icon-info-sign:before {
+  content: "\f05a";
+}
+
+.icon-screenshot:before {
+  content: "\f05b";
+}
+
+.icon-remove-circle:before {
+  content: "\f05c";
+}
+
+.icon-ok-circle:before {
+  content: "\f05d";
+}
+
+.icon-ban-circle:before {
+  content: "\f05e";
+}
+
+.icon-arrow-left:before {
+  content: "\f060";
+}
+
+.icon-arrow-right:before {
+  content: "\f061";
+}
+
+.icon-arrow-up:before {
+  content: "\f062";
+}
+
+.icon-arrow-down:before {
+  content: "\f063";
+}
+
+.icon-share-alt:before {
+  content: "\f064";
+}
+
+.icon-resize-full:before {
+  content: "\f065";
+}
+
+.icon-resize-small:before {
+  content: "\f066";
+}
+
+.icon-plus:before {
+  content: "\f067";
+}
+
+.icon-minus:before {
+  content: "\f068";
+}
+
+.icon-asterisk:before {
+  content: "\f069";
+}
+
+.icon-exclamation-sign:before {
+  content: "\f06a";
+}
+
+.icon-gift:before {
+  content: "\f06b";
+}
+
+.icon-leaf:before {
+  content: "\f06c";
+}
+
+.icon-fire:before {
+  content: "\f06d";
+}
+
+.icon-eye-open:before {
+  content: "\f06e";
+}
+
+.icon-eye-close:before {
+  content: "\f070";
+}
+
+.icon-warning-sign:before {
+  content: "\f071";
+}
+
+.icon-plane:before {
+  content: "\f072";
+}
+
+.icon-calendar:before {
+  content: "\f073";
+}
+
+.icon-random:before {
+  content: "\f074";
+}
+
+.icon-comment:before {
+  content: "\f075";
+}
+
+.icon-magnet:before {
+  content: "\f076";
+}
+
+.icon-chevron-up:before {
+  content: "\f077";
+}
+
+.icon-chevron-down:before {
+  content: "\f078";
+}
+
+.icon-retweet:before {
+  content: "\f079";
+}
+
+.icon-shopping-cart:before {
+  content: "\f07a";
+}
+
+.icon-folder-close:before {
+  content: "\f07b";
+}
+
+.icon-folder-open:before {
+  content: "\f07c";
+}
+
+.icon-resize-vertical:before {
+  content: "\f07d";
+}
+
+.icon-resize-horizontal:before {
+  content: "\f07e";
+}
+
+.icon-bar-chart:before {
+  content: "\f080";
+}
+
+.icon-twitter-sign:before {
+  content: "\f081";
+}
+
+.icon-facebook-sign:before {
+  content: "\f082";
+}
+
+.icon-camera-retro:before {
+  content: "\f083";
+}
+
+.icon-key:before {
+  content: "\f084";
+}
+
+.icon-cogs:before {
+  content: "\f085";
+}
+
+.icon-comments:before {
+  content: "\f086";
+}
+
+.icon-thumbs-up:before {
+  content: "\f087";
+}
+
+.icon-thumbs-down:before {
+  content: "\f088";
+}
+
+.icon-star-half:before {
+  content: "\f089";
+}
+
+.icon-heart-empty:before {
+  content: "\f08a";
+}
+
+.icon-signout:before {
+  content: "\f08b";
+}
+
+.icon-linkedin-sign:before {
+  content: "\f08c";
+}
+
+.icon-pushpin:before {
+  content: "\f08d";
+}
+
+.icon-external-link:before {
+  content: "\f08e";
+}
+
+.icon-signin:before {
+  content: "\f090";
+}
+
+.icon-trophy:before {
+  content: "\f091";
+}
+
+.icon-github-sign:before {
+  content: "\f092";
+}
+
+.icon-upload-alt:before {
+  content: "\f093";
+}
+
+.icon-lemon:before {
+  content: "\f094";
+}
+
+.icon-phone:before {
+  content: "\f095";
+}
+
+.icon-check-empty:before {
+  content: "\f096";
+}
+
+.icon-bookmark-empty:before {
+  content: "\f097";
+}
+
+.icon-phone-sign:before {
+  content: "\f098";
+}
+
+.icon-twitter:before {
+  content: "\f099";
+}
+
+.icon-facebook:before {
+  content: "\f09a";
+}
+
+.icon-github:before {
+  content: "\f09b";
+}
+
+.icon-unlock:before {
+  content: "\f09c";
+}
+
+.icon-credit-card:before {
+  content: "\f09d";
+}
+
+.icon-rss:before {
+  content: "\f09e";
+}
+
+.icon-hdd:before {
+  content: "\f0a0";
+}
+
+.icon-bullhorn:before {
+  content: "\f0a1";
+}
+
+.icon-bell:before {
+  content: "\f0a2";
+}
+
+.icon-certificate:before {
+  content: "\f0a3";
+}
+
+.icon-hand-right:before {
+  content: "\f0a4";
+}
+
+.icon-hand-left:before {
+  content: "\f0a5";
+}
+
+.icon-hand-up:before {
+  content: "\f0a6";
+}
+
+.icon-hand-down:before {
+  content: "\f0a7";
+}
+
+.icon-circle-arrow-left:before {
+  content: "\f0a8";
+}
+
+.icon-circle-arrow-right:before {
+  content: "\f0a9";
+}
+
+.icon-circle-arrow-up:before {
+  content: "\f0aa";
+}
+
+.icon-circle-arrow-down:before {
+  content: "\f0ab";
+}
+
+.icon-globe:before {
+  content: "\f0ac";
+}
+
+.icon-wrench:before {
+  content: "\f0ad";
+}
+
+.icon-tasks:before {
+  content: "\f0ae";
+}
+
+.icon-filter:before {
+  content: "\f0b0";
+}
+
+.icon-briefcase:before {
+  content: "\f0b1";
+}
+
+.icon-fullscreen:before {
+  content: "\f0b2";
+}
+
+.icon-group:before {
+  content: "\f0c0";
+}
+
+.icon-link:before {
+  content: "\f0c1";
+}
+
+.icon-cloud:before {
+  content: "\f0c2";
+}
+
+.icon-beaker:before {
+  content: "\f0c3";
+}
+
+.icon-cut:before {
+  content: "\f0c4";
+}
+
+.icon-copy:before {
+  content: "\f0c5";
+}
+
+.icon-paper-clip:before {
+  content: "\f0c6";
+}
+
+.icon-save:before {
+  content: "\f0c7";
+}
+
+.icon-sign-blank:before {
+  content: "\f0c8";
+}
+
+.icon-reorder:before {
+  content: "\f0c9";
+}
+
+.icon-list-ul:before {
+  content: "\f0ca";
+}
+
+.icon-list-ol:before {
+  content: "\f0cb";
+}
+
+.icon-strikethrough:before {
+  content: "\f0cc";
+}
+
+.icon-underline:before {
+  content: "\f0cd";
+}
+
+.icon-table:before {
+  content: "\f0ce";
+}
+
+.icon-magic:before {
+  content: "\f0d0";
+}
+
+.icon-truck:before {
+  content: "\f0d1";
+}
+
+.icon-pinterest:before {
+  content: "\f0d2";
+}
+
+.icon-pinterest-sign:before {
+  content: "\f0d3";
+}
+
+.icon-google-plus-sign:before {
+  content: "\f0d4";
+}
+
+.icon-google-plus:before {
+  content: "\f0d5";
+}
+
+.icon-money:before {
+  content: "\f0d6";
+}
+
+.icon-caret-down:before {
+  content: "\f0d7";
+}
+
+.icon-caret-up:before {
+  content: "\f0d8";
+}
+
+.icon-caret-left:before {
+  content: "\f0d9";
+}
+
+.icon-caret-right:before {
+  content: "\f0da";
+}
+
+.icon-columns:before {
+  content: "\f0db";
+}
+
+.icon-sort:before {
+  content: "\f0dc";
+}
+
+.icon-sort-down:before {
+  content: "\f0dd";
+}
+
+.icon-sort-up:before {
+  content: "\f0de";
+}
+
+.icon-envelope-alt:before {
+  content: "\f0e0";
+}
+
+.icon-linkedin:before {
+  content: "\f0e1";
+}
+
+.icon-undo:before {
+  content: "\f0e2";
+}
+
+.icon-legal:before {
+  content: "\f0e3";
+}
+
+.icon-dashboard:before {
+  content: "\f0e4";
+}
+
+.icon-comment-alt:before {
+  content: "\f0e5";
+}
+
+.icon-comments-alt:before {
+  content: "\f0e6";
+}
+
+.icon-bolt:before {
+  content: "\f0e7";
+}
+
+.icon-sitemap:before {
+  content: "\f0e8";
+}
+
+.icon-umbrella:before {
+  content: "\f0e9";
+}
+
+.icon-paste:before {
+  content: "\f0ea";
+}
+
+.icon-lightbulb:before {
+  content: "\f0eb";
+}
+
+.icon-exchange:before {
+  content: "\f0ec";
+}
+
+.icon-cloud-download:before {
+  content: "\f0ed";
+}
+
+.icon-cloud-upload:before {
+  content: "\f0ee";
+}
+
+.icon-user-md:before {
+  content: "\f0f0";
+}
+
+.icon-stethoscope:before {
+  content: "\f0f1";
+}
+
+.icon-suitcase:before {
+  content: "\f0f2";
+}
+
+.icon-bell-alt:before {
+  content: "\f0f3";
+}
+
+.icon-coffee:before {
+  content: "\f0f4";
+}
+
+.icon-food:before {
+  content: "\f0f5";
+}
+
+.icon-file-alt:before {
+  content: "\f0f6";
+}
+
+.icon-building:before {
+  content: "\f0f7";
+}
+
+.icon-hospital:before {
+  content: "\f0f8";
+}
+
+.icon-ambulance:before {
+  content: "\f0f9";
+}
+
+.icon-medkit:before {
+  content: "\f0fa";
+}
+
+.icon-fighter-jet:before {
+  content: "\f0fb";
+}
+
+.icon-beer:before {
+  content: "\f0fc";
+}
+
+.icon-h-sign:before {
+  content: "\f0fd";
+}
+
+.icon-plus-sign-alt:before {
+  content: "\f0fe";
+}
+
+.icon-double-angle-left:before {
+  content: "\f100";
+}
+
+.icon-double-angle-right:before {
+  content: "\f101";
+}
+
+.icon-double-angle-up:before {
+  content: "\f102";
+}
+
+.icon-double-angle-down:before {
+  content: "\f103";
+}
+
+.icon-angle-left:before {
+  content: "\f104";
+}
+
+.icon-angle-right:before {
+  content: "\f105";
+}
+
+.icon-angle-up:before {
+  content: "\f106";
+}
+
+.icon-angle-down:before {
+  content: "\f107";
+}
+
+.icon-desktop:before {
+  content: "\f108";
+}
+
+.icon-laptop:before {
+  content: "\f109";
+}
+
+.icon-tablet:before {
+  content: "\f10a";
+}
+
+.icon-mobile-phone:before {
+  content: "\f10b";
+}
+
+.icon-circle-blank:before {
+  content: "\f10c";
+}
+
+.icon-quote-left:before {
+  content: "\f10d";
+}
+
+.icon-quote-right:before {
+  content: "\f10e";
+}
+
+.icon-spinner:before {
+  content: "\f110";
+}
+
+.icon-circle:before {
+  content: "\f111";
+}
+
+.icon-reply:before {
+  content: "\f112";
+}
+
+.icon-github-alt:before {
+  content: "\f113";
+}
+
+.icon-folder-close-alt:before {
+  content: "\f114";
+}
+
+.icon-folder-open-alt:before {
+  content: "\f115";
+}
+
+/*
+	MARKUP - The elements of HTML5 - http://dev.w3.org/html5/spec/Overview.html
+*/
+@media all {
+  /*
+  	The root element
+  */
+  html {
+    font-family: Tahoma, Verdana, Arial, Sans-Serif;
+    font-size: 75%;
+    height: 100%;
+  }
+
+  /*
+  	Sections
+  */
+  body {
+    background: #eee;
+    /*-webkit-background-size: 1920px 1800px; // fix for iOS devices */
+    /*-webkit-font-smoothing: antialiased; // make fonts render nicer */
+    color: #333;
+    font-size: 12px;
+    font-size: 1rem;
+    _height: 100%;
+    line-height: 180%;
+    min-height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    display: block;
+    /*font-family : 'MerriweatherRegular', Tahoma, Verdana, Arial, Sans-Serif;*/
+    font-size: 12px;
+    font-size: 1rem;
+    font-weight: normal;
+    margin: 0 0 6px 0;
+    margin: 0 0 0.5rem 0;
+  }
+
+  h1 {
+    font-size: 24px;
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 18px;
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 15px;
+    font-size: 1.25rem;
+  }
+
+  address {
+    display: block;
+    font-style: normal;
+  }
+
+  section, nav, article, aside, hgroup, header, footer {
+    display: block;
+  }
+
+  /*
+  	Grouping content
+  */
+  p {
+    display: block;
+    margin: 0 0 12px 0;
+    margin: 0 0 1rem 0;
+  }
+
+  hr {
+    background-color: #333;
+    border: none;
+    clear: both;
+    color: #333;
+    display: block;
+    height: 1px;
+    margin: 12px 0 12px 0;
+    margin: 1rem 0 1rem 0;
+    width: 100%;
+  }
+
+  ul {
+    display: block;
+    margin: 0 0 12px 24px;
+    margin: 0 0 1rem 2rem;
+    padding: 0 0 0 0;
+  }
+
+  dl {
+    display: block;
+    margin: 0 0 12px 0;
+    margin: 0 0 1rem 0;
+  }
+
+  dt {
+    display: block;
+    font-weight: bold;
+    margin: 0 0 0 0;
+  }
+
+  dd {
+    display: block;
+    margin: 0 0 0 0;
+  }
+
+  pre, dialog, blockquote, ol {
+    display: block;
+  }
+
+  /*
+  	Text-level semantics
+  */
+  a {
+    color: #666;
+    text-decoration: underline;
+  }
+
+  a:hover {
+    color: #999;
+    text-decoration: underline;
+  }
+
+  sub {
+    line-height: 0;
+  }
+
+  sup {
+    line-height: 0;
+  }
+
+  time, progress, meter {
+    display: block;
+  }
+
+  /*
+  	Embedded content
+  */
+  img {
+    border: none;
+    vertical-align: middle;
+  }
+
+  figure, figcaption, video, audio, canvas {
+    display: block;
+  }
+
+  /* Tabular data */
+  table {
+    border-collapse: collapse;
+    margin: 0 0 12px 0;
+    margin: 0 0 1rem 0;
+  }
+
+  caption {
+    font-size: 110%;
+    font-weight: bold;
+    text-align: left;
+  }
+
+  tr {
+    vertical-align: top;
+  }
+
+  th {
+    text-align: left;
+  }
+
+  /*
+  	Forms
+  */
+  form {
+    margin: 0 0 0 0;
+  }
+
+  fieldset {
+    border: none;
+    margin: 0 0 12px 0;
+    margin: 0 0 1rem 0;
+    padding: 0 0 0 0;
+  }
+
+  input, button, select, textarea {
+    font-family: Tahoma, Verdana, Arial, Sans-Serif;
+    font-size: 100%;
+  }
+
+  button {
+    overflow: visible;
+  }
+
+  /*
+  	Interactive elements
+  */
+  menu {
+    display: block;
+    margin: 0;
+    padding: 0;
+  }
+
+  /*
+  	Miscellaneous elements
+  */
+  div {
+    display: block;
+  }
+}
+@media (max-width: 480px) {
+  html {
+    font-size: 62.5%;
+  }
+}
+/*
+	GENERIC - Fixes for common rending problems
+*/
+@media all {
+  /*
+  	Clear fix
+  */
+  .clearfix {
+    *zoom: 1;
+  }
+
+  .clearfix:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+
+  /*
+  	Box sizing
+  */
+  * {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+
+  /*
+  	Bicubic image scaling
+  */
+  img {
+    -ms-interpolation-mode: bicubic;
+  }
+
+  /*
+  	Fix for iOS
+  */
+  .fixed {
+    -webkit-transform: translate3d(0, 0, 0);
+  }
+
+  /*
+  	Circumvents some issues with button rendering
+  */
+  button {
+    overflow: visible;
+  }
+
+  button::-moz-focus-inner {
+    border: 0;
+    padding: 0;
+  }
+
+  /*
+  	Transparent Backdrop
+  */
+  .backdrop {
+    background-color: rgba(0, 0, 0, 0.5);
+    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000');
+  }
+
+  /*
+  	Text-shadow
+  */
+  .textshadow {
+    text-shadow: 1px 2px 2px #000;
+    filter: DropShadow(Color=black, OffX=1, OffY=2);
+  }
+}
+/*
+	LARGE - Desktop screens
+*/
+@media all {
+  /*
+  	Sprites
+  	Example: @include icons-sprite(pdf);
+  */
+  .icons-sprite {
+    background: url('../img/icons-s6dbf4aff8e.png') no-repeat;
+  }
+
+  /*
+  	central Page
+  */
+  body {
+    background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(256px, #cccccc), color-stop(100%, #cccccc)) no-repeat;
+    background: #cccccc -webkit-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+    background: #cccccc -moz-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+    background: #cccccc -o-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+    background: #cccccc linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+  }
+  body > section {
+    -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    -moz-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+    background: #fff;
+    border-left: solid 1px #e4e4e4;
+    border-right: solid 1px #e4e4e4;
+    margin: 0 auto 0 auto;
+    position: relative;
+    max-width: 960px;
+    min-width: 320px;
+  }
+  body > section > header {
+    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+    opacity: 0.9;
+    background: #333333 url(../img/documentHeader.jpg) 0px -100px;
+    height: 96px;
+    margin: 0 0 36px 0;
+    position: relative;
+  }
+  body > section > header hgroup {
+    line-height: 230%;
+    padding: 15px 30px 0 30px;
+    text-align: right;
+  }
+  body > section > header hgroup h1 {
+    color: #fff;
+    font-weight: bold;
+    text-shadow: 1px 2px 2px #000;
+    filter: DropShadow(Color=black, OffX=1, OffY=2);
+  }
+  body > section > header hgroup h2 {
+    color: #fff;
+    font-weight: normal;
+    text-shadow: 1px 2px 2px #000;
+    filter: DropShadow(Color=black, OffX=1, OffY=2);
+  }
+  body > section > footer {
+    clear: both;
+    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+    height: 60px;
+    line-height: 60px;
+    position: relative;
+  }
+  body > section > footer ul {
+    margin: 0;
+    padding: 0 3%;
+  }
+  body > section > footer ul li {
+    display: inline;
+    list-style-type: none;
+  }
+  body > section > footer ul li a img {
+    margin-right: 1em;
+    vertical-align: middle;
+  }
+}
+@media print {
+  body > section > header,
+  body > section > footer {
+    display: none;
+  }
+}
+/*
+	Examples
+*/
+@media all {
+  body {
+    /*
+    	example with the default aside
+    */
+    /*
+    	example with the smaller aside on the left
+    */
+    /*
+    	example with the smaller aside on the right
+    */
+    /*
+    	example with the smaller aside on the right
+    */
+    /*
+    	example without the aside
+    */
+  }
+  body section.example {
+    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+    display: block;
+    *zoom: 1;
+  }
+  body section.example > article {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    display: block;
+    float: right;
+    width: 50%;
+  }
+  body section.example > article p {
+    text-align: justify;
+  }
+  body section.example > aside {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    display: block;
+    float: left;
+    width: 50%;
+  }
+  body section.example:after {
+    clear: both;
+    content: ' ';
+    display: block;
+    font-size: 0;
+    height: 0;
+    visibility: hidden;
+  }
+  body section.example-left {
+    background: white url(../img/texture_shadow_top.png) no-repeat -480px 0;
+  }
+  body section.example-left > article {
+    float: right;
+  }
+  body section.example-left > aside {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    float: left;
+  }
+  body section.example-right {
+    background: white url(../img/texture_shadow_top.png) no-repeat 480px 0;
+  }
+  body section.example-right > article {
+    float: left;
+  }
+  body section.example-right > aside {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 0px;
+    padding-left: 0rem;
+    float: right;
+  }
+  body section.example-full {
+    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  }
+  body section.example-full > article {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    float: none;
+    width: 100%;
+  }
+  body section.example-full > aside {
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    float: none;
+    width: 100%;
+  }
+  body section.example-no {
+    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  }
+  body section.example-no > article {
+    float: left;
+    width: 100%;
+  }
+}
+@media (max-width: 767px) {
+  body section.example > article {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    float: none;
+    width: 100%;
+  }
+  body section.example > aside {
+    padding-top: 32px;
+    padding-top: 2rem;
+    padding-right: 32px;
+    padding-right: 2rem;
+    padding-bottom: 32px;
+    padding-bottom: 2rem;
+    padding-left: 32px;
+    padding-left: 2rem;
+    float: none;
+    width: 100%;
+  }
+}
+/*
+	Buttons
+*/
+@media all {
+  button, .button {
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    height: 48px;
+    height: 3rem;
+    line-height: 48px;
+    line-height: 3rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 16px;
+    padding-right: 1rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 16px;
+    padding-left: 1rem;
+    background-color: #ff6a00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
+    margin: 0;
+    overflow: visible;
+    text-decoration: none;
+  }
+  button:hover, .button:hover {
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+  }
+  button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
+    background-color: #7f7f7f;
+  }
+}
+/*
+	Example Styling for a Scroll Locked Navigation
+*/
+@media all {
+  /*
+  	navigation
+  */
+  body > section > nav {
+    -webkit-box-shadow: 0 1px 3px #999999;
+    -moz-box-shadow: 0 1px 3px #999999;
+    box-shadow: 0 1px 3px #999999;
+    -webkit-transition-property: max-height;
+    -moz-transition-property: max-height;
+    -o-transition-property: max-height;
+    transition-property: max-height;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    background: #333333 url(../img/documentHeader.jpg) 0px -196px;
+    overflow: hidden;
+    position: absolute;
+    top: 96px;
+    max-width: 960px;
+    z-index: 10000;
+  }
+  body > section > nav menu {
+    max-height: 240px;
+    margin: 36px 0 36px 0;
+    overflow: auto;
+    overflow-x: hidden;
+    -webkit-overflow-scrolling: touch;
+    padding: 15px 0 15px 15px;
+  }
+  body > section > nav menu li {
+    float: left;
+    height: 100px;
+    list-style-type: none;
+    margin-right: 15px;
+    overflow: visible;
+    text-align: center;
+    width: 88px;
+  }
+  body > section > nav menu li a {
+    color: #fff;
+    font-weight: normal;
+    text-decoration: none;
+    text-shadow: 0 0 1px #333;
+  }
+  body > section > nav menu li a img {
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    -ms-border-radius: 3px;
+    -o-border-radius: 3px;
+    border-radius: 3px;
+    -webkit-box-shadow: 0 0 5px #333333;
+    -moz-box-shadow: 0 0 5px #333333;
+    box-shadow: 0 0 5px #333333;
+    -webkit-transition-property: all;
+    -moz-transition-property: all;
+    -o-transition-property: all;
+    transition-property: all;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    background: #fff;
+    border: solid 1px #000;
+    height: 64px;
+    width: 64px;
+  }
+  body > section > nav menu li a span {
+    display: block;
+  }
+  body > section > nav menu li a:hover {
+    color: #fff;
+    text-decoration: none;
+    text-shadow: 0 0 5px #fff;
+  }
+  body > section > nav menu li a:hover img {
+    -webkit-box-shadow: 0 0 5px white;
+    -moz-box-shadow: 0 0 5px white;
+    box-shadow: 0 0 5px white;
+  }
+  body > section > nav a.opener {
+    -webkit-transition-property: max-height;
+    -moz-transition-property: max-height;
+    -o-transition-property: max-height;
+    transition-property: max-height;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    color: #fff;
+    bottom: 0;
+    display: block;
+    font-size: 18px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    height: 36px;
+    line-height: 36px;
+    position: absolute;
+    text-align: center;
+    text-decoration: none;
+    width: 100%;
+  }
+  body > section > nav a.nav-active {
+    -webkit-transform: rotate(0deg);
+    -moz-transform: rotate(0deg);
+    -ms-transform: rotate(0deg);
+    -o-transform: rotate(0deg);
+    transform: rotate(0deg);
+  }
+  body > section > nav a.nav-passive {
+    -webkit-transform: rotate(180deg);
+    -moz-transform: rotate(180deg);
+    -ms-transform: rotate(180deg);
+    -o-transform: rotate(180deg);
+    transform: rotate(180deg);
+  }
+  body > section > nav.nav-closed {
+    max-height: 36px;
+  }
+  body > section > nav.nav-open {
+    max-height: 360px;
+  }
+  body > section > nav.scroll-locked {
+    position: fixed;
+    top: 0px;
+  }
+  body > section > nav.scroll-unlocked {
+    position: absolute;
+    top: 96px;
+  }
+}
+@media (max-width: 480px) {
+  body > section > nav menu li {
+    margin-right: 0;
+    width: 95px;
+  }
+}

@@ -1,0 +1,69 @@
+/*
+	GENERIC - Fixes for common rending problems
+*/
+@media all {
+	@import "compass/css3";
+	@import "compass/utilities";
+	/*
+		Clear fix
+	*/
+	.clearfix {
+		*zoom : 1;
+	}
+	.clearfix:after {
+		clear : both;
+		content : ' ';
+		display : block;
+		font-size : 0;
+		height : 0;
+		visibility : hidden;
+	}
+	/*
+		Box sizing
+	*/
+	* {
+		@include box-sizing(border-box);
+	}
+	/*
+		Bicubic image scaling
+	*/
+	img {
+		-ms-interpolation-mode: bicubic;
+	}
+	/*
+		Fix for iOS
+	*/
+	.fixed {
+		-webkit-transform: translate3d(0, 0, 0);
+	}
+	/*
+		Circumvents some issues with button rendering
+	*/
+	button {
+		overflow: visible;
+	}
+	button::-moz-focus-inner {
+		border: 0;
+		padding: 0;
+	}
+	/*
+		Transparent Backdrop
+	*/
+	.backdrop {
+		background-color : rgba(0,0,0,0.5);
+		filter : progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000');
+	}
+	/*
+		Text-shadow
+	*/
+	.textshadow {
+		text-shadow : 1px 2px 2px #000;
+		filter : DropShadow(Color=#000000, OffX=1, OffY=2);
+	}
+}
+@media (min-width: 1200px) {}
+@media (min-width: 980px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 979px) {}
+@media (max-width: 767px) {}
+@media (max-width: 480px) {}
+@media print {}

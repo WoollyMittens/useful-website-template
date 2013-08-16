@@ -1,0 +1,123 @@
+/*
+	Examples
+*/
+
+@media all {
+
+	@import "compass/css3";
+	@import "compass/utilities";
+
+	body {
+
+		/*
+			example with the default aside
+		*/
+		section.example {
+			background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+			display : block;
+			*zoom : 1;
+			> article {
+				@include rems('padding', 2, 2, 2, 2);
+				display : block;
+				float : right;
+				width : 50%;
+				h2 {}
+				p {
+					text-align : justify;
+				}
+			}
+			> aside {
+				@include rems('padding', 2, 0, 2, 2);
+				display : block;
+				float : left;
+				width : 50%;
+			}
+		}
+		section.example:after {
+			clear : both;
+			content : ' ';
+			display : block;
+			font-size : 0;
+			height : 0;
+			visibility : hidden;
+		}
+
+		/*
+			example with the smaller aside on the left
+		*/
+		section.example-left {
+			background : #fff url(../img/texture_shadow_top.png) no-repeat -480px 0;
+			> article {
+				float : right;
+			}
+			> aside {
+				@include rems('padding', 2, 0, 2, 2);
+				float : left;
+			}
+		}
+
+		/*
+			example with the smaller aside on the right
+		*/
+		section.example-right {
+			background : #fff url(../img/texture_shadow_top.png) no-repeat 480px 0;
+			> article {
+				float : left;
+			}
+			> aside {
+				@include rems('padding', 2, 2, 2, 0);
+				float : right;
+			}
+		}
+
+		/*
+			example with the smaller aside on the right
+		*/
+		section.example-full {
+			background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+			> article {
+				@include rems('padding', 2, 2, 0, 2);
+				float : none;
+				width : 100%;
+			}
+			> aside {
+				@include rems('padding', 0, 2, 2, 2);
+				float : none;
+				width : 100%;
+			}
+		}
+
+		/*
+			example without the aside
+		*/
+		section.example-no {
+			background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+			> article {
+				float : left;
+				width : 100%;
+			}
+		}
+	}
+}
+
+@media (min-width: 1200px) {}
+@media (min-width: 980px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 979px) {}
+@media (max-width: 767px) {
+	body {
+
+		section.example > article {
+			@include rems('padding', 2, 2, 0, 2);
+			float : none;
+			width : 100%;
+		}
+		section.example > aside {
+			@include rems('padding', 2, 2, 2, 2);
+			float : none;
+			width : 100%;
+		}
+
+	}
+}
+@media (max-width: 480px) {}
+@media print {}

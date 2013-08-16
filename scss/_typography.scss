@@ -1,0 +1,194 @@
+/*
+	MARKUP - The elements of HTML5 - http://dev.w3.org/html5/spec/Overview.html
+*/
+@media all {
+	/*
+		The root element
+	*/
+	html {
+		font-family : Tahoma, Verdana, Arial, Sans-Serif;
+		font-size : 75%;
+		height : 100%;
+	}
+	/*
+		Sections
+	*/
+	body {
+		background : #eee;
+		/*-webkit-background-size: 1920px 1800px; // fix for iOS devices */
+		/*-webkit-font-smoothing: antialiased; // make fonts render nicer */
+		color : #333;
+		font-size : 12px;
+		font-size : 1rem;
+		_height : 100%;
+		line-height : 180%;
+		min-height : 100%;
+		margin : 0;
+		padding : 0;
+	}
+	h1, h2, h3, h4, h5, h6 {
+		display : block;
+		/*font-family : 'MerriweatherRegular', Tahoma, Verdana, Arial, Sans-Serif;*/
+		font-size : 12px;
+		font-size : 1rem;
+		font-weight : normal;
+		margin : 0 0 6px 0;
+		margin : 0 0 0.5rem 0;
+	}
+	h1 {
+		font-size : 24px;
+		font-size : 2rem;
+	}
+	h2 {
+		font-size : 18px;
+		font-size : 1.5rem;
+	}
+	h3 {
+		font-size : 15px;
+		font-size : 1.25rem;
+	}
+	address {
+		display : block;
+		font-style : normal;
+	}
+	section, nav, article, aside, hgroup,	header,	footer {
+		display : block;
+	}
+	/*
+		Grouping content
+	*/
+	p {
+		display : block;
+		margin : 0 0 12px 0;
+		margin : 0 0 1rem 0;
+	}
+	hr {
+		background-color : #333;
+		border : none;
+		clear : both;
+		color : #333;
+		display : block;
+		height : 1px;
+		margin : 12px 0 12px 0;
+		margin : 1rem 0 1rem 0;
+		width : 100%;
+	}
+	ul {
+		display : block;
+		margin : 0 0 12px 24px;
+		margin : 0 0 1rem 2rem;
+		padding : 0 0 0 0;
+	}
+	li {}
+	dl {
+		display : block;
+		margin : 0 0 12px 0;
+		margin : 0 0 1rem 0;
+	}
+	dt {
+		display : block;
+		font-weight : bold;
+		margin : 0 0 0 0;
+	}
+	dd {
+		display : block;
+		margin : 0 0 0 0;
+	}
+	pre, dialog, blockquote, ol {
+		display : block;
+	}
+	/*
+		Text-level semantics
+	*/
+	a {
+		color : #666;
+		text-decoration : underline;
+	}
+	a:hover {
+		color : #999;
+		text-decoration : underline;
+	}
+	sub {
+		line-height : 0;
+	}
+	sup {
+		line-height : 0;
+	}
+	time, progress, meter {
+		display : block;
+	}
+	/*
+		Embedded content
+	*/
+	img {
+		border : none;
+		vertical-align : middle;
+	}
+	figure, figcaption, video, audio, canvas {
+		display : block;
+	}
+	/* Tabular data */
+	table {
+		border-collapse : collapse;
+		margin : 0 0 12px 0;
+		margin : 0 0 1rem 0;
+	}
+	caption {
+		font-size :	110%;
+		font-weight : bold;
+		text-align : left;
+	}
+	thead, tbody, tfoot {}
+	tr {
+		vertical-align : top;
+	}
+	td {}
+	th {
+		text-align : left;
+	}
+	/*
+		Forms
+	*/
+	form {
+		margin : 0 0 0 0;
+	}
+	fieldset {
+		border : none;
+		margin : 0 0 12px 0;
+		margin : 0 0 1rem 0;
+		padding : 0 0 0 0;
+	}
+	legend {}
+	label {}
+	input, button, select, textarea {
+		font-family : Tahoma, Verdana, Arial, Sans-Serif;
+		font-size : 100%;
+	}
+	button {
+		overflow : visible;
+	}
+	/*
+		Interactive elements
+	*/
+	menu {
+		display : block;
+		margin : 0;
+		padding : 0;
+	}
+	/*
+		Miscellaneous elements
+	*/
+	div {
+		display : block;
+	}
+}
+@media (min-width: 1200px) {}
+@media (min-width: 980px) and (max-width: 1199px) {}
+@media (min-width: 768px) and (max-width: 979px) {}
+@media (max-width: 767px) {}
+@media (max-width: 480px) {
+	html {
+		font-size : 62.5%;
+	}
+}
+@media print {}
