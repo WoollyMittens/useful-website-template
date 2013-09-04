@@ -17,8 +17,8 @@
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 		<![endif]-->
-		<script src="../toggles/js/useful.toggles.js"></script>
-		<script src="../scrolllock/js/useful.scrolllock.js"></script>
+		<script src="../useful-toggles/js/toggles.min.js"></script>
+		<script src="../useful-scrolllock/js/scrolllock.min.js"></script>
 		<script type="text/javascript">
 			var _gaq = _gaq || [];
 			_gaq.push(['_setAccount', 'UA-52552-5']);
@@ -68,7 +68,7 @@
 					// include all project folders in the root
 					$files = scandir($dir);
 					for ($a = 0; $a < count($files); $a++) {
-						if (!preg_match("/\.|\_|useful|downloads/i", $files[$a])) {
+						if (preg_match("/useful-/i", $files[$a])) {
 							//include($dir.$files[$a]);
 							displayHTML($files[$a]);
 						}
@@ -82,10 +82,11 @@
 						// make a menu entry for all html examples in the folder
 						$files = scandir($dir);
 						for ($a = 0; $a < count($files); $a++) {
-							if(!preg_match("/\.|\_|useful|downloads/i", $files[$a])){
+							if(preg_match("/useful-/i", $files[$a])){
 								$path = preg_split('/[\/.]+/', $files[$a]);
+								$short = preg_replace('/useful-/', '', $path);
 								//	print_r($path);
-								?><li><a href="./default.php?url=<?php echo $files[$a]?>"><img alt="" src="<?php echo $dir?><?php echo $path[0]?>/img/favicon.png"/><span><?php echo $path[0]?></span></a></li><?php
+								?><li><a href="./default.php?url=<?php echo $files[$a]?>"><img alt="" src="<?php echo $dir?><?php echo $path[0]?>/img/favicon.png"/><span><?php echo $short[0]?></span></a></li><?php
 							}
 						}
 					?>
@@ -94,28 +95,24 @@
 			</nav>
 			<script>
 			//<!--
-				useful.css.select({
-					rule : 'nav#shortcuts',
-					handler : useful.toggles.setup,
-					data : {
-						'buttons' : 'a.opener',
-						'classes' : {
-							'active' : 'nav-active',
-							'passive' : 'nav-passive',
-							'open' : 'nav-open',
-							'closed' : 'nav-closed'
-						},
-						'grouped' : false,
-						'toggle' : true,
-						'index' : -1,
-						'auto' : null
-					}
+				// navigation bar
+				var shortcutsToggles = new useful.Toggles( document.getElementById('shortcuts'), {
+					'buttons' : 'a.opener',
+					'classes' : {
+						'active' : 'nav-active',
+						'passive' : 'nav-passive',
+						'open' : 'nav-open',
+						'closed' : 'nav-closed'
+					},
+					'grouped' : false,
+					'toggle' : true,
+					'index' : -1,
+					'auto' : null
 				});
-				useful.css.select({
-					rule : 'nav#shortcuts',
-					handler : useful.scrolllock.watch,
-					data : {}
-				});
+				shortcutsToggles.start();
+				// scroll lock
+				var shortcutsScrolllock = new useful.Scrolllock( document.getElementById('shortcuts'), {});
+				shortcutsScrolllock.start();
 			//-->
 			</script>
 			<footer>
