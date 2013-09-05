@@ -37,7 +37,7 @@
 				margin : 0 0 36px 0;
 				position : relative;
 
-				hgroup {
+				.hgroup {
 					line-height : 230%;
 					padding : 15px 30px 0 30px;
 					text-align : right;
@@ -54,6 +54,25 @@
 						text-shadow : 1px 2px 2px #000;
 						filter : DropShadow(Color=#000000, OffX=1, OffY=2);
 					}
+				}
+			}
+
+			> article {
+				@include rems('padding', 2, 2, 1, 2);
+				background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+				display : block;
+				img.demoIcon {
+					@include border-radius(3px);
+					@include box-shadow(0 0 5px #333);
+					@include transition-property(all);
+					@include transition-duration(0.3s);
+					@include transition-timing-function(ease);
+					@include rems('margin', 0, 0, 0, 1);
+					background : #fff;
+					border : solid 1px #000;
+					float : right;
+					height : 64px;
+					width : 64px;
 				}
 			}
 

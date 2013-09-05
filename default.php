@@ -33,10 +33,10 @@
 	<body>
 		<section>
 			<header>
-				<hgroup>
+				<div class="hgroup">
 					<h1>useful.js</h1>
 					<h2>JavaScript examples, too useful not to share.</h2>
-				</hgroup>
+				</div>
 				<a href="https://github.com/WoollyMittens"><img style="position: absolute; top: 0; left: 0; height:107px; width:auto; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
 			</header>
 			<?php
@@ -44,17 +44,17 @@
 				$dir = '../';
 				$urls = @$_REQUEST['url'];
 				// strips incoming HTML of its header and footer (I know it's not efficient)
-				function displayHTML($url)
+				function displayHTML($url, $tag)
 				{
 					global $dir;
 					$contents = file_get_contents($dir . $url . "/index.html");
-					$contents = split('<body>', $contents);
+					$contents = split('<' . $tag . '>', $contents);
 					$contents = $contents[1];
-					$contents = split('</body>', $contents);
+					$contents = split('</' . $tag . '>', $contents);
 					$contents = $contents[0];
 					$contents = str_replace("./", "../" . $url . "/", $contents);
 					$contents = str_replace(".../", "../../", $contents);
-					echo $contents;
+					return $contents;
 				}
 				// if urls were passed to this document
 				if ($urls != '') {
@@ -62,7 +62,7 @@
 					$files = explode(',', $urls);
 					for ($a = 0; $a < count($files); $a++) {
 						// include($files[$a]);
-						displayHTML($files[$a]);
+						echo displayHTML($files[$a], 'body');
 					}
 				} else {
 					// include all project folders in the root
@@ -70,7 +70,13 @@
 					for ($a = 0; $a < count($files); $a++) {
 						if (preg_match("/useful-/i", $files[$a])) {
 							//include($dir.$files[$a]);
-							displayHTML($files[$a]);
+							$demoIcon = '<img class="demoIcon" alt="" src="../' . $files[$a] . '/img/favicon.png"/>';
+							$demoHTML = displayHTML($files[$a], 'article');
+							$demoHTML = '<article>' . $demoIcon . $demoHTML . '</article>';
+							$demoHTML = str_replace('http://github.com/WoollyMittens/', './default.php?url=', $demoHTML);
+							$demoHTML = str_replace('Download (GitHub)', 'Demo', $demoHTML);
+							$demoHTML = str_replace('target="_blank"', '', $demoHTML);
+							echo $demoHTML;
 						}
 					}
 				}
