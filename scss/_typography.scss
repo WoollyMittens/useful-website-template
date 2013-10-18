@@ -1,5 +1,5 @@
 /*
-	MARKUP - The elements of HTML5 - http://dev.w3.org/html5/spec/Overview.html
+	Typography
 */
 @media all {
 	/*
@@ -14,38 +14,29 @@
 		Sections
 	*/
 	body {
+		@include text('m');
+		@include rems('margin', 0, 0, 0, 0);
+		@include rems('padding', 0, 0, 0, 0);
+		@include rem('line-height', 1.8);
 		background : #eee;
-		/*-webkit-background-size: 1920px 1800px; // fix for iOS devices */
-		/*-webkit-font-smoothing: antialiased; // make fonts render nicer */
 		color : #333;
-		font-size : 12px;
-		font-size : 1rem;
 		_height : 100%;
-		line-height : 180%;
 		min-height : 100%;
-		margin : 0;
-		padding : 0;
 	}
 	h1, h2, h3, h4, h5, h6 {
+		@include text('m');
+		@include rems('margin', 0, 0, 0.5, 0);
 		display : block;
-		/*font-family : 'MerriweatherRegular', Tahoma, Verdana, Arial, Sans-Serif;*/
-		font-size : 12px;
-		font-size : 1rem;
 		font-weight : normal;
-		margin : 0 0 6px 0;
-		margin : 0 0 0.5rem 0;
 	}
 	h1 {
-		font-size : 24px;
-		font-size : 2rem;
+		@include text('xxl');
 	}
 	h2 {
-		font-size : 18px;
-		font-size : 1.5rem;
+		@include text('xl');
 	}
 	h3 {
-		font-size : 15px;
-		font-size : 1.25rem;
+		@include text('l');
 	}
 	address {
 		display : block;
@@ -58,41 +49,37 @@
 		Grouping content
 	*/
 	p {
+		@include text('m');
 		display : block;
-		margin : 0 0 12px 0;
-		margin : 0 0 1rem 0;
 	}
 	hr {
+		@include rems('margin', 1, 0, 1, 0);
 		background-color : #333;
 		border : none;
 		clear : both;
 		color : #333;
 		display : block;
 		height : 1px;
-		margin : 12px 0 12px 0;
-		margin : 1rem 0 1rem 0;
 		width : 100%;
 	}
 	ul {
+		@include rems('margin', 0, 0, 1, 2);
+		@include rems('padding', 0, 0, 0, 0);
 		display : block;
-		margin : 0 0 12px 24px;
-		margin : 0 0 1rem 2rem;
-		padding : 0 0 0 0;
 	}
 	li {}
 	dl {
+		@include rems('margin', 0, 0, 1, 0);
 		display : block;
-		margin : 0 0 12px 0;
-		margin : 0 0 1rem 0;
 	}
 	dt {
+		@include rems('margin', 0, 0, 0, 0);
 		display : block;
 		font-weight : bold;
-		margin : 0 0 0 0;
 	}
 	dd {
+		@include rems('margin', 0, 0, 0, 0);
 		display : block;
-		margin : 0 0 0 0;
 	}
 	pre, dialog, blockquote, ol {
 		display : block;
@@ -101,11 +88,11 @@
 		Text-level semantics
 	*/
 	a {
-		color : #666;
+		color : $color-passive;
 		text-decoration : underline;
 	}
 	a:hover {
-		color : #999;
+		color : $color-hover;
 		text-decoration : underline;
 	}
 	sub {
@@ -129,51 +116,105 @@
 	}
 	/* Tabular data */
 	table {
+		@include rems('margin', 0, 0, 1, 0);
 		border-collapse : collapse;
-		margin : 0 0 12px 0;
-		margin : 0 0 1rem 0;
 	}
 	caption {
-		font-size :	110%;
+		@include text('l');
 		font-weight : bold;
 		text-align : left;
 	}
 	thead, tbody, tfoot {}
 	tr {
 		vertical-align : top;
+		&:nth-child(2n) { background-color : $color-highlight; }
 	}
-	td {}
-	th {
+	th, td {
+		@include rems('padding', 0.5, 1, 0.5, 1);
+	}
+	th, th a, th a:hover {
+		background-color : $color-hover;
+		color : #fff;
+		font-weight : normal;
+		white-space : nowrap;
 		text-align : left;
+		text-decoration : none;
 	}
 	/*
 		Forms
 	*/
 	form {
-		margin : 0 0 0 0;
+		@include rems('margin', 0, 0, 0, 0);
 	}
 	fieldset {
+		@include rems('margin', 0, 0, 1, 0);
+		@include rems('padding', 0, 0, 0, 0);
+		display : block;
 		border : none;
-		margin : 0 0 12px 0;
-		margin : 0 0 1rem 0;
-		padding : 0 0 0 0;
 	}
-	legend {}
+	legend {
+		@include rems('margin', 0, 0, 0.5, 0);
+		display : block;
+		font-weight : bold;
+	}
 	label {}
 	input, button, select, textarea {
+		@include text('m');
 		font-family : Tahoma, Verdana, Arial, Sans-Serif;
-		font-size : 100%;
+		vertical-align : baseline;
 	}
-	button {
+	input[type=color], input[type=range], input[type=number], input[type=date], input[type=text], input[type=password], input[type=email], select, textarea {
+		@include box-shadow(inset 0 0 5px #ccc);
+		@include rem('height', 3);
+		@include rem('font-size', 1);
+		@include rem('padding', 0.7);
+		@include rems('margin', 0.7, 0, 0.7, 0);
+		background : #fff;
+		border : solid 1px #333;
+		font-family : Arial, Sans-Serif;
+	}
+	input[type=checkbox], input[type=radio] {
+		@include rems('margin', 0.7, 0.3, 0.7, 0);
+	}
+	select {
+		@include rem('height', 3);
+		@include rem('padding', 0.7);
+	}
+	textarea {
+		@include rem('height', 10);
+		@include rem('padding', 0.7);
+	}
+	button, .button {
+		@include transition-property(background-color);
+		@include transition-duration(0.3s);
+		@include transition-timing-function(ease);
+		@include rem('height', 3);
+		@include rem('line-height', 3);
+		@include rems('margin', 0, 0, 0, 0);
+		@include rems('padding', 0, 1, 0, 1);
+		background-color : $color-passive;
+		border : none;
+		color : #fff;
+		cursor : pointer;
+		display : inline-block;
 		overflow : visible;
+		text-decoration : none;
+		&:hover {
+			background-color : $color-hover;
+			color : #fff;
+			text-decoration : none;
+		}
+		&.disabled, &.disabled:hover {
+			background-color : $color-disabled;
+		}
 	}
 	/*
 		Interactive elements
 	*/
 	menu {
+		@include rems('margin', 0, 0, 0, 0);
+		@include rems('padding', 0, 0, 0, 0);
 		display : block;
-		margin : 0;
-		padding : 0;
 	}
 	/*
 		Miscellaneous elements

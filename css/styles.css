@@ -5,7 +5,7 @@
 	Definitions
 */
 /*
-	FONTS - Externally referenced typefaces
+	Fonts
 */
 @font-face {
   font-family: 'MerriweatherRegular';
@@ -1035,7 +1035,7 @@
 }
 
 /*
-	MARKUP - The elements of HTML5 - http://dev.w3.org/html5/spec/Overview.html
+	Typography
 */
 @media all {
   /*
@@ -1051,41 +1051,59 @@
   	Sections
   */
   body {
-    background: #eee;
-    /*-webkit-background-size: 1920px 1800px; // fix for iOS devices */
-    /*-webkit-font-smoothing: antialiased; // make fonts render nicer */
-    color: #333;
-    font-size: 12px;
+    font-size: 16px;
     font-size: 1rem;
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 0px;
+    padding-left: 0rem;
+    line-height: 28.8px;
+    line-height: 1.8rem;
+    background: #eee;
+    color: #333;
     _height: 100%;
-    line-height: 180%;
     min-height: 100%;
-    margin: 0;
-    padding: 0;
   }
 
   h1, h2, h3, h4, h5, h6 {
-    display: block;
-    /*font-family : 'MerriweatherRegular', Tahoma, Verdana, Arial, Sans-Serif;*/
-    font-size: 12px;
+    font-size: 16px;
     font-size: 1rem;
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    display: block;
     font-weight: normal;
-    margin: 0 0 6px 0;
-    margin: 0 0 0.5rem 0;
   }
 
   h1 {
-    font-size: 24px;
-    font-size: 2rem;
+    font-size: 30px;
+    font-size: 1.875rem;
   }
 
   h2 {
-    font-size: 18px;
-    font-size: 1.5rem;
+    font-size: 26px;
+    font-size: 1.625rem;
   }
 
   h3 {
-    font-size: 15px;
+    font-size: 20px;
     font-size: 1.25rem;
   }
 
@@ -1102,45 +1120,84 @@
   	Grouping content
   */
   p {
+    font-size: 16px;
+    font-size: 1rem;
     display: block;
-    margin: 0 0 12px 0;
-    margin: 0 0 1rem 0;
   }
 
   hr {
+    margin-top: 16px;
+    margin-top: 1rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     background-color: #333;
     border: none;
     clear: both;
     color: #333;
     display: block;
     height: 1px;
-    margin: 12px 0 12px 0;
-    margin: 1rem 0 1rem 0;
     width: 100%;
   }
 
   ul {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-left: 32px;
+    margin-left: 2rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 0px;
+    padding-left: 0rem;
     display: block;
-    margin: 0 0 12px 24px;
-    margin: 0 0 1rem 2rem;
-    padding: 0 0 0 0;
   }
 
   dl {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     display: block;
-    margin: 0 0 12px 0;
-    margin: 0 0 1rem 0;
   }
 
   dt {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     display: block;
     font-weight: bold;
-    margin: 0 0 0 0;
   }
 
   dd {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     display: block;
-    margin: 0 0 0 0;
   }
 
   pre, dialog, blockquote, ol {
@@ -1151,12 +1208,12 @@
   	Text-level semantics
   */
   a {
-    color: #666;
+    color: #ff6a00;
     text-decoration: underline;
   }
 
   a:hover {
-    color: #999;
+    color: #ff6a00;
     text-decoration: underline;
   }
 
@@ -1186,13 +1243,20 @@
 
   /* Tabular data */
   table {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    margin-left: 0rem;
     border-collapse: collapse;
-    margin: 0 0 12px 0;
-    margin: 0 0 1rem 0;
   }
 
   caption {
-    font-size: 110%;
+    font-size: 20px;
+    font-size: 1.25rem;
     font-weight: bold;
     text-align: left;
   }
@@ -1209,32 +1273,176 @@
   	Forms
   */
   form {
-    margin: 0 0 0 0;
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
   }
 
   fieldset {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 16px;
+    margin-bottom: 1rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 0px;
+    padding-left: 0rem;
+    display: block;
     border: none;
-    margin: 0 0 12px 0;
-    margin: 0 0 1rem 0;
-    padding: 0 0 0 0;
+  }
+
+  legend {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 8px;
+    margin-bottom: 0.5rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    display: block;
+    font-weight: bold;
   }
 
   input, button, select, textarea {
+    font-size: 16px;
+    font-size: 1rem;
     font-family: Tahoma, Verdana, Arial, Sans-Serif;
-    font-size: 100%;
+    vertical-align: baseline;
   }
 
-  button {
+  input[type=color], input[type=range], input[type=number], input[type=date], input[type=text], input[type=password], input[type=email], select, textarea {
+    -webkit-box-shadow: inset 0 0 5px #cccccc;
+    -moz-box-shadow: inset 0 0 5px #cccccc;
+    box-shadow: inset 0 0 5px #cccccc;
+    height: 48px;
+    height: 3rem;
+    font-size: 16px;
+    font-size: 1rem;
+    padding: 11.2px;
+    padding: 0.7rem;
+    margin-top: 11.2px;
+    margin-top: 0.7rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 11.2px;
+    margin-bottom: 0.7rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    background: #fff;
+    border: solid 1px #333;
+    font-family: Arial, Sans-Serif;
+  }
+
+  input[type=checkbox], input[type=radio] {
+    margin-top: 11.2px;
+    margin-top: 0.7rem;
+    margin-right: 4.8px;
+    margin-right: 0.3rem;
+    margin-bottom: 11.2px;
+    margin-bottom: 0.7rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+  }
+
+  select {
+    height: 48px;
+    height: 3rem;
+    padding: 11.2px;
+    padding: 0.7rem;
+  }
+
+  textarea {
+    height: 160px;
+    height: 10rem;
+    padding: 11.2px;
+    padding: 0.7rem;
+  }
+
+  button, .button {
+    -webkit-transition-property: background-color;
+    -moz-transition-property: background-color;
+    -o-transition-property: background-color;
+    transition-property: background-color;
+    -webkit-transition-duration: 0.3s;
+    -moz-transition-duration: 0.3s;
+    -o-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
+    -moz-transition-timing-function: ease;
+    -o-transition-timing-function: ease;
+    transition-timing-function: ease;
+    height: 48px;
+    height: 3rem;
+    line-height: 48px;
+    line-height: 3rem;
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 16px;
+    padding-right: 1rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 16px;
+    padding-left: 1rem;
+    background-color: #ff6a00;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    display: inline-block;
     overflow: visible;
+    text-decoration: none;
+  }
+  button:hover, .button:hover {
+    background-color: #ff9800;
+    color: #fff;
+    text-decoration: none;
+  }
+  button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
+    background-color: #7f7f7f;
   }
 
   /*
   	Interactive elements
   */
   menu {
+    margin-top: 0px;
+    margin-top: 0rem;
+    margin-right: 0px;
+    margin-right: 0rem;
+    margin-bottom: 0px;
+    margin-bottom: 0rem;
+    margin-left: 0px;
+    margin-left: 0rem;
+    padding-top: 0px;
+    padding-top: 0rem;
+    padding-right: 0px;
+    padding-right: 0rem;
+    padding-bottom: 0px;
+    padding-bottom: 0rem;
+    padding-left: 0px;
+    padding-left: 0rem;
     display: block;
-    margin: 0;
-    padding: 0;
   }
 
   /*
@@ -1250,7 +1458,7 @@
   }
 }
 /*
-	GENERIC - Fixes for common rending problems
+	Miscellaneous
 */
 @media all {
   /*
@@ -1286,13 +1494,6 @@
   }
 
   /*
-  	Fix for iOS
-  */
-  .fixed {
-    -webkit-transform: translate3d(0, 0, 0);
-  }
-
-  /*
   	Circumvents some issues with button rendering
   */
   button {
@@ -1321,7 +1522,7 @@
   }
 }
 /*
-	LARGE - Desktop screens
+	Layout
 */
 @media all {
   /*
@@ -1611,54 +1812,7 @@
   }
 }
 /*
-	Buttons
-*/
-@media all {
-  button, .button {
-    -webkit-transition-property: background-color;
-    -moz-transition-property: background-color;
-    -o-transition-property: background-color;
-    transition-property: background-color;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    height: 48px;
-    height: 3rem;
-    line-height: 48px;
-    line-height: 3rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 16px;
-    padding-right: 1rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 16px;
-    padding-left: 1rem;
-    background-color: #ff6a00;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    margin: 0;
-    overflow: visible;
-    text-decoration: none;
-  }
-  button:hover, .button:hover {
-    background-color: #ff9800;
-    color: #fff;
-    text-decoration: none;
-  }
-  button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
-    background-color: #7f7f7f;
-  }
-}
-/*
-	Example Styling for a Scroll Locked Navigation
+	Navigation
 */
 @media all {
   /*

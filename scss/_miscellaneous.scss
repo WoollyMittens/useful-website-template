@@ -1,5 +1,5 @@
 /*
-	GENERIC - Fixes for common rending problems
+	Miscellaneous
 */
 @media all {
 	@import "compass/css3";
@@ -29,12 +29,6 @@
 	*/
 	img {
 		-ms-interpolation-mode: bicubic;
-	}
-	/*
-		Fix for iOS
-	*/
-	.fixed {
-		-webkit-transform: translate3d(0, 0, 0);
 	}
 	/*
 		Circumvents some issues with button rendering
