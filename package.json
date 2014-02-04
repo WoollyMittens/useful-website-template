@@ -1,0 +1,11 @@
+{
+  "name": "useful",
+  "version": "0.0.0",
+  "devDependencies": {
+    "grunt": "",
+    "grunt-contrib-watch": "",
+    "grunt-contrib-compass": "",
+    "sass": "",
+    "compass": ""
+  }
+}

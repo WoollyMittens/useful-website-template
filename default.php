@@ -17,8 +17,8 @@
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 		<![endif]-->
-		<script src="../useful-toggles/js/toggles.min.js"></script>
-		<script src="../useful-scrolllock/js/scrolllock.min.js"></script>
+		<script src="../useful-toggles/js/useful-toggles.js"></script>
+		<script src="../useful-scrolllock/js/useful-scrolllock.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),

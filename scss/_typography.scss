@@ -3,6 +3,12 @@
 */
 @media all {
 	/*
+		All elements
+	*/
+	*, *:before, *:after {
+		@include box-sizing(border-box);
+	}
+	/*
 		The root element
 	*/
 	html {
