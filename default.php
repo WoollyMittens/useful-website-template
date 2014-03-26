@@ -23,7 +23,7 @@
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
 		  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 		  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
-		  ga('create', 'UA-52552-7', 'sydneytrainwalks.com');
+		  ga('create', 'UA-52552-5', 'woollymittens.nl');
 		  ga('send', 'pageview');
 		</script>
 	</head>
@@ -45,9 +45,9 @@
 				{
 					global $dir;
 					$contents = file_get_contents($dir . $url . "/index.html");
-					$contents = split('<' . $tag . '>', $contents);
+					$contents = preg_split('/<' . $tag . '>/i', $contents);
 					$contents = $contents[1];
-					$contents = split('</' . $tag . '>', $contents);
+					$contents = preg_split('/<\/' . $tag . '>/i', $contents);
 					$contents = $contents[0];
 					$contents = str_replace("../", "qqq", $contents);
 					$contents = str_replace("./", "../" . $url . "/", $contents);
