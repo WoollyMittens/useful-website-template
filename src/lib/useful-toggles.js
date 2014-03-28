@@ -34,6 +34,8 @@
 			this.automatic.setup(this);
 			this.buttons.setup(this);
 			this.articles.setup(this);
+			// disable the start function so it can't be started twice
+			this.start = function () {};
 		};
 		this.update = function (context) {
 			// update the parent
@@ -159,6 +161,8 @@
 				}
 			}
 		};
+		// go
+		this.start();
 	};
 
 }(window.useful = window.useful || {}));

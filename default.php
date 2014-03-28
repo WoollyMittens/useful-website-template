@@ -113,10 +113,8 @@
 					'index' : -1,
 					'auto' : null
 				});
-				shortcutsToggles.start();
 				// scroll lock
 				var shortcutsScrolllock = new useful.Scrolllock( document.getElementById('shortcuts'), {});
-				shortcutsScrolllock.start();
 			//-->
 			</script>
 			<footer>
