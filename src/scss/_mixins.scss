@@ -1,7 +1,4 @@
 /*
-	Definitions
-*/
-/*
 	Constants
 */
 $color-background : #ffffff;
@@ -50,6 +47,9 @@ $remSize : 12;
 		margin-top : ($size * $remSize / -2) + px;
 		width : ($size * $remSize) + px;
 	}
+	@if $char != '' {
+		text-indent : 0;
+	}
 	font-size : ($size * $margin) + $unit;
 	height : $size + $unit;
 	line-height : $size + $unit;
@@ -59,7 +59,6 @@ $remSize : 12;
 	position : absolute;
 	left : 50%;
 	text-align : center;
-	text-indent : 0;
 	top : 50%;
 }
 /*

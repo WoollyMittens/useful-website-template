@@ -5,10 +5,10 @@
 @import "compass/css3";
 @import "compass/utilities";
 
-@import "_definitions";
-@import "_fonts";
-@import "_typography";
-@import "_miscellaneous";
-@import "_layout";
-@import "_examples";
-@import "_navigation";
+@import "mixins";
+@import "fonts";
+@import "typography";
+@import "miscellaneous";
+@import "layout";
+@import "examples";
+@import "navigation";

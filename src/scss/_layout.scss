@@ -1,101 +1,94 @@
+@import "compass/css3";
+@import "compass/utilities";
 /*
-	Layout
+	central Page
 */
-@media all {
-	@import "compass/css3";
-	@import "compass/utilities";
-	/*
-		Sprites
-		Example: @include icons-sprite(pdf);
-	$icons-spacing : 20px;
-	@import "icons/*.png";
-	*/
-	/*
-		central Page
-	*/
-	body {
-		@include background(#ccc linear-gradient(#eee 0%, #ccc 256px, #ccc 100%) no-repeat);
-		> section {
-			@include box-shadow(0 0 32px rgba(0, 0, 0, 0.1));
+body {
+	@include background(#ccc linear-gradient(#eee 0%, #ccc 256px, #ccc 100%) no-repeat);
+}
+#layout {
+	@include box-shadow(0 0 32px rgba(0, 0, 0, 0.1));
+	background : #fff;
+	border-left : solid 1px #e4e4e4;
+	border-right : solid 1px #e4e4e4;
+	margin : 0 auto 0 auto;
+	position : relative;
+	max-width : 960px;
+	min-width : 320px;
+	> article {
+		@include rems('padding', 2, 2, 1, 2);
+		background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+		display : block;
+		img.demoIcon {
+			@include border-radius(3px);
+			@include box-shadow(0 0 5px #333);
+			@include transition-property(all);
+			@include transition-duration(0.3s);
+			@include transition-timing-function(ease);
+			@include rems('margin', 0, 0, 0, 1);
 			background : #fff;
-			border-left : solid 1px #e4e4e4;
-			border-right : solid 1px #e4e4e4;
-			margin : 0 auto 0 auto;
-			position : relative;
-			max-width : 960px;
-			min-width : 320px;
-			> header {
-				@include opacity(0.9);
-				background : #333 url(../img/documentHeader.jpg) 0px -100px;
-				height : 96px;
-				margin : 0 0 36px 0;
-				position : relative;
-				.hgroup {
-					line-height : 230%;
-					padding : 15px 30px 0 30px;
-					text-align : right;
-					h1 {
-						color : #fff;
-						font-weight : bold;
-						text-shadow : 1px 2px 2px #000;
-						filter : DropShadow(Color=#000000, OffX=1, OffY=2);
-					}
-					h2 {
-						color : #fff;
-						font-weight : normal;
-						text-shadow : 1px 2px 2px #000;
-						filter : DropShadow(Color=#000000, OffX=1, OffY=2);
-					}
-				}
-			}
-			> article {
-				@include rems('padding', 2, 2, 1, 2);
-				background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
-				display : block;
-				img.demoIcon {
-					@include border-radius(3px);
-					@include box-shadow(0 0 5px #333);
-					@include transition-property(all);
-					@include transition-duration(0.3s);
-					@include transition-timing-function(ease);
-					@include rems('margin', 0, 0, 0, 1);
-					background : #fff;
-					border : solid 1px #000;
-					float : right;
-					height : 64px;
-					width : 64px;
-				}
-			}
-			> footer {
-				clear : both;
-				background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
-				height : 60px;
-				line-height : 60px;
-				position : relative;
-				ul {
-					margin : 0;
-					padding : 0 3%;
-					li {
-						display : inline;
-						list-style-type : none;
-						a {
-							img {
-								margin-right : 1em;
-								vertical-align : middle;
-							}
-						}
-						a:hover {}
-					}
-				}
-			}
+			border : solid 1px #000;
+			float : right;
+			height : 64px;
+			width : 64px;
 		}
 	}
 }
-@media (min-width: 1200px) {}
-@media (min-width: 980px) and (max-width: 1199px) {}
-@media (min-width: 768px) and (max-width: 979px) {}
-@media (max-width: 767px) {}
-@media (max-width: 480px) {}
+/*
+	header bar
+*/
+#masthead {
+	@include opacity(0.9);
+	background : #333 url(../img/documentHeader.jpg) 0px -100px;
+	height : 96px;
+	margin : 0 0 36px 0;
+	position : relative;
+	.hgroup {
+		line-height : 230%;
+		padding : 15px 30px 0 30px;
+		text-align : right;
+		h1 {
+			color : #fff;
+			font-weight : bold;
+			text-shadow : 1px 2px 2px #000;
+			filter : DropShadow(Color=#000000, OffX=1, OffY=2);
+		}
+		h2 {
+			color : #fff;
+			font-weight : normal;
+			text-shadow : 1px 2px 2px #000;
+			filter : DropShadow(Color=#000000, OffX=1, OffY=2);
+		}
+	}
+}
+/*
+	footer bar
+*/
+#footnotes {
+	clear : both;
+	background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
+	height : 60px;
+	line-height : 60px;
+	position : relative;
+	ul {
+		margin : 0;
+		padding : 0 3%;
+		li {
+			display : inline;
+			list-style-type : none;
+			a {
+				img {
+					margin-right : 1em;
+					vertical-align : middle;
+				}
+			}
+			a:hover {}
+		}
+	}
+}
+/*
+	print styles
+*/
 @media print {
 	body > section > header,
 	body > section > footer {

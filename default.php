@@ -28,8 +28,8 @@
 		</script>
 	</head>
 	<body>
-		<section>
-			<header>
+		<section id="layout">
+			<header id="masthead">
 				<div class="hgroup">
 					<h1>useful.js</h1>
 					<h2>JavaScript examples, too useful not to share.</h2>
@@ -117,7 +117,7 @@
 				var shortcutsScrolllock = new useful.Scrolllock( document.getElementById('shortcuts'), {});
 			//-->
 			</script>
-			<footer>
+			<footer id="footnotes">
 				<ul>
 					<li>
 						<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./inc/img/banner_cc.png" /></a>

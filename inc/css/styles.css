@@ -2,9 +2,6 @@
 	Reference Stylesheet for a Typical HTML5 Website Template
 */
 /*
-	Definitions
-*/
-/*
 	Constants
 */
 /*
@@ -60,2119 +57,840 @@
 }
 
 /*
-	Icon Fonts Legend
+	Typography
 */
-/* line 33, ../../src/scss/_fonts.scss */
-.icon {
-  font-family: FontAwesome;
-}
-
-/* line 34, ../../src/scss/_fonts.scss */
-.icon-glass:before {
-  content: "\f000";
-}
-
-/* line 35, ../../src/scss/_fonts.scss */
-.icon-music:before {
-  content: "\f001";
-}
-
-/* line 36, ../../src/scss/_fonts.scss */
-.icon-search:before {
-  content: "\f002";
-}
-
-/* line 37, ../../src/scss/_fonts.scss */
-.icon-envelope:before {
-  content: "\f003";
-}
-
-/* line 38, ../../src/scss/_fonts.scss */
-.icon-heart:before {
-  content: "\f004";
-}
-
-/* line 39, ../../src/scss/_fonts.scss */
-.icon-star:before {
-  content: "\f005";
-}
-
-/* line 40, ../../src/scss/_fonts.scss */
-.icon-star-empty:before {
-  content: "\f006";
-}
-
-/* line 41, ../../src/scss/_fonts.scss */
-.icon-user:before {
-  content: "\f007";
-}
-
-/* line 42, ../../src/scss/_fonts.scss */
-.icon-film:before {
-  content: "\f008";
-}
-
-/* line 43, ../../src/scss/_fonts.scss */
-.icon-th-large:before {
-  content: "\f009";
-}
-
-/* line 44, ../../src/scss/_fonts.scss */
-.icon-th:before {
-  content: "\f00a";
-}
-
-/* line 45, ../../src/scss/_fonts.scss */
-.icon-th-list:before {
-  content: "\f00b";
-}
-
-/* line 46, ../../src/scss/_fonts.scss */
-.icon-ok:before {
-  content: "\f00c";
-}
-
-/* line 47, ../../src/scss/_fonts.scss */
-.icon-remove:before {
-  content: "\f00d";
-}
-
-/* line 48, ../../src/scss/_fonts.scss */
-.icon-zoom-in:before {
-  content: "\f00e";
-}
-
-/* line 49, ../../src/scss/_fonts.scss */
-.icon-zoom-out:before {
-  content: "\f010";
-}
-
-/* line 50, ../../src/scss/_fonts.scss */
-.icon-off:before {
-  content: "\f011";
-}
-
-/* line 51, ../../src/scss/_fonts.scss */
-.icon-signal:before {
-  content: "\f012";
-}
-
-/* line 52, ../../src/scss/_fonts.scss */
-.icon-cog:before {
-  content: "\f013";
-}
-
-/* line 53, ../../src/scss/_fonts.scss */
-.icon-trash:before {
-  content: "\f014";
-}
-
-/* line 54, ../../src/scss/_fonts.scss */
-.icon-home:before {
-  content: "\f015";
-}
-
-/* line 55, ../../src/scss/_fonts.scss */
-.icon-file:before {
-  content: "\f016";
-}
-
-/* line 56, ../../src/scss/_fonts.scss */
-.icon-time:before {
-  content: "\f017";
-}
-
-/* line 57, ../../src/scss/_fonts.scss */
-.icon-road:before {
-  content: "\f018";
-}
-
-/* line 58, ../../src/scss/_fonts.scss */
-.icon-download-alt:before {
-  content: "\f019";
-}
-
-/* line 59, ../../src/scss/_fonts.scss */
-.icon-download:before {
-  content: "\f01a";
-}
-
-/* line 60, ../../src/scss/_fonts.scss */
-.icon-upload:before {
-  content: "\f01b";
-}
-
-/* line 61, ../../src/scss/_fonts.scss */
-.icon-inbox:before {
-  content: "\f01c";
-}
-
-/* line 62, ../../src/scss/_fonts.scss */
-.icon-play-circle:before {
-  content: "\f01d";
-}
-
-/* line 63, ../../src/scss/_fonts.scss */
-.icon-repeat:before {
-  content: "\f01e";
-}
-
-/* line 64, ../../src/scss/_fonts.scss */
-.icon-refresh:before {
-  content: "\f021";
-}
-
-/* line 65, ../../src/scss/_fonts.scss */
-.icon-list-alt:before {
-  content: "\f022";
-}
-
-/* line 66, ../../src/scss/_fonts.scss */
-.icon-lock:before {
-  content: "\f023";
-}
-
-/* line 67, ../../src/scss/_fonts.scss */
-.icon-flag:before {
-  content: "\f024";
-}
-
-/* line 68, ../../src/scss/_fonts.scss */
-.icon-headphones:before {
-  content: "\f025";
-}
-
-/* line 69, ../../src/scss/_fonts.scss */
-.icon-volume-off:before {
-  content: "\f026";
-}
-
-/* line 70, ../../src/scss/_fonts.scss */
-.icon-volume-down:before {
-  content: "\f027";
-}
-
-/* line 71, ../../src/scss/_fonts.scss */
-.icon-volume-up:before {
-  content: "\f028";
-}
-
-/* line 72, ../../src/scss/_fonts.scss */
-.icon-qrcode:before {
-  content: "\f029";
-}
-
-/* line 73, ../../src/scss/_fonts.scss */
-.icon-barcode:before {
-  content: "\f02a";
-}
-
-/* line 74, ../../src/scss/_fonts.scss */
-.icon-tag:before {
-  content: "\f02b";
-}
-
-/* line 75, ../../src/scss/_fonts.scss */
-.icon-tags:before {
-  content: "\f02c";
-}
-
-/* line 76, ../../src/scss/_fonts.scss */
-.icon-book:before {
-  content: "\f02d";
-}
-
-/* line 77, ../../src/scss/_fonts.scss */
-.icon-bookmark:before {
-  content: "\f02e";
-}
-
-/* line 78, ../../src/scss/_fonts.scss */
-.icon-print:before {
-  content: "\f02f";
-}
-
-/* line 79, ../../src/scss/_fonts.scss */
-.icon-camera:before {
-  content: "\f030";
-}
-
-/* line 80, ../../src/scss/_fonts.scss */
-.icon-font:before {
-  content: "\f031";
-}
-
-/* line 81, ../../src/scss/_fonts.scss */
-.icon-bold:before {
-  content: "\f032";
-}
-
-/* line 82, ../../src/scss/_fonts.scss */
-.icon-italic:before {
-  content: "\f033";
-}
-
-/* line 83, ../../src/scss/_fonts.scss */
-.icon-text-height:before {
-  content: "\f034";
-}
-
-/* line 84, ../../src/scss/_fonts.scss */
-.icon-text-width:before {
-  content: "\f035";
-}
-
-/* line 85, ../../src/scss/_fonts.scss */
-.icon-align-left:before {
-  content: "\f036";
-}
-
-/* line 86, ../../src/scss/_fonts.scss */
-.icon-align-center:before {
-  content: "\f037";
-}
-
-/* line 87, ../../src/scss/_fonts.scss */
-.icon-align-right:before {
-  content: "\f038";
-}
-
-/* line 88, ../../src/scss/_fonts.scss */
-.icon-align-justify:before {
-  content: "\f039";
-}
-
-/* line 89, ../../src/scss/_fonts.scss */
-.icon-list:before {
-  content: "\f03a";
-}
-
-/* line 90, ../../src/scss/_fonts.scss */
-.icon-indent-left:before {
-  content: "\f03b";
-}
-
-/* line 91, ../../src/scss/_fonts.scss */
-.icon-indent-right:before {
-  content: "\f03c";
-}
-
-/* line 92, ../../src/scss/_fonts.scss */
-.icon-facetime-video:before {
-  content: "\f03d";
-}
-
-/* line 93, ../../src/scss/_fonts.scss */
-.icon-picture:before {
-  content: "\f03e";
-}
-
-/* line 94, ../../src/scss/_fonts.scss */
-.icon-pencil:before {
-  content: "\f040";
-}
-
-/* line 95, ../../src/scss/_fonts.scss */
-.icon-map-marker:before {
-  content: "\f041";
-}
-
-/* line 96, ../../src/scss/_fonts.scss */
-.icon-adjust:before {
-  content: "\f042";
-}
-
-/* line 97, ../../src/scss/_fonts.scss */
-.icon-tint:before {
-  content: "\f043";
-}
-
-/* line 98, ../../src/scss/_fonts.scss */
-.icon-edit:before {
-  content: "\f044";
-}
-
-/* line 99, ../../src/scss/_fonts.scss */
-.icon-share:before {
-  content: "\f045";
-}
-
-/* line 100, ../../src/scss/_fonts.scss */
-.icon-check:before {
-  content: "\f046";
-}
-
-/* line 101, ../../src/scss/_fonts.scss */
-.icon-move:before {
-  content: "\f047";
-}
-
-/* line 102, ../../src/scss/_fonts.scss */
-.icon-step-backward:before {
-  content: "\f048";
-}
-
-/* line 103, ../../src/scss/_fonts.scss */
-.icon-fast-backward:before {
-  content: "\f049";
-}
-
-/* line 104, ../../src/scss/_fonts.scss */
-.icon-backward:before {
-  content: "\f04a";
-}
-
-/* line 105, ../../src/scss/_fonts.scss */
-.icon-play:before {
-  content: "\f04b";
-}
-
-/* line 106, ../../src/scss/_fonts.scss */
-.icon-pause:before {
-  content: "\f04c";
-}
-
-/* line 107, ../../src/scss/_fonts.scss */
-.icon-stop:before {
-  content: "\f04d";
-}
-
-/* line 108, ../../src/scss/_fonts.scss */
-.icon-forward:before {
-  content: "\f04e";
-}
-
-/* line 109, ../../src/scss/_fonts.scss */
-.icon-fast-forward:before {
-  content: "\f050";
-}
-
-/* line 110, ../../src/scss/_fonts.scss */
-.icon-step-forward:before {
-  content: "\f051";
-}
-
-/* line 111, ../../src/scss/_fonts.scss */
-.icon-eject:before {
-  content: "\f052";
-}
-
-/* line 112, ../../src/scss/_fonts.scss */
-.icon-chevron-left:before {
-  content: "\f053";
-}
-
-/* line 113, ../../src/scss/_fonts.scss */
-.icon-chevron-right:before {
-  content: "\f054";
-}
-
-/* line 114, ../../src/scss/_fonts.scss */
-.icon-plus-sign:before {
-  content: "\f055";
-}
-
-/* line 115, ../../src/scss/_fonts.scss */
-.icon-minus-sign:before {
-  content: "\f056";
-}
-
-/* line 116, ../../src/scss/_fonts.scss */
-.icon-remove-sign:before {
-  content: "\f057";
-}
-
-/* line 117, ../../src/scss/_fonts.scss */
-.icon-ok-sign:before {
-  content: "\f058";
-}
-
-/* line 118, ../../src/scss/_fonts.scss */
-.icon-question-sign:before {
-  content: "\f059";
-}
-
-/* line 119, ../../src/scss/_fonts.scss */
-.icon-info-sign:before {
-  content: "\f05a";
-}
-
-/* line 120, ../../src/scss/_fonts.scss */
-.icon-screenshot:before {
-  content: "\f05b";
-}
-
-/* line 121, ../../src/scss/_fonts.scss */
-.icon-remove-circle:before {
-  content: "\f05c";
-}
-
-/* line 122, ../../src/scss/_fonts.scss */
-.icon-ok-circle:before {
-  content: "\f05d";
-}
-
-/* line 123, ../../src/scss/_fonts.scss */
-.icon-ban-circle:before {
-  content: "\f05e";
-}
-
-/* line 124, ../../src/scss/_fonts.scss */
-.icon-arrow-left:before {
-  content: "\f060";
-}
-
-/* line 125, ../../src/scss/_fonts.scss */
-.icon-arrow-right:before {
-  content: "\f061";
-}
-
-/* line 126, ../../src/scss/_fonts.scss */
-.icon-arrow-up:before {
-  content: "\f062";
-}
-
-/* line 127, ../../src/scss/_fonts.scss */
-.icon-arrow-down:before {
-  content: "\f063";
-}
-
-/* line 128, ../../src/scss/_fonts.scss */
-.icon-share-alt:before {
-  content: "\f064";
-}
-
-/* line 129, ../../src/scss/_fonts.scss */
-.icon-resize-full:before {
-  content: "\f065";
-}
-
-/* line 130, ../../src/scss/_fonts.scss */
-.icon-resize-small:before {
-  content: "\f066";
-}
-
-/* line 131, ../../src/scss/_fonts.scss */
-.icon-plus:before {
-  content: "\f067";
-}
-
-/* line 132, ../../src/scss/_fonts.scss */
-.icon-minus:before {
-  content: "\f068";
-}
-
-/* line 133, ../../src/scss/_fonts.scss */
-.icon-asterisk:before {
-  content: "\f069";
-}
-
-/* line 134, ../../src/scss/_fonts.scss */
-.icon-exclamation-sign:before {
-  content: "\f06a";
-}
-
-/* line 135, ../../src/scss/_fonts.scss */
-.icon-gift:before {
-  content: "\f06b";
-}
-
-/* line 136, ../../src/scss/_fonts.scss */
-.icon-leaf:before {
-  content: "\f06c";
-}
-
-/* line 137, ../../src/scss/_fonts.scss */
-.icon-fire:before {
-  content: "\f06d";
-}
-
-/* line 138, ../../src/scss/_fonts.scss */
-.icon-eye-open:before {
-  content: "\f06e";
-}
-
-/* line 139, ../../src/scss/_fonts.scss */
-.icon-eye-close:before {
-  content: "\f070";
-}
-
-/* line 140, ../../src/scss/_fonts.scss */
-.icon-warning-sign:before {
-  content: "\f071";
-}
-
-/* line 141, ../../src/scss/_fonts.scss */
-.icon-plane:before {
-  content: "\f072";
-}
-
-/* line 142, ../../src/scss/_fonts.scss */
-.icon-calendar:before {
-  content: "\f073";
-}
-
-/* line 143, ../../src/scss/_fonts.scss */
-.icon-random:before {
-  content: "\f074";
-}
-
-/* line 144, ../../src/scss/_fonts.scss */
-.icon-comment:before {
-  content: "\f075";
-}
-
-/* line 145, ../../src/scss/_fonts.scss */
-.icon-magnet:before {
-  content: "\f076";
-}
-
-/* line 146, ../../src/scss/_fonts.scss */
-.icon-chevron-up:before {
-  content: "\f077";
-}
-
-/* line 147, ../../src/scss/_fonts.scss */
-.icon-chevron-down:before {
-  content: "\f078";
-}
-
-/* line 148, ../../src/scss/_fonts.scss */
-.icon-retweet:before {
-  content: "\f079";
-}
-
-/* line 149, ../../src/scss/_fonts.scss */
-.icon-shopping-cart:before {
-  content: "\f07a";
-}
-
-/* line 150, ../../src/scss/_fonts.scss */
-.icon-folder-close:before {
-  content: "\f07b";
-}
-
-/* line 151, ../../src/scss/_fonts.scss */
-.icon-folder-open:before {
-  content: "\f07c";
-}
-
-/* line 152, ../../src/scss/_fonts.scss */
-.icon-resize-vertical:before {
-  content: "\f07d";
-}
-
-/* line 153, ../../src/scss/_fonts.scss */
-.icon-resize-horizontal:before {
-  content: "\f07e";
-}
-
-/* line 154, ../../src/scss/_fonts.scss */
-.icon-bar-chart:before {
-  content: "\f080";
-}
-
-/* line 155, ../../src/scss/_fonts.scss */
-.icon-twitter-sign:before {
-  content: "\f081";
-}
-
-/* line 156, ../../src/scss/_fonts.scss */
-.icon-facebook-sign:before {
-  content: "\f082";
-}
-
-/* line 157, ../../src/scss/_fonts.scss */
-.icon-camera-retro:before {
-  content: "\f083";
-}
-
-/* line 158, ../../src/scss/_fonts.scss */
-.icon-key:before {
-  content: "\f084";
-}
-
-/* line 159, ../../src/scss/_fonts.scss */
-.icon-cogs:before {
-  content: "\f085";
-}
-
-/* line 160, ../../src/scss/_fonts.scss */
-.icon-comments:before {
-  content: "\f086";
-}
-
-/* line 161, ../../src/scss/_fonts.scss */
-.icon-thumbs-up:before {
-  content: "\f087";
-}
-
-/* line 162, ../../src/scss/_fonts.scss */
-.icon-thumbs-down:before {
-  content: "\f088";
-}
-
-/* line 163, ../../src/scss/_fonts.scss */
-.icon-star-half:before {
-  content: "\f089";
-}
-
-/* line 164, ../../src/scss/_fonts.scss */
-.icon-heart-empty:before {
-  content: "\f08a";
-}
-
-/* line 165, ../../src/scss/_fonts.scss */
-.icon-signout:before {
-  content: "\f08b";
-}
-
-/* line 166, ../../src/scss/_fonts.scss */
-.icon-linkedin-sign:before {
-  content: "\f08c";
-}
-
-/* line 167, ../../src/scss/_fonts.scss */
-.icon-pushpin:before {
-  content: "\f08d";
-}
-
-/* line 168, ../../src/scss/_fonts.scss */
-.icon-external-link:before {
-  content: "\f08e";
-}
-
-/* line 169, ../../src/scss/_fonts.scss */
-.icon-signin:before {
-  content: "\f090";
-}
-
-/* line 170, ../../src/scss/_fonts.scss */
-.icon-trophy:before {
-  content: "\f091";
-}
-
-/* line 171, ../../src/scss/_fonts.scss */
-.icon-github-sign:before {
-  content: "\f092";
-}
-
-/* line 172, ../../src/scss/_fonts.scss */
-.icon-upload-alt:before {
-  content: "\f093";
-}
-
-/* line 173, ../../src/scss/_fonts.scss */
-.icon-lemon:before {
-  content: "\f094";
-}
-
-/* line 174, ../../src/scss/_fonts.scss */
-.icon-phone:before {
-  content: "\f095";
-}
-
-/* line 175, ../../src/scss/_fonts.scss */
-.icon-check-empty:before {
-  content: "\f096";
-}
-
-/* line 176, ../../src/scss/_fonts.scss */
-.icon-bookmark-empty:before {
-  content: "\f097";
-}
-
-/* line 177, ../../src/scss/_fonts.scss */
-.icon-phone-sign:before {
-  content: "\f098";
-}
-
-/* line 178, ../../src/scss/_fonts.scss */
-.icon-twitter:before {
-  content: "\f099";
-}
-
-/* line 179, ../../src/scss/_fonts.scss */
-.icon-facebook:before {
-  content: "\f09a";
-}
-
-/* line 180, ../../src/scss/_fonts.scss */
-.icon-github:before {
-  content: "\f09b";
-}
-
-/* line 181, ../../src/scss/_fonts.scss */
-.icon-unlock:before {
-  content: "\f09c";
-}
-
-/* line 182, ../../src/scss/_fonts.scss */
-.icon-credit-card:before {
-  content: "\f09d";
-}
-
-/* line 183, ../../src/scss/_fonts.scss */
-.icon-rss:before {
-  content: "\f09e";
-}
-
-/* line 184, ../../src/scss/_fonts.scss */
-.icon-hdd:before {
-  content: "\f0a0";
-}
-
-/* line 185, ../../src/scss/_fonts.scss */
-.icon-bullhorn:before {
-  content: "\f0a1";
-}
-
-/* line 186, ../../src/scss/_fonts.scss */
-.icon-bell:before {
-  content: "\f0a2";
-}
-
-/* line 187, ../../src/scss/_fonts.scss */
-.icon-certificate:before {
-  content: "\f0a3";
-}
-
-/* line 188, ../../src/scss/_fonts.scss */
-.icon-hand-right:before {
-  content: "\f0a4";
-}
-
-/* line 189, ../../src/scss/_fonts.scss */
-.icon-hand-left:before {
-  content: "\f0a5";
-}
-
-/* line 190, ../../src/scss/_fonts.scss */
-.icon-hand-up:before {
-  content: "\f0a6";
-}
-
-/* line 191, ../../src/scss/_fonts.scss */
-.icon-hand-down:before {
-  content: "\f0a7";
-}
-
-/* line 192, ../../src/scss/_fonts.scss */
-.icon-circle-arrow-left:before {
-  content: "\f0a8";
-}
-
-/* line 193, ../../src/scss/_fonts.scss */
-.icon-circle-arrow-right:before {
-  content: "\f0a9";
-}
-
-/* line 194, ../../src/scss/_fonts.scss */
-.icon-circle-arrow-up:before {
-  content: "\f0aa";
-}
-
-/* line 195, ../../src/scss/_fonts.scss */
-.icon-circle-arrow-down:before {
-  content: "\f0ab";
-}
-
-/* line 196, ../../src/scss/_fonts.scss */
-.icon-globe:before {
-  content: "\f0ac";
-}
-
-/* line 197, ../../src/scss/_fonts.scss */
-.icon-wrench:before {
-  content: "\f0ad";
-}
-
-/* line 198, ../../src/scss/_fonts.scss */
-.icon-tasks:before {
-  content: "\f0ae";
-}
-
-/* line 199, ../../src/scss/_fonts.scss */
-.icon-filter:before {
-  content: "\f0b0";
-}
-
-/* line 200, ../../src/scss/_fonts.scss */
-.icon-briefcase:before {
-  content: "\f0b1";
-}
-
-/* line 201, ../../src/scss/_fonts.scss */
-.icon-fullscreen:before {
-  content: "\f0b2";
-}
-
-/* line 202, ../../src/scss/_fonts.scss */
-.icon-group:before {
-  content: "\f0c0";
-}
-
-/* line 203, ../../src/scss/_fonts.scss */
-.icon-link:before {
-  content: "\f0c1";
-}
-
-/* line 204, ../../src/scss/_fonts.scss */
-.icon-cloud:before {
-  content: "\f0c2";
-}
-
-/* line 205, ../../src/scss/_fonts.scss */
-.icon-beaker:before {
-  content: "\f0c3";
-}
-
-/* line 206, ../../src/scss/_fonts.scss */
-.icon-cut:before {
-  content: "\f0c4";
-}
-
-/* line 207, ../../src/scss/_fonts.scss */
-.icon-copy:before {
-  content: "\f0c5";
-}
-
-/* line 208, ../../src/scss/_fonts.scss */
-.icon-paper-clip:before {
-  content: "\f0c6";
-}
-
-/* line 209, ../../src/scss/_fonts.scss */
-.icon-save:before {
-  content: "\f0c7";
-}
-
-/* line 210, ../../src/scss/_fonts.scss */
-.icon-sign-blank:before {
-  content: "\f0c8";
-}
-
-/* line 211, ../../src/scss/_fonts.scss */
-.icon-reorder:before {
-  content: "\f0c9";
-}
-
-/* line 212, ../../src/scss/_fonts.scss */
-.icon-list-ul:before {
-  content: "\f0ca";
-}
-
-/* line 213, ../../src/scss/_fonts.scss */
-.icon-list-ol:before {
-  content: "\f0cb";
-}
-
-/* line 214, ../../src/scss/_fonts.scss */
-.icon-strikethrough:before {
-  content: "\f0cc";
-}
-
-/* line 215, ../../src/scss/_fonts.scss */
-.icon-underline:before {
-  content: "\f0cd";
-}
-
-/* line 216, ../../src/scss/_fonts.scss */
-.icon-table:before {
-  content: "\f0ce";
-}
-
-/* line 217, ../../src/scss/_fonts.scss */
-.icon-magic:before {
-  content: "\f0d0";
-}
-
-/* line 218, ../../src/scss/_fonts.scss */
-.icon-truck:before {
-  content: "\f0d1";
-}
-
-/* line 219, ../../src/scss/_fonts.scss */
-.icon-pinterest:before {
-  content: "\f0d2";
-}
-
-/* line 220, ../../src/scss/_fonts.scss */
-.icon-pinterest-sign:before {
-  content: "\f0d3";
-}
-
-/* line 221, ../../src/scss/_fonts.scss */
-.icon-google-plus-sign:before {
-  content: "\f0d4";
-}
-
-/* line 222, ../../src/scss/_fonts.scss */
-.icon-google-plus:before {
-  content: "\f0d5";
-}
-
-/* line 223, ../../src/scss/_fonts.scss */
-.icon-money:before {
-  content: "\f0d6";
-}
-
-/* line 224, ../../src/scss/_fonts.scss */
-.icon-caret-down:before {
-  content: "\f0d7";
-}
-
-/* line 225, ../../src/scss/_fonts.scss */
-.icon-caret-up:before {
-  content: "\f0d8";
-}
-
-/* line 226, ../../src/scss/_fonts.scss */
-.icon-caret-left:before {
-  content: "\f0d9";
-}
-
-/* line 227, ../../src/scss/_fonts.scss */
-.icon-caret-right:before {
-  content: "\f0da";
-}
-
-/* line 228, ../../src/scss/_fonts.scss */
-.icon-columns:before {
-  content: "\f0db";
-}
-
-/* line 229, ../../src/scss/_fonts.scss */
-.icon-sort:before {
-  content: "\f0dc";
-}
-
-/* line 230, ../../src/scss/_fonts.scss */
-.icon-sort-down:before {
-  content: "\f0dd";
-}
-
-/* line 231, ../../src/scss/_fonts.scss */
-.icon-sort-up:before {
-  content: "\f0de";
-}
-
-/* line 232, ../../src/scss/_fonts.scss */
-.icon-envelope-alt:before {
-  content: "\f0e0";
-}
-
-/* line 233, ../../src/scss/_fonts.scss */
-.icon-linkedin:before {
-  content: "\f0e1";
-}
-
-/* line 234, ../../src/scss/_fonts.scss */
-.icon-undo:before {
-  content: "\f0e2";
-}
-
-/* line 235, ../../src/scss/_fonts.scss */
-.icon-legal:before {
-  content: "\f0e3";
-}
-
-/* line 236, ../../src/scss/_fonts.scss */
-.icon-dashboard:before {
-  content: "\f0e4";
-}
-
-/* line 237, ../../src/scss/_fonts.scss */
-.icon-comment-alt:before {
-  content: "\f0e5";
-}
-
-/* line 238, ../../src/scss/_fonts.scss */
-.icon-comments-alt:before {
-  content: "\f0e6";
-}
-
-/* line 239, ../../src/scss/_fonts.scss */
-.icon-bolt:before {
-  content: "\f0e7";
-}
-
-/* line 240, ../../src/scss/_fonts.scss */
-.icon-sitemap:before {
-  content: "\f0e8";
-}
-
-/* line 241, ../../src/scss/_fonts.scss */
-.icon-umbrella:before {
-  content: "\f0e9";
-}
-
-/* line 242, ../../src/scss/_fonts.scss */
-.icon-paste:before {
-  content: "\f0ea";
-}
-
-/* line 243, ../../src/scss/_fonts.scss */
-.icon-lightbulb:before {
-  content: "\f0eb";
-}
-
-/* line 244, ../../src/scss/_fonts.scss */
-.icon-exchange:before {
-  content: "\f0ec";
-}
-
-/* line 245, ../../src/scss/_fonts.scss */
-.icon-cloud-download:before {
-  content: "\f0ed";
-}
-
-/* line 246, ../../src/scss/_fonts.scss */
-.icon-cloud-upload:before {
-  content: "\f0ee";
-}
-
-/* line 247, ../../src/scss/_fonts.scss */
-.icon-user-md:before {
-  content: "\f0f0";
-}
-
-/* line 248, ../../src/scss/_fonts.scss */
-.icon-stethoscope:before {
-  content: "\f0f1";
-}
-
-/* line 249, ../../src/scss/_fonts.scss */
-.icon-suitcase:before {
-  content: "\f0f2";
-}
-
-/* line 250, ../../src/scss/_fonts.scss */
-.icon-bell-alt:before {
-  content: "\f0f3";
-}
-
-/* line 251, ../../src/scss/_fonts.scss */
-.icon-coffee:before {
-  content: "\f0f4";
-}
-
-/* line 252, ../../src/scss/_fonts.scss */
-.icon-food:before {
-  content: "\f0f5";
-}
-
-/* line 253, ../../src/scss/_fonts.scss */
-.icon-file-alt:before {
-  content: "\f0f6";
-}
-
-/* line 254, ../../src/scss/_fonts.scss */
-.icon-building:before {
-  content: "\f0f7";
-}
-
-/* line 255, ../../src/scss/_fonts.scss */
-.icon-hospital:before {
-  content: "\f0f8";
-}
-
-/* line 256, ../../src/scss/_fonts.scss */
-.icon-ambulance:before {
-  content: "\f0f9";
-}
-
-/* line 257, ../../src/scss/_fonts.scss */
-.icon-medkit:before {
-  content: "\f0fa";
-}
-
-/* line 258, ../../src/scss/_fonts.scss */
-.icon-fighter-jet:before {
-  content: "\f0fb";
-}
-
-/* line 259, ../../src/scss/_fonts.scss */
-.icon-beer:before {
-  content: "\f0fc";
-}
-
-/* line 260, ../../src/scss/_fonts.scss */
-.icon-h-sign:before {
-  content: "\f0fd";
-}
-
-/* line 261, ../../src/scss/_fonts.scss */
-.icon-plus-sign-alt:before {
-  content: "\f0fe";
-}
-
-/* line 262, ../../src/scss/_fonts.scss */
-.icon-double-angle-left:before {
-  content: "\f100";
-}
-
-/* line 263, ../../src/scss/_fonts.scss */
-.icon-double-angle-right:before {
-  content: "\f101";
-}
-
-/* line 264, ../../src/scss/_fonts.scss */
-.icon-double-angle-up:before {
-  content: "\f102";
-}
-
-/* line 265, ../../src/scss/_fonts.scss */
-.icon-double-angle-down:before {
-  content: "\f103";
-}
-
-/* line 266, ../../src/scss/_fonts.scss */
-.icon-angle-left:before {
-  content: "\f104";
-}
-
-/* line 267, ../../src/scss/_fonts.scss */
-.icon-angle-right:before {
-  content: "\f105";
-}
-
-/* line 268, ../../src/scss/_fonts.scss */
-.icon-angle-up:before {
-  content: "\f106";
-}
-
-/* line 269, ../../src/scss/_fonts.scss */
-.icon-angle-down:before {
-  content: "\f107";
-}
-
-/* line 270, ../../src/scss/_fonts.scss */
-.icon-desktop:before {
-  content: "\f108";
-}
-
-/* line 271, ../../src/scss/_fonts.scss */
-.icon-laptop:before {
-  content: "\f109";
-}
-
-/* line 272, ../../src/scss/_fonts.scss */
-.icon-tablet:before {
-  content: "\f10a";
-}
-
-/* line 273, ../../src/scss/_fonts.scss */
-.icon-mobile-phone:before {
-  content: "\f10b";
-}
-
-/* line 274, ../../src/scss/_fonts.scss */
-.icon-circle-blank:before {
-  content: "\f10c";
-}
-
-/* line 275, ../../src/scss/_fonts.scss */
-.icon-quote-left:before {
-  content: "\f10d";
-}
-
-/* line 276, ../../src/scss/_fonts.scss */
-.icon-quote-right:before {
-  content: "\f10e";
-}
-
-/* line 277, ../../src/scss/_fonts.scss */
-.icon-spinner:before {
-  content: "\f110";
-}
-
-/* line 278, ../../src/scss/_fonts.scss */
-.icon-circle:before {
-  content: "\f111";
-}
-
-/* line 279, ../../src/scss/_fonts.scss */
-.icon-reply:before {
-  content: "\f112";
-}
-
-/* line 280, ../../src/scss/_fonts.scss */
-.icon-github-alt:before {
-  content: "\f113";
-}
-
-/* line 281, ../../src/scss/_fonts.scss */
-.icon-folder-close-alt:before {
-  content: "\f114";
-}
-
-/* line 282, ../../src/scss/_fonts.scss */
-.icon-folder-open-alt:before {
-  content: "\f115";
+/* line 4, ../../src/scss/_typography.scss */
+html {
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+  font-size: 75%;
+  height: 100%;
 }
 
 /*
-	Typography
+	All elements
 */
-@media all {
-  /*
-  	All elements
-  */
-  /* line 8, ../../src/scss/_typography.scss */
-  *, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  /*
-  	The root element
-  */
-  /* line 14, ../../src/scss/_typography.scss */
-  html {
-    font-family: Tahoma, Verdana, Arial, Sans-Serif;
-    font-size: 75%;
-    height: 100%;
-  }
-
-  /*
-  	Sections
-  */
-  /* line 22, ../../src/scss/_typography.scss */
-  body {
-    font-size: 12px;
-    font-size: 1rem;
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 0px;
-    padding-left: 0rem;
-    line-height: 21.6px;
-    line-height: 1.8rem;
-    background: #eee;
-    color: #333;
-    _height: 100%;
-    min-height: 100%;
-  }
-
-  /* line 32, ../../src/scss/_typography.scss */
-  h1, h2, h3, h4, h5, h6 {
-    font-size: 12px;
-    font-size: 1rem;
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 6px;
-    margin-bottom: 0.5rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    display: block;
-    font-weight: normal;
-  }
-
-  /* line 38, ../../src/scss/_typography.scss */
-  h1 {
-    font-size: 22.5px;
-    font-size: 1.875rem;
-  }
-
-  /* line 41, ../../src/scss/_typography.scss */
-  h2 {
-    font-size: 19.5px;
-    font-size: 1.625rem;
-  }
-
-  /* line 44, ../../src/scss/_typography.scss */
-  h3 {
-    font-size: 15px;
-    font-size: 1.25rem;
-  }
-
-  /* line 47, ../../src/scss/_typography.scss */
-  address {
-    display: block;
-    font-style: normal;
-  }
-
-  /* line 51, ../../src/scss/_typography.scss */
-  section, nav, article, aside, hgroup, header, footer {
-    display: block;
-  }
-
-  /*
-  	Grouping content
-  */
-  /* line 57, ../../src/scss/_typography.scss */
-  p {
-    font-size: 12px;
-    font-size: 1rem;
-    display: block;
-  }
-
-  /* line 61, ../../src/scss/_typography.scss */
-  hr {
-    margin-top: 12px;
-    margin-top: 1rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 12px;
-    margin-bottom: 1rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    background-color: #333;
-    border: none;
-    clear: both;
-    color: #333;
-    display: block;
-    height: 1px;
-    width: 100%;
-  }
-
-  /* line 71, ../../src/scss/_typography.scss */
-  ul {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 12px;
-    margin-bottom: 1rem;
-    margin-left: 24px;
-    margin-left: 2rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 0px;
-    padding-left: 0rem;
-    display: block;
-  }
-
-  /* line 77, ../../src/scss/_typography.scss */
-  dl {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 12px;
-    margin-bottom: 1rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    display: block;
-  }
-
-  /* line 81, ../../src/scss/_typography.scss */
-  dt {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    display: block;
-    font-weight: bold;
-  }
-
-  /* line 86, ../../src/scss/_typography.scss */
-  dd {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    display: block;
-  }
-
-  /* line 90, ../../src/scss/_typography.scss */
-  pre, dialog, blockquote, ol {
-    display: block;
-  }
-
-  /*
-  	Text-level semantics
-  */
-  /* line 96, ../../src/scss/_typography.scss */
-  a {
-    color: #ff6a00;
-    text-decoration: underline;
-  }
-
-  /* line 100, ../../src/scss/_typography.scss */
-  a:hover {
-    color: #ff9800;
-    text-decoration: underline;
-  }
-
-  /* line 104, ../../src/scss/_typography.scss */
-  sub {
-    line-height: 0;
-  }
-
-  /* line 107, ../../src/scss/_typography.scss */
-  sup {
-    line-height: 0;
-  }
-
-  /* line 110, ../../src/scss/_typography.scss */
-  time, progress, meter {
-    display: block;
-  }
-
-  /*
-  	Embedded content
-  */
-  /* line 116, ../../src/scss/_typography.scss */
-  img {
-    border: none;
-    vertical-align: middle;
-  }
-
-  /* line 120, ../../src/scss/_typography.scss */
-  figure, figcaption, video, audio, canvas {
-    display: block;
-  }
-
-  /* Tabular data */
-  /* line 124, ../../src/scss/_typography.scss */
-  table {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 12px;
-    margin-bottom: 1rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    border-collapse: collapse;
-  }
-
-  /* line 128, ../../src/scss/_typography.scss */
-  caption {
-    font-size: 15px;
-    font-size: 1.25rem;
-    font-weight: bold;
-    text-align: left;
-  }
-
-  /* line 134, ../../src/scss/_typography.scss */
-  tr {
-    vertical-align: top;
-  }
-  /* line 136, ../../src/scss/_typography.scss */
-  tr:nth-child(2n) {
-    background-color: #eeeeee;
-  }
-
-  /* line 138, ../../src/scss/_typography.scss */
-  th, td {
-    padding-top: 6px;
-    padding-top: 0.5rem;
-    padding-right: 12px;
-    padding-right: 1rem;
-    padding-bottom: 6px;
-    padding-bottom: 0.5rem;
-    padding-left: 12px;
-    padding-left: 1rem;
-  }
-
-  /* line 141, ../../src/scss/_typography.scss */
-  th, th a, th a:hover {
-    background-color: #ff9800;
-    color: #fff;
-    font-weight: normal;
-    white-space: nowrap;
-    text-align: left;
-    text-decoration: none;
-  }
-
-  /*
-  	Forms
-  */
-  /* line 152, ../../src/scss/_typography.scss */
-  form {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-  }
-
-  /* line 155, ../../src/scss/_typography.scss */
-  fieldset {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 12px;
-    margin-bottom: 1rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 0px;
-    padding-left: 0rem;
-    display: block;
-    border: none;
-  }
-
-  /* line 161, ../../src/scss/_typography.scss */
-  legend {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 6px;
-    margin-bottom: 0.5rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    display: block;
-    font-weight: bold;
-  }
-
-  /* line 167, ../../src/scss/_typography.scss */
-  input, button, select, textarea {
-    font-size: 12px;
-    font-size: 1rem;
-    font-family: Tahoma, Verdana, Arial, Sans-Serif;
-    vertical-align: baseline;
-  }
-
-  /* line 172, ../../src/scss/_typography.scss */
-  input[type=color], input[type=range], input[type=number], input[type=date], input[type=text], input[type=password], input[type=email], select, textarea {
-    -webkit-box-shadow: inset 0 0 5px #cccccc;
-    -moz-box-shadow: inset 0 0 5px #cccccc;
-    box-shadow: inset 0 0 5px #cccccc;
-    height: 36px;
-    height: 3rem;
-    font-size: 12px;
-    font-size: 1rem;
-    padding: 8.4px;
-    padding: 0.7rem;
-    margin-top: 8.4px;
-    margin-top: 0.7rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 8.4px;
-    margin-bottom: 0.7rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    background: #fff;
-    border: solid 1px #333;
-    font-family: Arial, Sans-Serif;
-  }
-
-  /* line 182, ../../src/scss/_typography.scss */
-  input[type=checkbox], input[type=radio] {
-    margin-top: 8.4px;
-    margin-top: 0.7rem;
-    margin-right: 3.6px;
-    margin-right: 0.3rem;
-    margin-bottom: 8.4px;
-    margin-bottom: 0.7rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-  }
-
-  /* line 185, ../../src/scss/_typography.scss */
-  select {
-    height: 36px;
-    height: 3rem;
-    padding: 8.4px;
-    padding: 0.7rem;
-  }
-
-  /* line 189, ../../src/scss/_typography.scss */
-  textarea {
-    height: 120px;
-    height: 10rem;
-    padding: 8.4px;
-    padding: 0.7rem;
-  }
-
-  /* line 193, ../../src/scss/_typography.scss */
-  button, .button {
-    -webkit-transition-property: background-color;
-    -moz-transition-property: background-color;
-    -o-transition-property: background-color;
-    transition-property: background-color;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    height: 36px;
-    height: 3rem;
-    line-height: 36px;
-    line-height: 3rem;
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 12px;
-    padding-right: 1rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 12px;
-    padding-left: 1rem;
-    background-color: #ff6a00;
-    border: none;
-    color: #fff;
-    cursor: pointer;
-    display: inline-block;
-    overflow: visible;
-    text-decoration: none;
-  }
-  /* line 208, ../../src/scss/_typography.scss */
-  button:hover, .button:hover {
-    background-color: #ff9800;
-    color: #fff;
-    text-decoration: none;
-  }
-  /* line 213, ../../src/scss/_typography.scss */
-  button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
-    background-color: #7f7f7f;
-  }
-
-  /*
-  	Interactive elements
-  */
-  /* line 220, ../../src/scss/_typography.scss */
-  menu {
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 0px;
-    margin-left: 0rem;
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 0px;
-    padding-left: 0rem;
-    display: block;
-  }
-
-  /*
-  	Miscellaneous elements
-  */
-  /* line 228, ../../src/scss/_typography.scss */
-  div {
-    display: block;
-  }
+/* line 12, ../../src/scss/_typography.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+
+/*
+	Sections
+*/
+/* line 18, ../../src/scss/_typography.scss */
+body {
+  font-size: 12px;
+  font-size: 1rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  line-height: 21.6px;
+  line-height: 1.8rem;
+  background: #eee;
+  color: #333;
+  _height: 100%;
+  min-height: 100%;
+}
+
+/* line 28, ../../src/scss/_typography.scss */
+h1, h2, h3, h4, h5, h6 {
+  font-size: 12px;
+  font-size: 1rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  display: block;
+  font-weight: normal;
+}
+
+/* line 34, ../../src/scss/_typography.scss */
+h1 {
+  font-size: 22.5px;
+  font-size: 1.875rem;
+}
+
+/* line 37, ../../src/scss/_typography.scss */
+h2 {
+  font-size: 19.5px;
+  font-size: 1.625rem;
+}
+
+/* line 40, ../../src/scss/_typography.scss */
+h3 {
+  font-size: 15px;
+  font-size: 1.25rem;
+}
+
+/* line 43, ../../src/scss/_typography.scss */
+address {
+  display: block;
+  font-style: normal;
+}
+
+/* line 47, ../../src/scss/_typography.scss */
+section, nav, article, aside, hgroup, header, footer {
+  display: block;
+}
+
+/*
+	Grouping content
+*/
+/* line 53, ../../src/scss/_typography.scss */
+p {
+  font-size: 12px;
+  font-size: 1rem;
+  display: block;
+}
+
+/* line 57, ../../src/scss/_typography.scss */
+hr {
+  margin-top: 12px;
+  margin-top: 1rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  background-color: #333;
+  border: none;
+  clear: both;
+  color: #333;
+  display: block;
+  height: 1px;
+  width: 100%;
+}
+
+/* line 67, ../../src/scss/_typography.scss */
+ul {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  margin-left: 24px;
+  margin-left: 2rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  display: block;
+}
+
+/* line 73, ../../src/scss/_typography.scss */
+dl {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  display: block;
+}
+
+/* line 77, ../../src/scss/_typography.scss */
+dt {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  display: block;
+  font-weight: bold;
+}
+
+/* line 82, ../../src/scss/_typography.scss */
+dd {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  display: block;
+}
+
+/* line 86, ../../src/scss/_typography.scss */
+pre, blockquote, ol {
+  display: block;
+}
+
+/*
+	Text-level semantics
+*/
+/* line 92, ../../src/scss/_typography.scss */
+a {
+  color: #ff6a00;
+  text-decoration: underline;
+}
+
+/* line 96, ../../src/scss/_typography.scss */
+a:hover {
+  color: #ff9800;
+  text-decoration: underline;
+}
+
+/* line 100, ../../src/scss/_typography.scss */
+sub {
+  line-height: 0;
+}
+
+/* line 103, ../../src/scss/_typography.scss */
+sup {
+  line-height: 0;
+}
+
+/* line 106, ../../src/scss/_typography.scss */
+time, progress, meter {
+  display: block;
+}
+
+/*
+	Embedded content
+*/
+/* line 112, ../../src/scss/_typography.scss */
+img {
+  border: none;
+  vertical-align: middle;
+}
+
+/* line 116, ../../src/scss/_typography.scss */
+figure, figcaption, video, audio, canvas {
+  display: block;
+}
+
+/* Tabular data */
+/* line 120, ../../src/scss/_typography.scss */
+table {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  border-collapse: collapse;
+}
+
+/* line 124, ../../src/scss/_typography.scss */
+caption {
+  font-size: 15px;
+  font-size: 1.25rem;
+  font-weight: bold;
+  text-align: left;
+}
+
+/* line 130, ../../src/scss/_typography.scss */
+tr {
+  vertical-align: top;
+}
+/* line 132, ../../src/scss/_typography.scss */
+tr:nth-child(2n) {
+  background-color: #eeeeee;
+}
+
+/* line 134, ../../src/scss/_typography.scss */
+th, td {
+  padding-top: 6px;
+  padding-top: 0.5rem;
+  padding-right: 12px;
+  padding-right: 1rem;
+  padding-bottom: 6px;
+  padding-bottom: 0.5rem;
+  padding-left: 12px;
+  padding-left: 1rem;
+}
+
+/* line 137, ../../src/scss/_typography.scss */
+th, th a, th a:hover {
+  background-color: #ff9800;
+  color: #fff;
+  font-weight: normal;
+  white-space: nowrap;
+  text-align: left;
+  text-decoration: none;
+}
+
+/*
+	Forms
+*/
+/* line 148, ../../src/scss/_typography.scss */
+form {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+}
+
+/* line 151, ../../src/scss/_typography.scss */
+fieldset {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 12px;
+  margin-bottom: 1rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  display: block;
+  border: none;
+}
+
+/* line 157, ../../src/scss/_typography.scss */
+legend {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 6px;
+  margin-bottom: 0.5rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  display: block;
+  font-weight: bold;
+}
+
+/* line 163, ../../src/scss/_typography.scss */
+input, button, select, textarea {
+  font-size: 12px;
+  font-size: 1rem;
+  font-family: Tahoma, Verdana, Arial, Sans-Serif;
+  vertical-align: baseline;
+}
+
+/* line 168, ../../src/scss/_typography.scss */
+input[type=date], input[type=email], input[type=number], input[type=text], input[type=password], select, textarea {
+  box-shadow: inset 0 0 5px #cccccc;
+  height: 36px;
+  height: 3rem;
+  font-size: 12px;
+  font-size: 1rem;
+  padding: 8.4px;
+  padding: 0.7rem;
+  margin-top: 8.4px;
+  margin-top: 0.7rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 8.4px;
+  margin-bottom: 0.7rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  background: #fff;
+  border: solid 1px #333;
+  font-family: Arial, Sans-Serif;
+}
+
+/* line 178, ../../src/scss/_typography.scss */
+input[type=checkbox], input[type=radio] {
+  margin-top: 8.4px;
+  margin-top: 0.7rem;
+  margin-right: 3.6px;
+  margin-right: 0.3rem;
+  margin-bottom: 8.4px;
+  margin-bottom: 0.7rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+}
+
+/* line 181, ../../src/scss/_typography.scss */
+select {
+  height: 36px;
+  height: 3rem;
+  padding: 8.4px;
+  padding: 0.7rem;
+}
+
+/* line 185, ../../src/scss/_typography.scss */
+textarea {
+  height: 120px;
+  height: 10rem;
+  padding: 8.4px;
+  padding: 0.7rem;
+}
+
+/* line 189, ../../src/scss/_typography.scss */
+button, .button {
+  -webkit-transition-property: background-color;
+  transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  height: 36px;
+  height: 3rem;
+  line-height: 36px;
+  line-height: 3rem;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 12px;
+  padding-right: 1rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 12px;
+  padding-left: 1rem;
+  background-color: #ff6a00;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  overflow: visible;
+  text-decoration: none;
+}
+/* line 204, ../../src/scss/_typography.scss */
+button:hover, .button:hover {
+  background-color: #ff9800;
+  color: #fff;
+  text-decoration: none;
+}
+/* line 209, ../../src/scss/_typography.scss */
+button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
+  background-color: #7f7f7f;
+}
+
+/*
+	Interactive elements
+*/
+/* line 216, ../../src/scss/_typography.scss */
+menu {
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 0px;
+  margin-left: 0rem;
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  display: block;
+}
+
+/*
+	Miscellaneous elements
+*/
+/* line 224, ../../src/scss/_typography.scss */
+div {
+  display: block;
+}
+
+/*
+	For smaller screens
+*/
 @media (max-width: 480px) {
-  /* line 237, ../../src/scss/_typography.scss */
+  /* line 231, ../../src/scss/_typography.scss */
   html {
     font-size: 62.5%;
   }
 }
 /*
-	Miscellaneous
+	Clear fix
 */
-@media all {
-  /*
-  	Clear fix
-  */
-  /* line 10, ../../src/scss/_miscellaneous.scss */
-  .clearfix {
-    *zoom: 1;
-  }
-
-  /* line 13, ../../src/scss/_miscellaneous.scss */
-  .clearfix:after {
-    clear: both;
-    content: ' ';
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
-
-  /*
-  	Box sizing
-  */
-  /* line 24, ../../src/scss/_miscellaneous.scss */
-  *, *:before, *:after {
-    -webkit-box-sizing: border-box;
-    -moz-box-sizing: border-box;
-    box-sizing: border-box;
-  }
-
-  /*
-  	Bicubic image scaling
-  */
-  /* line 30, ../../src/scss/_miscellaneous.scss */
-  img {
-    -ms-interpolation-mode: bicubic;
-  }
-
-  /*
-  	Circumvents some issues with button rendering
-  */
-  /* line 36, ../../src/scss/_miscellaneous.scss */
-  button {
-    overflow: visible;
-  }
-
-  /* line 39, ../../src/scss/_miscellaneous.scss */
-  button::-moz-focus-inner {
-    border: 0;
-    padding: 0;
-  }
-
-  /*
-  	Transparent Backdrop
-  */
-  /* line 46, ../../src/scss/_miscellaneous.scss */
-  .backdrop {
-    background-color: rgba(0, 0, 0, 0.5);
-    filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000');
-  }
-
-  /*
-  	Text-shadow
-  */
-  /* line 53, ../../src/scss/_miscellaneous.scss */
-  .textshadow {
-    text-shadow: 1px 2px 2px #000;
-    filter: DropShadow(Color=black, OffX=1, OffY=2);
-  }
+/* line 6, ../../src/scss/_miscellaneous.scss */
+.clearfix {
+  *zoom: 1;
 }
+
+/* line 9, ../../src/scss/_miscellaneous.scss */
+.clearfix:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
 /*
-	Layout
+	Box sizing
 */
-@media all {
-              /*
-	Sprites
-	Example: @include icons-sprite(pdf);
-$icons-spacing : 20px;
-@import "icons/*.png";
-*/
-  /*
-  	central Page
-  */
-  /* line 16, ../../src/scss/_layout.scss */
-  body {
-    background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(256px, #cccccc), color-stop(100%, #cccccc)) no-repeat;
-    background: #cccccc -webkit-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
-    background: #cccccc -moz-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
-    background: #cccccc -o-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
-    background: #cccccc linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
-  }
-  /* line 18, ../../src/scss/_layout.scss */
-  body > section {
-    -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
-    box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
-    background: #fff;
-    border-left: solid 1px #e4e4e4;
-    border-right: solid 1px #e4e4e4;
-    margin: 0 auto 0 auto;
-    position: relative;
-    max-width: 960px;
-    min-width: 320px;
-  }
-  /* line 27, ../../src/scss/_layout.scss */
-  body > section > header {
-    filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
-    opacity: 0.9;
-    background: #333333 url(../img/documentHeader.jpg) 0px -100px;
-    height: 96px;
-    margin: 0 0 36px 0;
-    position: relative;
-  }
-  /* line 33, ../../src/scss/_layout.scss */
-  body > section > header .hgroup {
-    line-height: 230%;
-    padding: 15px 30px 0 30px;
-    text-align: right;
-  }
-  /* line 37, ../../src/scss/_layout.scss */
-  body > section > header .hgroup h1 {
-    color: #fff;
-    font-weight: bold;
-    text-shadow: 1px 2px 2px #000;
-    filter: DropShadow(Color=black, OffX=1, OffY=2);
-  }
-  /* line 43, ../../src/scss/_layout.scss */
-  body > section > header .hgroup h2 {
-    color: #fff;
-    font-weight: normal;
-    text-shadow: 1px 2px 2px #000;
-    filter: DropShadow(Color=black, OffX=1, OffY=2);
-  }
-  /* line 51, ../../src/scss/_layout.scss */
-  body > section > article {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 24px;
-    padding-right: 2rem;
-    padding-bottom: 12px;
-    padding-bottom: 1rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
-    display: block;
-  }
-  /* line 55, ../../src/scss/_layout.scss */
-  body > section > article img.demoIcon {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 0 5px #333333;
-    -moz-box-shadow: 0 0 5px #333333;
-    box-shadow: 0 0 5px #333333;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    margin-top: 0px;
-    margin-top: 0rem;
-    margin-right: 0px;
-    margin-right: 0rem;
-    margin-bottom: 0px;
-    margin-bottom: 0rem;
-    margin-left: 12px;
-    margin-left: 1rem;
-    background: #fff;
-    border: solid 1px #000;
-    float: right;
-    height: 64px;
-    width: 64px;
-  }
-  /* line 69, ../../src/scss/_layout.scss */
-  body > section > footer {
-    clear: both;
-    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
-    height: 60px;
-    line-height: 60px;
-    position: relative;
-  }
-  /* line 75, ../../src/scss/_layout.scss */
-  body > section > footer ul {
-    margin: 0;
-    padding: 0 3%;
-  }
-  /* line 78, ../../src/scss/_layout.scss */
-  body > section > footer ul li {
-    display: inline;
-    list-style-type: none;
-  }
-  /* line 82, ../../src/scss/_layout.scss */
-  body > section > footer ul li a img {
-    margin-right: 1em;
-    vertical-align: middle;
-  }
+/* line 20, ../../src/scss/_miscellaneous.scss */
+*, *:before, *:after {
+  box-sizing: border-box;
 }
+
+/*
+	Bicubic image scaling
+*/
+/* line 26, ../../src/scss/_miscellaneous.scss */
+img {
+  -ms-interpolation-mode: bicubic;
+}
+
+/*
+	Circumvents some issues with button rendering
+*/
+/* line 32, ../../src/scss/_miscellaneous.scss */
+button {
+  overflow: visible;
+}
+
+/* line 35, ../../src/scss/_miscellaneous.scss */
+button::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*
+	Transparent Backdrop
+*/
+/* line 42, ../../src/scss/_miscellaneous.scss */
+.backdrop {
+  background-color: rgba(0, 0, 0, 0.5);
+  filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#80000000', endColorstr='#80000000');
+}
+
+/*
+	Text-shadow
+*/
+/* line 49, ../../src/scss/_miscellaneous.scss */
+.textshadow {
+  text-shadow: 1px 2px 2px #000;
+  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
+          filter: DropShadow(Color=black, OffX=1, OffY=2);
+}
+
+/*
+	central Page
+*/
+/* line 6, ../../src/scss/_layout.scss */
+body {
+  background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(256px, #cccccc), color-stop(100%, #cccccc)) no-repeat;
+  background: #cccccc -webkit-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+  background: #cccccc linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+}
+
+/* line 9, ../../src/scss/_layout.scss */
+#layout {
+  box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
+  background: #fff;
+  border-left: solid 1px #e4e4e4;
+  border-right: solid 1px #e4e4e4;
+  margin: 0 auto 0 auto;
+  position: relative;
+  max-width: 960px;
+  min-width: 320px;
+}
+/* line 18, ../../src/scss/_layout.scss */
+#layout > article {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 24px;
+  padding-right: 2rem;
+  padding-bottom: 12px;
+  padding-bottom: 1rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  display: block;
+}
+/* line 22, ../../src/scss/_layout.scss */
+#layout > article img.demoIcon {
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #333333;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  margin-top: 0px;
+  margin-top: 0rem;
+  margin-right: 0px;
+  margin-right: 0rem;
+  margin-bottom: 0px;
+  margin-bottom: 0rem;
+  margin-left: 12px;
+  margin-left: 1rem;
+  background: #fff;
+  border: solid 1px #000;
+  float: right;
+  height: 64px;
+  width: 64px;
+}
+
+/*
+	header bar
+*/
+/* line 40, ../../src/scss/_layout.scss */
+#masthead {
+  filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
+  opacity: 0.9;
+  background: #333333 url(../img/documentHeader.jpg) 0px -100px;
+  height: 96px;
+  margin: 0 0 36px 0;
+  position: relative;
+}
+/* line 46, ../../src/scss/_layout.scss */
+#masthead .hgroup {
+  line-height: 230%;
+  padding: 15px 30px 0 30px;
+  text-align: right;
+}
+/* line 50, ../../src/scss/_layout.scss */
+#masthead .hgroup h1 {
+  color: #fff;
+  font-weight: bold;
+  text-shadow: 1px 2px 2px #000;
+  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
+          filter: DropShadow(Color=black, OffX=1, OffY=2);
+}
+/* line 56, ../../src/scss/_layout.scss */
+#masthead .hgroup h2 {
+  color: #fff;
+  font-weight: normal;
+  text-shadow: 1px 2px 2px #000;
+  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
+          filter: DropShadow(Color=black, OffX=1, OffY=2);
+}
+
+/*
+	footer bar
+*/
+/* line 67, ../../src/scss/_layout.scss */
+#footnotes {
+  clear: both;
+  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  height: 60px;
+  line-height: 60px;
+  position: relative;
+}
+/* line 73, ../../src/scss/_layout.scss */
+#footnotes ul {
+  margin: 0;
+  padding: 0 3%;
+}
+/* line 76, ../../src/scss/_layout.scss */
+#footnotes ul li {
+  display: inline;
+  list-style-type: none;
+}
+/* line 80, ../../src/scss/_layout.scss */
+#footnotes ul li a img {
+  margin-right: 1em;
+  vertical-align: middle;
+}
+
+/*
+	print styles
+*/
 @media print {
-  /* line 101, ../../src/scss/_layout.scss */
+  /* line 94, ../../src/scss/_layout.scss */
   body > section > header,
   body > section > footer {
     display: none;
   }
 }
 /*
-	Examples
+	example with the default aside
 */
-@media all {
-  /* line 7, ../../src/scss/_examples.scss */
-  body {
-    /*
-    	example with the default aside
-    */
-    /*
-    	example with the smaller aside on the left
-    */
-    /*
-    	example with the smaller aside on the right
-    */
-    /*
-    	example with the smaller aside on the right
-    */
-    /*
-    	example without the aside
-    */
-  }
-  /* line 11, ../../src/scss/_examples.scss */
-  body section.example {
-    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
-    display: block;
-    *zoom: 1;
-  }
-  /* line 15, ../../src/scss/_examples.scss */
-  body section.example > article {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 24px;
-    padding-right: 2rem;
-    padding-bottom: 24px;
-    padding-bottom: 2rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    display: block;
-    float: right;
-    width: 50%;
-  }
-  /* line 21, ../../src/scss/_examples.scss */
-  body section.example > article p {
-    text-align: justify;
-  }
-  /* line 25, ../../src/scss/_examples.scss */
-  body section.example > aside {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 24px;
-    padding-bottom: 2rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    display: block;
-    float: left;
-    width: 50%;
-  }
-  /* line 32, ../../src/scss/_examples.scss */
-  body section.example:after {
-    clear: both;
-    content: ' ';
-    display: block;
-    font-size: 0;
-    height: 0;
-    visibility: hidden;
-  }
-  /* line 43, ../../src/scss/_examples.scss */
-  body section.example-left {
-    background: white url(../img/texture_shadow_top.png) no-repeat -480px 0;
-  }
-  /* line 45, ../../src/scss/_examples.scss */
-  body section.example-left > article {
-    float: right;
-  }
-  /* line 48, ../../src/scss/_examples.scss */
-  body section.example-left > aside {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 0px;
-    padding-right: 0rem;
-    padding-bottom: 24px;
-    padding-bottom: 2rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    float: left;
-  }
-  /* line 56, ../../src/scss/_examples.scss */
-  body section.example-right {
-    background: white url(../img/texture_shadow_top.png) no-repeat 480px 0;
-  }
-  /* line 58, ../../src/scss/_examples.scss */
-  body section.example-right > article {
-    float: left;
-  }
-  /* line 61, ../../src/scss/_examples.scss */
-  body section.example-right > aside {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 24px;
-    padding-right: 2rem;
-    padding-bottom: 24px;
-    padding-bottom: 2rem;
-    padding-left: 0px;
-    padding-left: 0rem;
-    float: right;
-  }
-  /* line 69, ../../src/scss/_examples.scss */
-  body section.example-full {
-    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
-  }
-  /* line 71, ../../src/scss/_examples.scss */
-  body section.example-full > article {
-    padding-top: 24px;
-    padding-top: 2rem;
-    padding-right: 24px;
-    padding-right: 2rem;
-    padding-bottom: 0px;
-    padding-bottom: 0rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    float: none;
-    width: 100%;
-  }
-  /* line 76, ../../src/scss/_examples.scss */
-  body section.example-full > aside {
-    padding-top: 0px;
-    padding-top: 0rem;
-    padding-right: 24px;
-    padding-right: 2rem;
-    padding-bottom: 24px;
-    padding-bottom: 2rem;
-    padding-left: 24px;
-    padding-left: 2rem;
-    float: none;
-    width: 100%;
-  }
-  /* line 85, ../../src/scss/_examples.scss */
-  body section.example-no {
-    background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
-  }
-  /* line 87, ../../src/scss/_examples.scss */
-  body section.example-no > article {
-    float: left;
-    width: 100%;
-  }
+/* line 6, ../../src/scss/_examples.scss */
+section.example {
+  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  display: block;
+  *zoom: 1;
 }
+/* line 10, ../../src/scss/_examples.scss */
+section.example > article {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 24px;
+  padding-right: 2rem;
+  padding-bottom: 24px;
+  padding-bottom: 2rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  display: block;
+  float: right;
+  width: 50%;
+}
+/* line 16, ../../src/scss/_examples.scss */
+section.example > article p {
+  text-align: justify;
+}
+/* line 20, ../../src/scss/_examples.scss */
+section.example > aside {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 24px;
+  padding-bottom: 2rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  display: block;
+  float: left;
+  width: 50%;
+}
+
+/* line 27, ../../src/scss/_examples.scss */
+section.example:after {
+  clear: both;
+  content: ' ';
+  display: block;
+  font-size: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+/*
+	example with the smaller aside on the left
+*/
+/* line 38, ../../src/scss/_examples.scss */
+section.example-left {
+  background: white url(../img/texture_shadow_top.png) no-repeat -480px 0;
+}
+/* line 40, ../../src/scss/_examples.scss */
+section.example-left > article {
+  float: right;
+}
+/* line 43, ../../src/scss/_examples.scss */
+section.example-left > aside {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 0px;
+  padding-right: 0rem;
+  padding-bottom: 24px;
+  padding-bottom: 2rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  float: left;
+}
+
+/*
+	example with the smaller aside on the right
+*/
+/* line 51, ../../src/scss/_examples.scss */
+section.example-right {
+  background: white url(../img/texture_shadow_top.png) no-repeat 480px 0;
+}
+/* line 53, ../../src/scss/_examples.scss */
+section.example-right > article {
+  float: left;
+}
+/* line 56, ../../src/scss/_examples.scss */
+section.example-right > aside {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 24px;
+  padding-right: 2rem;
+  padding-bottom: 24px;
+  padding-bottom: 2rem;
+  padding-left: 0px;
+  padding-left: 0rem;
+  float: right;
+}
+
+/*
+	example with the smaller aside on the right
+*/
+/* line 64, ../../src/scss/_examples.scss */
+section.example-full {
+  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+}
+/* line 66, ../../src/scss/_examples.scss */
+section.example-full > article {
+  padding-top: 24px;
+  padding-top: 2rem;
+  padding-right: 24px;
+  padding-right: 2rem;
+  padding-bottom: 0px;
+  padding-bottom: 0rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  float: none;
+  width: 100%;
+}
+/* line 71, ../../src/scss/_examples.scss */
+section.example-full > aside {
+  padding-top: 0px;
+  padding-top: 0rem;
+  padding-right: 24px;
+  padding-right: 2rem;
+  padding-bottom: 24px;
+  padding-bottom: 2rem;
+  padding-left: 24px;
+  padding-left: 2rem;
+  float: none;
+  width: 100%;
+}
+
+/*
+	example without the aside
+*/
+/* line 80, ../../src/scss/_examples.scss */
+section.example-no {
+  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+}
+/* line 82, ../../src/scss/_examples.scss */
+section.example-no > article {
+  float: left;
+  width: 100%;
+}
+
+/*
+	for smaller screens
+*/
 @media (max-width: 767px) {
-  /* line 99, ../../src/scss/_examples.scss */
-  body section.example > article {
+  /* line 91, ../../src/scss/_examples.scss */
+  section.example > article {
     padding-top: 24px;
     padding-top: 2rem;
     padding-right: 24px;
@@ -2184,8 +902,9 @@ $icons-spacing : 20px;
     float: none;
     width: 100%;
   }
-  /* line 104, ../../src/scss/_examples.scss */
-  body section.example > aside {
+
+  /* line 96, ../../src/scss/_examples.scss */
+  section.example > aside {
     padding-top: 24px;
     padding-top: 2rem;
     padding-right: 24px;
@@ -2199,170 +918,138 @@ $icons-spacing : 20px;
   }
 }
 /*
-	Navigation
+	navigation
 */
-@media all {
-  /*
-  	navigation
-  */
-  /* line 12, ../../src/scss/_navigation.scss */
-  body > section > nav {
-    -webkit-box-shadow: 0 1px 3px #999999;
-    -moz-box-shadow: 0 1px 3px #999999;
-    box-shadow: 0 1px 3px #999999;
-    -webkit-transition-property: max-height;
-    -moz-transition-property: max-height;
-    -o-transition-property: max-height;
-    transition-property: max-height;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    background: #333333 url(../img/documentHeader.jpg) 0px -196px;
-    overflow: hidden;
-    position: absolute;
-    top: 96px;
-    max-width: 960px;
-    z-index: 10000;
-  }
-  /* line 23, ../../src/scss/_navigation.scss */
-  body > section > nav menu {
-    max-height: 240px;
-    margin: 36px 0 36px 0;
-    overflow: auto;
-    overflow-x: hidden;
-    -webkit-overflow-scrolling: touch;
-    padding: 15px 0 15px 15px;
-  }
-  /* line 30, ../../src/scss/_navigation.scss */
-  body > section > nav menu li {
-    float: left;
-    height: 100px;
-    list-style-type: none;
-    margin-right: 15px;
-    overflow: visible;
-    text-align: center;
-    width: 88px;
-  }
-  /* line 38, ../../src/scss/_navigation.scss */
-  body > section > nav menu li a {
-    color: #fff;
-    font-weight: normal;
-    text-decoration: none;
-    text-shadow: 0 0 1px #333;
-  }
-  /* line 43, ../../src/scss/_navigation.scss */
-  body > section > nav menu li a img {
-    -webkit-border-radius: 3px;
-    -moz-border-radius: 3px;
-    -ms-border-radius: 3px;
-    -o-border-radius: 3px;
-    border-radius: 3px;
-    -webkit-box-shadow: 0 0 5px #333333;
-    -moz-box-shadow: 0 0 5px #333333;
-    box-shadow: 0 0 5px #333333;
-    -webkit-transition-property: all;
-    -moz-transition-property: all;
-    -o-transition-property: all;
-    transition-property: all;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    background: #fff;
-    border: solid 1px #000;
-    height: 64px;
-    width: 64px;
-  }
-  /* line 54, ../../src/scss/_navigation.scss */
-  body > section > nav menu li a span {
-    display: block;
-  }
-  /* line 58, ../../src/scss/_navigation.scss */
-  body > section > nav menu li a:hover {
-    color: #fff;
-    text-decoration: none;
-    text-shadow: 0 0 5px #fff;
-  }
-  /* line 62, ../../src/scss/_navigation.scss */
-  body > section > nav menu li a:hover img {
-    -webkit-box-shadow: 0 0 5px white;
-    -moz-box-shadow: 0 0 5px white;
-    box-shadow: 0 0 5px white;
-  }
-  /* line 68, ../../src/scss/_navigation.scss */
-  body > section > nav a.opener {
-    -webkit-transition-property: max-height;
-    -moz-transition-property: max-height;
-    -o-transition-property: max-height;
-    transition-property: max-height;
-    -webkit-transition-duration: 0.3s;
-    -moz-transition-duration: 0.3s;
-    -o-transition-duration: 0.3s;
-    transition-duration: 0.3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-timing-function: ease;
-    -o-transition-timing-function: ease;
-    transition-timing-function: ease;
-    color: #fff;
-    bottom: 0;
-    display: block;
-    font-size: 18px;
-    font-size: 1.5rem;
-    font-weight: bold;
-    height: 36px;
-    line-height: 36px;
-    position: absolute;
-    text-align: center;
-    text-decoration: none;
-    width: 100%;
-  }
-  /* line 85, ../../src/scss/_navigation.scss */
-  body > section > nav a.nav-active {
-    -webkit-transform: rotate(0deg);
-    -moz-transform: rotate(0deg);
-    -ms-transform: rotate(0deg);
-    -o-transform: rotate(0deg);
-    transform: rotate(0deg);
-  }
-  /* line 88, ../../src/scss/_navigation.scss */
-  body > section > nav a.nav-passive {
-    -webkit-transform: rotate(180deg);
-    -moz-transform: rotate(180deg);
-    -ms-transform: rotate(180deg);
-    -o-transform: rotate(180deg);
-    transform: rotate(180deg);
-  }
-  /* line 92, ../../src/scss/_navigation.scss */
-  body > section > nav.nav-closed {
-    max-height: 36px;
-  }
-  /* line 95, ../../src/scss/_navigation.scss */
-  body > section > nav.nav-open {
-    max-height: 360px;
-  }
-  /* line 98, ../../src/scss/_navigation.scss */
-  body > section > nav.scroll-locked {
-    position: fixed;
-    top: 0px;
-  }
-  /* line 102, ../../src/scss/_navigation.scss */
-  body > section > nav.scroll-unlocked {
-    position: absolute;
-    top: 96px;
-  }
+/* line 6, ../../src/scss/_navigation.scss */
+#shortcuts {
+  box-shadow: 0 1px 3px #999999;
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background: #333333 url(../img/documentHeader.jpg) 0px -196px;
+  overflow: hidden;
+  position: absolute;
+  top: 96px;
+  max-width: 960px;
+  z-index: 10000;
 }
+/* line 17, ../../src/scss/_navigation.scss */
+#shortcuts menu {
+  max-height: 240px;
+  margin: 36px 0 36px 0;
+  overflow: auto;
+  overflow-x: hidden;
+  -webkit-overflow-scrolling: touch;
+  padding: 15px 0 15px 15px;
+}
+/* line 24, ../../src/scss/_navigation.scss */
+#shortcuts menu li {
+  float: left;
+  height: 100px;
+  list-style-type: none;
+  margin-right: 15px;
+  overflow: visible;
+  text-align: center;
+  width: 88px;
+}
+/* line 32, ../../src/scss/_navigation.scss */
+#shortcuts menu li a {
+  color: #fff;
+  font-weight: normal;
+  text-decoration: none;
+  text-shadow: 0 0 1px #333;
+}
+/* line 37, ../../src/scss/_navigation.scss */
+#shortcuts menu li a img {
+  -o-border-radius: 3px;
+  border-radius: 3px;
+  box-shadow: 0 0 5px #333333;
+  -webkit-transition-property: all;
+  transition-property: all;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  background: #fff;
+  border: solid 1px #000;
+  height: 64px;
+  width: 64px;
+}
+/* line 48, ../../src/scss/_navigation.scss */
+#shortcuts menu li a span {
+  display: block;
+}
+/* line 52, ../../src/scss/_navigation.scss */
+#shortcuts menu li a:hover {
+  color: #fff;
+  text-decoration: none;
+  text-shadow: 0 0 5px #fff;
+}
+/* line 56, ../../src/scss/_navigation.scss */
+#shortcuts menu li a:hover img {
+  box-shadow: 0 0 5px white;
+}
+/* line 62, ../../src/scss/_navigation.scss */
+#shortcuts a.opener {
+  -webkit-transition-property: max-height;
+  transition-property: max-height;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
+  transition-timing-function: ease;
+  color: #fff;
+  bottom: 0;
+  display: block;
+  font-size: 18px;
+  font-size: 1.5rem;
+  font-weight: bold;
+  height: 36px;
+  line-height: 36px;
+  position: absolute;
+  text-align: center;
+  text-decoration: none;
+  width: 100%;
+}
+/* line 79, ../../src/scss/_navigation.scss */
+#shortcuts a.nav-active {
+  -webkit-transform: rotate(0deg);
+  -ms-transform: rotate(0deg);
+  transform: rotate(0deg);
+}
+/* line 82, ../../src/scss/_navigation.scss */
+#shortcuts a.nav-passive {
+  -webkit-transform: rotate(180deg);
+  -ms-transform: rotate(180deg);
+  transform: rotate(180deg);
+}
+/* line 85, ../../src/scss/_navigation.scss */
+#shortcuts.nav-closed {
+  max-height: 36px;
+}
+/* line 88, ../../src/scss/_navigation.scss */
+#shortcuts.nav-open {
+  max-height: 360px;
+}
+/* line 91, ../../src/scss/_navigation.scss */
+#shortcuts.scroll-locked {
+  position: fixed;
+  top: 0px;
+}
+/* line 95, ../../src/scss/_navigation.scss */
+#shortcuts.scroll-unlocked {
+  position: absolute;
+  top: 96px;
+}
+
+/*
+	for smaller screens
+*/
 @media (max-width: 480px) {
-  /* line 118, ../../src/scss/_navigation.scss */
-  body > section > nav menu li {
+  /* line 104, ../../src/scss/_navigation.scss */
+  #shortcuts menu li {
     margin-right: 0;
     width: 95px;
   }
