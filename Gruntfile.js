@@ -3,12 +3,15 @@ module.exports = function(grunt) {
 	// components
 	var name = 'interface';
 	var libs = [
+		'../useful-polyfills/src/js/useful-polyfills.js',
+		'../useful-transitions/src/js/useful-transitions.js',
+		'../useful-positions/src/js/useful-positions.js',
 		'../useful-scrolllock/src/js/useful-scrolllock.js',
 		'../useful-toggles/src/js/useful-toggles.js',
-		'../useful-positions/src/js/useful-positions.js',
-		'../useful-transitions/src/js/useful-transitions.js',
-		'../useful-instances/src/js/useful-instances.js',
-		'../useful-polyfills/src/js/useful-polyfills.js'
+		'../useful-toggles/src/js/useful-toggles-main.js',
+		'../useful-toggles/src/js/useful-toggles-buttons.js',
+		'../useful-toggles/src/js/useful-toggles-automatic.js',
+		'../useful-toggles/src/js/useful-toggles-articles.js'
 	];
 
 	// configuration.

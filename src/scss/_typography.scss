@@ -11,6 +11,7 @@ html {
 */
 *, *:before, *:after {
 	@include box-sizing(border-box);
+	box-decoration-break : clone;
 }
 /*
 	Sections

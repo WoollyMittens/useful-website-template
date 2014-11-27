@@ -2,31 +2,31 @@
 	Reference Stylesheet for a Typical HTML5 Website Template
 */
 /*
-	Constants
+Constants
 */
 /*
-	Hides text in the margin
+Hides text in the margin
 */
 /*
-	Turns a button into an icon
+Turns a button into an icon
 */
 /*
-	Centres a graphic or glyph inside an icon
+Centres a graphic or glyph inside an icon
 */
 /*
-	Offers both the pixel and rem value of a single property
+Offers both the pixel and rem value of a single property
 */
 /*
-	Offers both the pixel and rem values of a shorthand property
+Offers both the pixel and rem values of a shorthand property
 */
 /*
-	Offers the text size as both the pixel and rem value
+Offers the text size as both the pixel and rem value
 */
 /*
-	Adds vendor prefixed to a property
+Adds vendor prefixed to a property
 */
 /*
-	Applies the "clearfix" hack to a container with floating content
+Applies the "clearfix" hack to a container with floating content
 */
 /*
 	Fonts
@@ -38,7 +38,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 @font-face {
   font-family: 'FontAwesome';
   src: url("../font/fontawesome.eot?v=3.0.1");
@@ -46,7 +45,6 @@
   font-weight: normal;
   font-style: normal;
 }
-
 /* line 18, ../../src/scss/_fonts.scss */
 * {
   -webkit-font-smoothing: antialiased;
@@ -69,12 +67,13 @@ html {
 /* line 12, ../../src/scss/_typography.scss */
 *, *:before, *:after {
   box-sizing: border-box;
+  box-decoration-break: clone;
 }
 
 /*
 	Sections
 */
-/* line 18, ../../src/scss/_typography.scss */
+/* line 19, ../../src/scss/_typography.scss */
 body {
   font-size: 12px;
   font-size: 1rem;
@@ -102,7 +101,7 @@ body {
   min-height: 100%;
 }
 
-/* line 28, ../../src/scss/_typography.scss */
+/* line 29, ../../src/scss/_typography.scss */
 h1, h2, h3, h4, h5, h6 {
   font-size: 12px;
   font-size: 1rem;
@@ -118,31 +117,31 @@ h1, h2, h3, h4, h5, h6 {
   font-weight: normal;
 }
 
-/* line 34, ../../src/scss/_typography.scss */
+/* line 35, ../../src/scss/_typography.scss */
 h1 {
   font-size: 22.5px;
   font-size: 1.875rem;
 }
 
-/* line 37, ../../src/scss/_typography.scss */
+/* line 38, ../../src/scss/_typography.scss */
 h2 {
   font-size: 19.5px;
   font-size: 1.625rem;
 }
 
-/* line 40, ../../src/scss/_typography.scss */
+/* line 41, ../../src/scss/_typography.scss */
 h3 {
   font-size: 15px;
   font-size: 1.25rem;
 }
 
-/* line 43, ../../src/scss/_typography.scss */
+/* line 44, ../../src/scss/_typography.scss */
 address {
   display: block;
   font-style: normal;
 }
 
-/* line 47, ../../src/scss/_typography.scss */
+/* line 48, ../../src/scss/_typography.scss */
 section, nav, article, aside, hgroup, header, footer {
   display: block;
 }
@@ -150,14 +149,14 @@ section, nav, article, aside, hgroup, header, footer {
 /*
 	Grouping content
 */
-/* line 53, ../../src/scss/_typography.scss */
+/* line 54, ../../src/scss/_typography.scss */
 p {
   font-size: 12px;
   font-size: 1rem;
   display: block;
 }
 
-/* line 57, ../../src/scss/_typography.scss */
+/* line 58, ../../src/scss/_typography.scss */
 hr {
   margin-top: 12px;
   margin-top: 1rem;
@@ -176,7 +175,7 @@ hr {
   width: 100%;
 }
 
-/* line 67, ../../src/scss/_typography.scss */
+/* line 68, ../../src/scss/_typography.scss */
 ul {
   margin-top: 0px;
   margin-top: 0rem;
@@ -197,7 +196,7 @@ ul {
   display: block;
 }
 
-/* line 73, ../../src/scss/_typography.scss */
+/* line 74, ../../src/scss/_typography.scss */
 dl {
   margin-top: 0px;
   margin-top: 0rem;
@@ -210,7 +209,7 @@ dl {
   display: block;
 }
 
-/* line 77, ../../src/scss/_typography.scss */
+/* line 78, ../../src/scss/_typography.scss */
 dt {
   margin-top: 0px;
   margin-top: 0rem;
@@ -224,7 +223,7 @@ dt {
   font-weight: bold;
 }
 
-/* line 82, ../../src/scss/_typography.scss */
+/* line 83, ../../src/scss/_typography.scss */
 dd {
   margin-top: 0px;
   margin-top: 0rem;
@@ -237,7 +236,7 @@ dd {
   display: block;
 }
 
-/* line 86, ../../src/scss/_typography.scss */
+/* line 87, ../../src/scss/_typography.scss */
 pre, blockquote, ol {
   display: block;
 }
@@ -245,29 +244,29 @@ pre, blockquote, ol {
 /*
 	Text-level semantics
 */
-/* line 92, ../../src/scss/_typography.scss */
+/* line 93, ../../src/scss/_typography.scss */
 a {
   color: #ff6a00;
   text-decoration: underline;
 }
 
-/* line 96, ../../src/scss/_typography.scss */
+/* line 97, ../../src/scss/_typography.scss */
 a:hover {
   color: #ff9800;
   text-decoration: underline;
 }
 
-/* line 100, ../../src/scss/_typography.scss */
+/* line 101, ../../src/scss/_typography.scss */
 sub {
   line-height: 0;
 }
 
-/* line 103, ../../src/scss/_typography.scss */
+/* line 104, ../../src/scss/_typography.scss */
 sup {
   line-height: 0;
 }
 
-/* line 106, ../../src/scss/_typography.scss */
+/* line 107, ../../src/scss/_typography.scss */
 time, progress, meter {
   display: block;
 }
@@ -275,19 +274,19 @@ time, progress, meter {
 /*
 	Embedded content
 */
-/* line 112, ../../src/scss/_typography.scss */
+/* line 113, ../../src/scss/_typography.scss */
 img {
   border: none;
   vertical-align: middle;
 }
 
-/* line 116, ../../src/scss/_typography.scss */
+/* line 117, ../../src/scss/_typography.scss */
 figure, figcaption, video, audio, canvas {
   display: block;
 }
 
 /* Tabular data */
-/* line 120, ../../src/scss/_typography.scss */
+/* line 121, ../../src/scss/_typography.scss */
 table {
   margin-top: 0px;
   margin-top: 0rem;
@@ -300,7 +299,7 @@ table {
   border-collapse: collapse;
 }
 
-/* line 124, ../../src/scss/_typography.scss */
+/* line 125, ../../src/scss/_typography.scss */
 caption {
   font-size: 15px;
   font-size: 1.25rem;
@@ -308,16 +307,16 @@ caption {
   text-align: left;
 }
 
-/* line 130, ../../src/scss/_typography.scss */
+/* line 131, ../../src/scss/_typography.scss */
 tr {
   vertical-align: top;
 }
-/* line 132, ../../src/scss/_typography.scss */
+/* line 133, ../../src/scss/_typography.scss */
 tr:nth-child(2n) {
   background-color: #eeeeee;
 }
 
-/* line 134, ../../src/scss/_typography.scss */
+/* line 135, ../../src/scss/_typography.scss */
 th, td {
   padding-top: 6px;
   padding-top: 0.5rem;
@@ -329,7 +328,7 @@ th, td {
   padding-left: 1rem;
 }
 
-/* line 137, ../../src/scss/_typography.scss */
+/* line 138, ../../src/scss/_typography.scss */
 th, th a, th a:hover {
   background-color: #ff9800;
   color: #fff;
@@ -342,7 +341,7 @@ th, th a, th a:hover {
 /*
 	Forms
 */
-/* line 148, ../../src/scss/_typography.scss */
+/* line 149, ../../src/scss/_typography.scss */
 form {
   margin-top: 0px;
   margin-top: 0rem;
@@ -354,7 +353,7 @@ form {
   margin-left: 0rem;
 }
 
-/* line 151, ../../src/scss/_typography.scss */
+/* line 152, ../../src/scss/_typography.scss */
 fieldset {
   margin-top: 0px;
   margin-top: 0rem;
@@ -376,7 +375,7 @@ fieldset {
   border: none;
 }
 
-/* line 157, ../../src/scss/_typography.scss */
+/* line 158, ../../src/scss/_typography.scss */
 legend {
   margin-top: 0px;
   margin-top: 0rem;
@@ -390,7 +389,7 @@ legend {
   font-weight: bold;
 }
 
-/* line 163, ../../src/scss/_typography.scss */
+/* line 164, ../../src/scss/_typography.scss */
 input, button, select, textarea {
   font-size: 12px;
   font-size: 1rem;
@@ -398,9 +397,9 @@ input, button, select, textarea {
   vertical-align: baseline;
 }
 
-/* line 168, ../../src/scss/_typography.scss */
+/* line 169, ../../src/scss/_typography.scss */
 input[type=date], input[type=email], input[type=number], input[type=text], input[type=password], select, textarea {
-  box-shadow: inset 0 0 5px #cccccc;
+  box-shadow: inset 0 0 5px #ccc;
   height: 36px;
   height: 3rem;
   font-size: 12px;
@@ -420,7 +419,7 @@ input[type=date], input[type=email], input[type=number], input[type=text], input
   font-family: Arial, Sans-Serif;
 }
 
-/* line 178, ../../src/scss/_typography.scss */
+/* line 179, ../../src/scss/_typography.scss */
 input[type=checkbox], input[type=radio] {
   margin-top: 8.4px;
   margin-top: 0.7rem;
@@ -432,7 +431,7 @@ input[type=checkbox], input[type=radio] {
   margin-left: 0rem;
 }
 
-/* line 181, ../../src/scss/_typography.scss */
+/* line 182, ../../src/scss/_typography.scss */
 select {
   height: 36px;
   height: 3rem;
@@ -440,7 +439,7 @@ select {
   padding: 0.7rem;
 }
 
-/* line 185, ../../src/scss/_typography.scss */
+/* line 186, ../../src/scss/_typography.scss */
 textarea {
   height: 120px;
   height: 10rem;
@@ -448,7 +447,7 @@ textarea {
   padding: 0.7rem;
 }
 
-/* line 189, ../../src/scss/_typography.scss */
+/* line 190, ../../src/scss/_typography.scss */
 button, .button {
   -webkit-transition-property: background-color;
   transition-property: background-color;
@@ -484,13 +483,13 @@ button, .button {
   overflow: visible;
   text-decoration: none;
 }
-/* line 204, ../../src/scss/_typography.scss */
+/* line 205, ../../src/scss/_typography.scss */
 button:hover, .button:hover {
   background-color: #ff9800;
   color: #fff;
   text-decoration: none;
 }
-/* line 209, ../../src/scss/_typography.scss */
+/* line 210, ../../src/scss/_typography.scss */
 button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover {
   background-color: #7f7f7f;
 }
@@ -498,7 +497,7 @@ button.disabled, button.disabled:hover, .button.disabled, .button.disabled:hover
 /*
 	Interactive elements
 */
-/* line 216, ../../src/scss/_typography.scss */
+/* line 217, ../../src/scss/_typography.scss */
 menu {
   margin-top: 0px;
   margin-top: 0rem;
@@ -522,7 +521,7 @@ menu {
 /*
 	Miscellaneous elements
 */
-/* line 224, ../../src/scss/_typography.scss */
+/* line 225, ../../src/scss/_typography.scss */
 div {
   display: block;
 }
@@ -531,7 +530,7 @@ div {
 	For smaller screens
 */
 @media (max-width: 480px) {
-  /* line 231, ../../src/scss/_typography.scss */
+  /* line 232, ../../src/scss/_typography.scss */
   html {
     font-size: 62.5%;
   }
@@ -599,8 +598,8 @@ button::-moz-focus-inner {
 /* line 49, ../../src/scss/_miscellaneous.scss */
 .textshadow {
   text-shadow: 1px 2px 2px #000;
-  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
-          filter: DropShadow(Color=black, OffX=1, OffY=2);
+  -webkit-filter: DropShadow(Color=#000000, OffX=1, OffY=2);
+          filter: DropShadow(Color=#000000, OffX=1, OffY=2);
 }
 
 /*
@@ -608,9 +607,10 @@ button::-moz-focus-inner {
 */
 /* line 6, ../../src/scss/_layout.scss */
 body {
-  background: #cccccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(256px, #cccccc), color-stop(100%, #cccccc)) no-repeat;
-  background: #cccccc -webkit-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
-  background: #cccccc linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+  background: #ccc url('data:image/svg+xml;base64,PD94bWwgdmVyc2lvbj0iMS4wIiBlbmNvZGluZz0idXRmLTgiPz4gPHN2ZyB2ZXJzaW9uPSIxLjEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGRlZnM+PGxpbmVhckdyYWRpZW50IGlkPSJncmFkIiBncmFkaWVudFVuaXRzPSJvYmplY3RCb3VuZGluZ0JveCIgeDE9IjAuNSIgeTE9IjAuMCIgeDI9IjAuNSIgeTI9IjEuMCI+PHN0b3Agb2Zmc2V0PSIwJSIgc3RvcC1jb2xvcj0iI2VlZWVlZSIvPjxzdG9wIG9mZnNldD0iMjU2cHgiIHN0b3AtY29sb3I9IiNjY2NjY2MiLz48c3RvcCBvZmZzZXQ9IjEwMCUiIHN0b3AtY29sb3I9IiNjY2NjY2MiLz48L2xpbmVhckdyYWRpZW50PjwvZGVmcz48cmVjdCB4PSIwIiB5PSIwIiB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiBmaWxsPSJ1cmwoI2dyYWQpIiAvPjwvc3ZnPiA=') no-repeat;
+  background: #ccc -webkit-gradient(linear, 50% 0%, 50% 100%, color-stop(0%, #eeeeee), color-stop(256px, #cccccc), color-stop(100%, #cccccc)) no-repeat;
+  background: #ccc -webkit-linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
+  background: #ccc linear-gradient(#eeeeee 0%, #cccccc 256px, #cccccc 100%) no-repeat;
 }
 
 /* line 9, ../../src/scss/_layout.scss */
@@ -634,14 +634,13 @@ body {
   padding-bottom: 1rem;
   padding-left: 24px;
   padding-left: 2rem;
-  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
   display: block;
 }
 /* line 22, ../../src/scss/_layout.scss */
 #layout > article img.demoIcon {
-  -o-border-radius: 3px;
   border-radius: 3px;
-  box-shadow: 0 0 5px #333333;
+  box-shadow: 0 0 5px #333;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.3s;
@@ -670,7 +669,7 @@ body {
 #masthead {
   filter: progid:DXImageTransform.Microsoft.Alpha(Opacity=90);
   opacity: 0.9;
-  background: #333333 url(../img/documentHeader.jpg) 0px -100px;
+  background: #333 url(../img/documentHeader.jpg) 0px -100px;
   height: 96px;
   margin: 0 0 36px 0;
   position: relative;
@@ -686,16 +685,16 @@ body {
   color: #fff;
   font-weight: bold;
   text-shadow: 1px 2px 2px #000;
-  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
-          filter: DropShadow(Color=black, OffX=1, OffY=2);
+  -webkit-filter: DropShadow(Color=#000000, OffX=1, OffY=2);
+          filter: DropShadow(Color=#000000, OffX=1, OffY=2);
 }
 /* line 56, ../../src/scss/_layout.scss */
 #masthead .hgroup h2 {
   color: #fff;
   font-weight: normal;
   text-shadow: 1px 2px 2px #000;
-  -webkit-filter: DropShadow(Color=black, OffX=1, OffY=2);
-          filter: DropShadow(Color=black, OffX=1, OffY=2);
+  -webkit-filter: DropShadow(Color=#000000, OffX=1, OffY=2);
+          filter: DropShadow(Color=#000000, OffX=1, OffY=2);
 }
 
 /*
@@ -704,7 +703,7 @@ body {
 /* line 67, ../../src/scss/_layout.scss */
 #footnotes {
   clear: both;
-  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
   height: 60px;
   line-height: 60px;
   position: relative;
@@ -729,7 +728,7 @@ body {
 	print styles
 */
 @media print {
-  /* line 94, ../../src/scss/_layout.scss */
+  /* line 93, ../../src/scss/_layout.scss */
   body > section > header,
   body > section > footer {
     display: none;
@@ -740,7 +739,7 @@ body {
 */
 /* line 6, ../../src/scss/_examples.scss */
 section.example {
-  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
   display: block;
   *zoom: 1;
 }
@@ -792,7 +791,7 @@ section.example:after {
 */
 /* line 38, ../../src/scss/_examples.scss */
 section.example-left {
-  background: white url(../img/texture_shadow_top.png) no-repeat -480px 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat -480px 0;
 }
 /* line 40, ../../src/scss/_examples.scss */
 section.example-left > article {
@@ -816,7 +815,7 @@ section.example-left > aside {
 */
 /* line 51, ../../src/scss/_examples.scss */
 section.example-right {
-  background: white url(../img/texture_shadow_top.png) no-repeat 480px 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 480px 0;
 }
 /* line 53, ../../src/scss/_examples.scss */
 section.example-right > article {
@@ -840,7 +839,7 @@ section.example-right > aside {
 */
 /* line 64, ../../src/scss/_examples.scss */
 section.example-full {
-  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
 }
 /* line 66, ../../src/scss/_examples.scss */
 section.example-full > article {
@@ -874,7 +873,7 @@ section.example-full > aside {
 */
 /* line 80, ../../src/scss/_examples.scss */
 section.example-no {
-  background: white url(../img/texture_shadow_top.png) no-repeat 50% 0;
+  background: #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
 }
 /* line 82, ../../src/scss/_examples.scss */
 section.example-no > article {
@@ -919,14 +918,14 @@ section.example-no > article {
 */
 /* line 6, ../../src/scss/_navigation.scss */
 #shortcuts {
-  box-shadow: 0 1px 3px #999999;
+  box-shadow: 0 1px 3px #999;
   -webkit-transition-property: max-height;
   transition-property: max-height;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
-  background: #333333 url(../img/documentHeader.jpg) 0px -196px;
+  background: #333 url(../img/documentHeader.jpg) 0px -196px;
   overflow: hidden;
   position: absolute;
   top: 96px;
@@ -961,9 +960,8 @@ section.example-no > article {
 }
 /* line 37, ../../src/scss/_navigation.scss */
 #shortcuts menu li a img {
-  -o-border-radius: 3px;
   border-radius: 3px;
-  box-shadow: 0 0 5px #333333;
+  box-shadow: 0 0 5px #333;
   -webkit-transition-property: all;
   transition-property: all;
   -webkit-transition-duration: 0.3s;
@@ -987,7 +985,7 @@ section.example-no > article {
 }
 /* line 56, ../../src/scss/_navigation.scss */
 #shortcuts menu li a:hover img {
-  box-shadow: 0 0 5px white;
+  box-shadow: 0 0 5px #fff;
 }
 /* line 62, ../../src/scss/_navigation.scss */
 #shortcuts a.opener {
@@ -1012,14 +1010,14 @@ section.example-no > article {
 }
 /* line 79, ../../src/scss/_navigation.scss */
 #shortcuts a.nav-active {
-  -webkit-transform: rotate(0deg);
   -ms-transform: rotate(0deg);
+  -webkit-transform: rotate(0deg);
   transform: rotate(0deg);
 }
 /* line 82, ../../src/scss/_navigation.scss */
 #shortcuts a.nav-passive {
-  -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 /* line 85, ../../src/scss/_navigation.scss */

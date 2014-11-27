@@ -1,62 +1,6 @@
 /*
 	Source:
-	van Creij, Maurice (2012). "useful.instances.js: A library of useful functions to ease working with instances of constructors.", version 20121126, http://www.woollymittens.nl/.
-
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
-*/
-
-// public object
-var useful = useful || {};
-
-(function(){
-
-	// Invoke strict mode
-	"use strict";
-
-	// public functions
-	useful.Instances = function (objs, constructor, cfg) {
-		// properties
-		this.objs = objs;
-		this.constructor = constructor;
-		this.cfg = cfg;
-		this.constructs = [];
-		// starts and stores an instance of the constructor for every element
-		this.start = function () {
-			for (var a = 0, b = this.objs.length; a < b; a += 1) {
-				// store a constructed instance with cloned cfg object
-				this.constructs[a] = new this.constructor(this.objs[a], Object.create(this.cfg));
-			}
-			// disable the start function so it can't be started twice
-			this.start = function () {};
-			// empty the timeout
-			return null;
-		};
-		// returns the constructs
-		this.getAll = function () {
-			return this.constructs;
-		};
-		// returns the object that goes with the element
-		this.getByObject = function (element) {
-			return this.constructs[this.constructs.indexOf(element)];
-		};
-		// returns the object that goes with the index
-		this.getByIndex = function (index) {
-			return this.constructs[index];
-		};
-		this.start();
-	};
-
-	// return as a require.js module
-	if (typeof module !== 'undefined') {
-		exports = module.exports = useful.Instances;
-	}
-
-})();
-
-/*
-	Source:
-	van Creij, Maurice (2012). "useful.polyfills.js: A library of useful polyfills to ease working with HTML5 in legacy environments.", version 20121126, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.polyfills.js: A library of useful polyfills to ease working with HTML5 in legacy environments.", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -336,7 +280,7 @@ var useful = useful || {};
 
 /*
 	Source:
-	van Creij, Maurice (2012). "useful.positions.js: A library of useful functions to ease working with screen positions.", version 20121126, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.positions.js: A library of useful functions to ease working with screen positions.", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -444,235 +388,348 @@ var useful = useful || {};
 
 /*
 	Source:
-	van Creij, Maurice (2012). "useful.scrolllock.js: Manages elements that float overtop of scrolling content.", version 20120606, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.scrolllock.js: Manages elements that float overtop of scrolling content.", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 */
 
-// public object
+// create the constructor if needed
 var useful = useful || {};
+useful.ScrollLock = useful.ScrollLock || function () {};
 
-(function(){
-
-	// invoke strict mode
+// extend the constructor
+useful.ScrollLock.prototype.init = function (cfg) {
+	// properties
 	"use strict";
-
-	// private functions
-	useful.Scrolllock = function (obj, cfg) {
-		// properties
-		this.obj = obj;
-		this.cfg = cfg;
-		// methods
-		this.start = function () {
-			var context = this;
-			// set the event handlers
-			window.addEventListener('scroll', function () { context.adjust(); }, false);
-			window.addEventListener('resize', function () { context.adjust(); }, false);
-			// measure the trigger position if none was given
-			this.cfg.threshold = this.cfg.threshold || useful.positions.object(this.obj);
-			// disable the start function so it can't be started twice
-			this.start = function () {};
-		};
-		this.adjust = function () {
+	this.cfg = cfg;
+	this.obj = cfg.element;
+	// methods
+	this.events = function () {
+		var context = this;
+		// set the event handlers
+		window.addEventListener('scroll', this.onReposition(), false);
+		window.addEventListener('resize', this.onReposition(), false);
+		// measure the trigger position if none was given
+		this.cfg.threshold = this.cfg.threshold || useful.positions.object(this.obj);
+		// disable the start function so it can't be started twice
+		this.init = function () {};
+	};
+	// events
+	this.onReposition = function () {
+		var _this = this;
+		return function () {
 			// get the current scroll position
 			var scrolled = useful.positions.document();
 			// if scrolled far enough
-			if (scrolled.y > this.cfg.threshold.y || scrolled.x > this.cfg.threshold.x) {
+			if (scrolled.y > _this.cfg.threshold.y || scrolled.x > _this.cfg.threshold.x) {
 				// apply the scroll lock class
-				if (!this.obj.className.match(/scroll-locked/gi)) {
-					this.obj.className = this.obj.className.replace(/scroll-unlocked/g, '').replace(/  /g, ' ') + ' scroll-locked';
+				if (!_this.obj.className.match(/scroll-locked/gi)) {
+					_this.obj.className = _this.obj.className.replace(/scroll-unlocked/g, '').replace(/  /g, ' ') + ' scroll-locked';
 				}
 			} else {
 				// remove the scroll lock style
-				if (!this.obj.className.match(/scroll-unlocked/gi)) {
-					this.obj.className = this.obj.className.replace(/scroll-locked/g, '').replace(/  /g, ' ') + ' scroll-unlocked';
+				if (!_this.obj.className.match(/scroll-unlocked/gi)) {
+					_this.obj.className = _this.obj.className.replace(/scroll-locked/g, '').replace(/  /g, ' ') + ' scroll-unlocked';
 				}
 			}
 		};
-		// go
-		this.start();
 	};
+	// go
+	this.events();
+	return this;
+};
 
-	// return as a require.js module
-	if (typeof module !== 'undefined') {
-		exports = module.exports = useful.Aspectratio;
-	}
-
-})();
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.ScrollLock;
+}
 
 /*
 	Source:
-	van Creij, Maurice (2012). "useful.toggles.js: Simple collapsible content", version 20120606, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 */
 
-// public object
+// create the constructor if needed
 var useful = useful || {};
+useful.Toggles = useful.Toggles || function () {};
 
-(function(){
-
-	// invoke strict mode
+// extend the constructor
+useful.Toggles.prototype.Articles = function (parent) {
+	// properties
 	"use strict";
-
-	// private functions
-	useful.Toggles = function (obj, cfg) {
-		// properties
-		this.obj = obj;
-		this.cfg = cfg;
-		// methods
-		this.start = function () {
-			// setup the parent
-			this.cfg.outlets = {};
-			this.cfg.outlets.parent = this.obj;
-			this.cfg.index = this.cfg.index || 0;
-			// setup the components
-			this.automatic.setup(this);
-			this.buttons.setup(this);
-			this.articles.setup(this);
-			// disable the start function so it can't be started twice
-			this.start = function () {};
-		};
-		this.update = function (context) {
-			// update the parent
-			// update the components
-			context.buttons.update(context);
-			context.articles.update(context);
-		};
-		this.focus = function (index) {
-			// establish the context
-			var context = this;
-			// activate the element
-			context.buttons.change(index, context);
-		};
-		this.automatic = {};
-		this.automatic.setup = function () {
-			// set the event handlers for (un)pausing
-			// start the interval
-		};
-		this.automatic.start = function () {
-			// cancel any interval
-			// resume the interval
-		};
-		this.automatic.pause = function () {
-			// cancel any interval
-		};
-		this.buttons = {};
-		this.buttons.setup = function (context) {
-			// store the links in this group
-			context.cfg.outlets.buttons = useful.transitions.select(context.cfg.buttons, context.cfg.outlets.parent);
-			// for each link
-			for (var a = 0, b = context.cfg.outlets.buttons.length; a < b; a += 1) {
-				// apply the default class name
-				context.cfg.outlets.buttons[a].className += ' ' + context.cfg.classes.passive;
-				// set the event handlers
-				context.cfg.outlets.buttons[a].addEventListener('click', context.buttons.onClicked(a, context), false);
-			}
-			// initial update
-			context.buttons.update(context);
-		};
-		this.buttons.onClicked = function (index, context) {
-			return function (event) {
-				// change the active index
-				context.buttons.change(index, context);
-				// cancel the click
-				event.preventDefault();
-			};
-		};
-		this.buttons.change = function (index, context) {
-			// update the index
-			context.cfg.index = index;
-			// redraw the parent
-			context.update(context);
-		};
-		this.buttons.update = function (context) {
-			// formulate regular expressions for the class names
-			var passive = new RegExp(context.cfg.classes.passive, 'gi');
-			var active = new RegExp(context.cfg.classes.active, 'gi');
-			// for each link
-			for (var a = 0, b = context.cfg.outlets.buttons.length; a < b; a += 1) {
-				// if this is the active index
-				if (a === context.cfg.index) {
-					// if toggling is allowed
-					if (context.cfg.toggle) {
-						// toggle the class name
-						context.cfg.outlets.buttons[a].className = (context.cfg.outlets.buttons[a].className.match(active)) ?
-							context.cfg.outlets.buttons[a].className.replace(active, context.cfg.classes.passive) :
-							context.cfg.outlets.buttons[a].className.replace(passive, context.cfg.classes.active);
-					// else
-					} else {
-						// activate the link
-						context.cfg.outlets.buttons[a].className = context.cfg.outlets.buttons[a].className.replace(passive, context.cfg.classes.active);
-					}
-				// else if grouping is allowed
-				} else if (context.cfg.grouped) {
-					// deactivate the link
-					context.cfg.outlets.buttons[a].className = context.cfg.outlets.buttons[a].className.replace(active, context.cfg.classes.passive);
+	this.parent = parent;
+	this.cfg = parent.cfg;
+	// methods
+	this.setup = function () {
+		// store the articles
+		this.cfg.outlets.articles = [];
+		// for all the links
+		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+			// if this link has a href and an #
+			if (this.cfg.outlets.buttons[a].href && this.cfg.outlets.buttons[a].href.match('#')) {
+				// store the referenced article
+				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].href.split('#')[1]);
+			// else if this link is a button with a value
+			} else if (this.cfg.outlets.buttons[a].value && this.cfg.outlets.buttons[a].value.match('#')) {
+				// store the referenced article
+				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].value.split('#')[1]);
+			// else
+			} else {
+				// store the next sibling as the article
+				var target = this.cfg.outlets.buttons[a].nextSibling, tries = 0;
+				while (target.nodeName.match(/#/) && tries < 50) {
+					target = target.nextSibling;
+					tries += 1;
 				}
+				this.cfg.outlets.articles[a] = target;
 			}
-		};
-		this.articles = {};
-		this.articles.setup = function (context) {
-			// store the articles
-			context.cfg.outlets.articles = [];
-			// for all the links
-			for (var a = 0, b = context.cfg.outlets.buttons.length; a < b; a += 1) {
-				// if this link has a href and an #
-				if (context.cfg.outlets.buttons[a].href && context.cfg.outlets.buttons[a].href.match('#')) {
-					// store the referenced article
-					context.cfg.outlets.articles[a] = document.getElementById(context.cfg.outlets.buttons[a].href.split('#')[1]);
-				// else if this link is a button with a value
-				} else if (context.cfg.outlets.buttons[a].value && context.cfg.outlets.buttons[a].value.match('#')) {
-					// store the referenced article
-					context.cfg.outlets.articles[a] = document.getElementById(context.cfg.outlets.buttons[a].value.split('#')[1]);
-				// else
-				} else {
-					// store the next sibling as the article
-					var target = context.cfg.outlets.buttons[a].nextSibling, tries = 0;
-					while (target.nodeName.match(/#/) && tries < 50) {
-						target = target.nextSibling;
-						tries += 1;
-					}
-					context.cfg.outlets.articles[a] = target;
-				}
-				// apply the default class name
-				context.cfg.outlets.articles[a].className += ' ' + context.cfg.classes.closed;
-			}
-			// initial update
-			context.articles.update(context);
-		};
-		this.articles.update = function (context) {
-			// formulate regular expressions for the class names
-			var active = new RegExp(context.cfg.classes.active, 'gi');
-			// for each link
-			for (var a = 0, b = context.cfg.outlets.buttons.length; a < b; a += 1) {
-				// if the element is active
-				if (context.cfg.outlets.buttons[a].className.match(active)) {
-					// open its content section
-					useful.transitions.byClass(context.cfg.outlets.articles[a], context.cfg.classes.closed, context.cfg.classes.open);
-				// else
-				} else {
-					// close its content section
-					useful.transitions.byClass(context.cfg.outlets.articles[a], context.cfg.classes.open, context.cfg.classes.closed);
-				}
-			}
-		};
-		// go
-		this.start();
+			// apply the default class name
+			this.cfg.outlets.articles[a].className += ' ' + this.cfg.classes.closed;
+		}
+		// initial update
+		this.update();
 	};
+	this.update = function () {
+		// formulate regular expressions for the class names
+		var active = new RegExp(this.cfg.classes.active, 'gi');
+		// for each link
+		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+			// if the element is active
+			if (this.cfg.outlets.buttons[a].className.match(active)) {
+				// open its content section
+				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.closed, this.cfg.classes.open);
+			// else
+			} else {
+				// close its content section
+				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.open, this.cfg.classes.closed);
+			}
+		}
+	};
+	// go
+	this.setup();
+};
 
-	// return as a require.js module
-	if (typeof module !== 'undefined') {
-		exports = module.exports = useful.Toggles;
-	}
-
-})();
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.Toggles.Articles;
+}
 
 /*
 	Source:
-	van Creij, Maurice (2012). "useful.transitions.js: A library of useful functions to ease working with CSS3 transitions.", version 20121126, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
+
+	License:
+	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+*/
+
+// create the constructor if needed
+var useful = useful || {};
+useful.Toggles = useful.Toggles || function () {};
+
+// extend the constructor
+useful.Toggles.prototype.Automatic = function (parent) {
+	// properties
+	"use strict";
+	this.parent = parent;
+	this.cfg = parent.cfg;
+	// methods
+	this.setup = function () {
+		// set the event handlers for (un)pausing
+		// start the interval
+	};
+	this.start = function () {
+		// cancel any interval
+		// resume the interval
+	};
+	this.pause = function () {
+		// cancel any interval
+	};
+	// go
+	this.setup();
+};
+
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.Toggles.Automatic;
+}
+
+/*
+	Source:
+	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
+
+	License:
+	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+*/
+
+// create the constructor if needed
+var useful = useful || {};
+useful.Toggles = useful.Toggles || function () {};
+
+// extend the constructor
+useful.Toggles.prototype.Buttons = function (parent) {
+	// properties
+	"use strict";
+	this.parent = parent;
+	this.cfg = parent.cfg;
+	// methods
+	this.setup = function () {
+		// store the links in this group
+		this.cfg.outlets.buttons = useful.transitions.select(this.cfg.buttons, this.cfg.outlets.parent);
+		// for each link
+		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+			// apply the default class name
+			this.cfg.outlets.buttons[a].className += ' ' + this.cfg.classes.passive;
+			// set the event handlers
+			this.cfg.outlets.buttons[a].addEventListener('click', this.onClicked(a), false);
+		}
+		// initial update
+		this.update();
+	};
+	this.onClicked = function (index) {
+		var _this = this;
+		return function (event) {
+			// change the active index
+			_this.change(index);
+			// cancel the click
+			event.preventDefault();
+		};
+	};
+	this.change = function (index) {
+		// update the index
+		this.cfg.index = index;
+		// redraw the parent
+		this.parent.update();
+	};
+	this.update = function () {
+		// formulate regular expressions for the class names
+		var passive = new RegExp(this.cfg.classes.passive, 'gi');
+		var active = new RegExp(this.cfg.classes.active, 'gi');
+		// for each link
+		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+			// if this is the active index
+			if (a === this.cfg.index) {
+				// if toggling is allowed
+				if (this.cfg.toggle) {
+					// toggle the class name
+					this.cfg.outlets.buttons[a].className = (this.cfg.outlets.buttons[a].className.match(active)) ?
+						this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive):
+						this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+				// else
+				} else {
+					// activate the link
+					this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+				}
+			// else if grouping is allowed
+			} else if (this.cfg.grouped) {
+				// deactivate the link
+				this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive);
+			}
+		}
+	};
+	// go
+	this.setup();
+};
+
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.Toggles.Buttons;
+}
+
+/*
+	Source:
+	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
+
+	License:
+	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+*/
+
+// create the constructor if needed
+var useful = useful || {};
+useful.Toggles = useful.Toggles || function () {};
+
+// extend the constructor
+useful.Toggles.prototype.Main = function (parent, cfg) {
+	// properties
+	"use strict";
+	this.cfg = cfg;
+	this.parent = parent;
+	// methods
+	this.start = function () {
+		// setup the parent
+		this.cfg.outlets = {};
+		this.cfg.outlets.parent = this.cfg.element;
+		this.cfg.index = this.cfg.index || 0;
+		// setup the components
+		this.automatic = new this.parent.Automatic(this);
+		this.buttons = new this.parent.Buttons(this);
+		this.articles = new this.parent.Articles(this);
+	};
+	this.update = function () {
+		// update the components
+		this.buttons.update();
+		this.articles.update();
+	};
+	this.focus = function (index) {
+		// activate the element
+		this.buttons.change(index);
+	};
+	// go
+	this.start();
+};
+
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.Toggles.Main;
+}
+
+/*
+	Source:
+	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
+
+	License:
+	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+*/
+
+// create the constructor if needed
+var useful = useful || {};
+useful.Toggles = useful.Toggles || function () {};
+
+// extend the constructor
+useful.Toggles.prototype.init = function (cfg) {
+	// properties
+	"use strict";
+	this.instances = [];
+	// methods
+	this.each = function (elements, cfg) {
+		var _cfg, instance;
+		// for all elements
+		for (var a = 0, b = elements.length; a < b; a += 1) {
+			// clone the configuration
+			_cfg = Object.create(cfg);
+			// insert the current element
+			_cfg.element = elements[a];
+			// start a new instance of the object
+			this.instances.push(new this.Main(this, _cfg));
+		}
+	};
+	// go
+	this.each(cfg.elements, cfg);
+	this.init = function () {};
+	return this;
+};
+
+// return as a require.js module
+if (typeof module !== 'undefined') {
+	exports = module.exports = useful.Toggles;
+}
+
+/*
+	Source:
+	van Creij, Maurice (2014). "useful.transitions.js: A library of useful functions to ease working with CSS3 transitions.", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.

@@ -100,7 +100,8 @@
 			<script>
 			//<!--
 				// navigation bar
-				var shortcutsToggles = new useful.Toggles( document.getElementById('shortcuts'), {
+				var shortcutsToggles = new useful.Toggles().init({
+					'elements' : [document.getElementById('shortcuts')],
 					'buttons' : 'a.opener',
 					'classes' : {
 						'active' : 'nav-active',
@@ -114,7 +115,9 @@
 					'auto' : null
 				});
 				// scroll lock
-				var shortcutsScrolllock = new useful.Scrolllock( document.getElementById('shortcuts'), {});
+				var shortcutsScrolllock = new useful.ScrollLock().init({
+					'element' : document.getElementById('shortcuts')
+				});
 			//-->
 			</script>
 			<footer id="footnotes">
