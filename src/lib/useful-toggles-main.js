@@ -11,7 +11,7 @@ var useful = useful || {};
 useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.Main = function (parent, cfg) {
+useful.Toggles.prototype.Main = function (cfg, parent) {
 	// properties
 	"use strict";
 	this.cfg = cfg;

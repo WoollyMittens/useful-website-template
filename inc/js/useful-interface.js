@@ -652,7 +652,7 @@ var useful = useful || {};
 useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.Main = function (parent, cfg) {
+useful.Toggles.prototype.Main = function (cfg, parent) {
 	// properties
 	"use strict";
 	this.cfg = cfg;
@@ -702,24 +702,29 @@ useful.Toggles = useful.Toggles || function () {};
 useful.Toggles.prototype.init = function (cfg) {
 	// properties
 	"use strict";
-	this.instances = [];
 	// methods
-	this.each = function (elements, cfg) {
-		var _cfg, instance;
-		// for all elements
-		for (var a = 0, b = elements.length; a < b; a += 1) {
-			// clone the configuration
+	this.only = function (cfg) {
+		// start an instance of the script
+		return new this.Main(cfg, this);
+	};
+	this.each = function (cfg) {
+		var _cfg, instances = [];
+		// for all element
+		for (var a = 0, b = cfg.elements.length; a < b; a += 1) {
+			// clone the cfguration
 			_cfg = Object.create(cfg);
 			// insert the current element
-			_cfg.element = elements[a];
+			_cfg.element = cfg.elements[a];
+			// delete the list of elements from the clone
+			delete _cfg.elements;
 			// start a new instance of the object
-			this.instances.push(new this.Main(this, _cfg));
+			instances[a] = new this.Main(_cfg, this);
 		}
+		// return the instances
+		return instances;
 	};
-	// go
-	this.each(cfg.elements, cfg);
-	this.init = function () {};
-	return this;
+	// return a single or multiple instances of the script
+	return (cfg.elements) ? this.each(cfg) : this.only(cfg);
 };
 
 // return as a require.js module
