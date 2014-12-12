@@ -15,11 +15,13 @@ useful.Toggles.prototype.Automatic = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// set the event handlers for (un)pausing
 		// start the interval
+		// return the object
+		return this;
 	};
 	this.start = function () {
 		// cancel any interval
@@ -28,8 +30,6 @@ useful.Toggles.prototype.Automatic = function (parent) {
 	this.pause = function () {
 		// cancel any interval
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module

@@ -15,20 +15,22 @@ useful.Toggles.prototype.Buttons = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// store the links in this group
-		this.cfg.outlets.buttons = useful.transitions.select(this.cfg.buttons, this.cfg.outlets.parent);
+		this.config.outlets.buttons = useful.transitions.select(this.config.buttons, this.config.outlets.parent);
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// apply the default class name
-			this.cfg.outlets.buttons[a].className += ' ' + this.cfg.classes.passive;
+			this.config.outlets.buttons[a].className += ' ' + this.config.classes.passive;
 			// set the event handlers
-			this.cfg.outlets.buttons[a].addEventListener('click', this.onClicked(a), false);
+			this.config.outlets.buttons[a].addEventListener('click', this.onClicked(a), false);
 		}
 		// initial update
 		this.update();
+		// return the object
+		return this;
 	};
 	this.onClicked = function (index) {
 		var _this = this;
@@ -41,38 +43,36 @@ useful.Toggles.prototype.Buttons = function (parent) {
 	};
 	this.change = function (index) {
 		// update the index
-		this.cfg.index = index;
+		this.config.index = index;
 		// redraw the parent
 		this.parent.update();
 	};
 	this.update = function () {
 		// formulate regular expressions for the class names
-		var passive = new RegExp(this.cfg.classes.passive, 'gi');
-		var active = new RegExp(this.cfg.classes.active, 'gi');
+		var passive = new RegExp(this.config.classes.passive, 'gi');
+		var active = new RegExp(this.config.classes.active, 'gi');
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if this is the active index
-			if (a === this.cfg.index) {
+			if (a === this.config.index) {
 				// if toggling is allowed
-				if (this.cfg.toggle) {
+				if (this.config.toggle) {
 					// toggle the class name
-					this.cfg.outlets.buttons[a].className = (this.cfg.outlets.buttons[a].className.match(active)) ?
-						this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive):
-						this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+					this.config.outlets.buttons[a].className = (this.config.outlets.buttons[a].className.match(active)) ?
+						this.config.outlets.buttons[a].className.replace(active, this.config.classes.passive):
+						this.config.outlets.buttons[a].className.replace(passive, this.config.classes.active);
 				// else
 				} else {
 					// activate the link
-					this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+					this.config.outlets.buttons[a].className = this.config.outlets.buttons[a].className.replace(passive, this.config.classes.active);
 				}
 			// else if grouping is allowed
-			} else if (this.cfg.grouped) {
+			} else if (this.config.grouped) {
 				// deactivate the link
-				this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive);
+				this.config.outlets.buttons[a].className = this.config.outlets.buttons[a].className.replace(active, this.config.classes.passive);
 			}
 		}
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module

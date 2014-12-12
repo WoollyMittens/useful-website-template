@@ -11,21 +11,23 @@ var useful = useful || {};
 useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.Main = function (cfg, parent) {
+useful.Toggles.prototype.Main = function (config, context) {
 	// properties
 	"use strict";
-	this.cfg = cfg;
-	this.parent = parent;
+	this.config = config;
+	this.context = context;
 	// methods
-	this.start = function () {
-		// setup the parent
-		this.cfg.outlets = {};
-		this.cfg.outlets.parent = this.cfg.element;
-		this.cfg.index = this.cfg.index || 0;
+	this.init = function () {
+		// setup the context
+		this.config.outlets = {};
+		this.config.outlets.parent = this.config.element;
+		this.config.index = this.config.index || 0;
 		// setup the components
-		this.automatic = new this.parent.Automatic(this);
-		this.buttons = new this.parent.Buttons(this);
-		this.articles = new this.parent.Articles(this);
+		this.automatic = new this.context.Automatic(this).init();
+		this.buttons = new this.context.Buttons(this).init();
+		this.articles = new this.context.Articles(this).init();
+		// return the object
+		return this;
 	};
 	this.update = function () {
 		// update the components
@@ -36,8 +38,6 @@ useful.Toggles.prototype.Main = function (cfg, parent) {
 		// activate the element
 		this.buttons.change(index);
 	};
-	// go
-	this.start();
 };
 
 // return as a require.js module

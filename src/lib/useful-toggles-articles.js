@@ -15,55 +15,55 @@ useful.Toggles.prototype.Articles = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// store the articles
-		this.cfg.outlets.articles = [];
+		this.config.outlets.articles = [];
 		// for all the links
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if this link has a href and an #
-			if (this.cfg.outlets.buttons[a].href && this.cfg.outlets.buttons[a].href.match('#')) {
+			if (this.config.outlets.buttons[a].href && this.config.outlets.buttons[a].href.match('#')) {
 				// store the referenced article
-				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].href.split('#')[1]);
+				this.config.outlets.articles[a] = document.getElementById(this.config.outlets.buttons[a].href.split('#')[1]);
 			// else if this link is a button with a value
-			} else if (this.cfg.outlets.buttons[a].value && this.cfg.outlets.buttons[a].value.match('#')) {
+			} else if (this.config.outlets.buttons[a].value && this.config.outlets.buttons[a].value.match('#')) {
 				// store the referenced article
-				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].value.split('#')[1]);
+				this.config.outlets.articles[a] = document.getElementById(this.config.outlets.buttons[a].value.split('#')[1]);
 			// else
 			} else {
 				// store the next sibling as the article
-				var target = this.cfg.outlets.buttons[a].nextSibling, tries = 0;
+				var target = this.config.outlets.buttons[a].nextSibling, tries = 0;
 				while (target.nodeName.match(/#/) && tries < 50) {
 					target = target.nextSibling;
 					tries += 1;
 				}
-				this.cfg.outlets.articles[a] = target;
+				this.config.outlets.articles[a] = target;
 			}
 			// apply the default class name
-			this.cfg.outlets.articles[a].className += ' ' + this.cfg.classes.closed;
+			this.config.outlets.articles[a].className += ' ' + this.config.classes.closed;
 		}
 		// initial update
 		this.update();
+		// return the object
+		return this;
 	};
 	this.update = function () {
 		// formulate regular expressions for the class names
-		var active = new RegExp(this.cfg.classes.active, 'gi');
+		var active = new RegExp(this.config.classes.active, 'gi');
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if the element is active
-			if (this.cfg.outlets.buttons[a].className.match(active)) {
+			if (this.config.outlets.buttons[a].className.match(active)) {
 				// open its content section
-				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.closed, this.cfg.classes.open);
+				useful.transitions.byClass(this.config.outlets.articles[a], this.config.classes.closed, this.config.classes.open);
 			// else
 			} else {
 				// close its content section
-				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.open, this.cfg.classes.closed);
+				useful.transitions.byClass(this.config.outlets.articles[a], this.config.classes.open, this.config.classes.closed);
 			}
 		}
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module

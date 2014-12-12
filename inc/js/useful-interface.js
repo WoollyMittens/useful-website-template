@@ -279,11 +279,11 @@ var useful = useful || {};
 })();
 
 /*
-	Source:
-	van Creij, Maurice (2014). "useful.positions.js: A library of useful functions to ease working with screen positions.", version 20141127, http://www.woollymittens.nl/.
+Source:
+van Creij, Maurice (2014). "useful.positions.js: A library of useful functions to ease working with screen positions.", version 20141127, http://www.woollymittens.nl/.
 
-	License:
-	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
+License:
+This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 */
 
 // public object
@@ -325,15 +325,15 @@ var useful = useful || {};
 				position.y = parent.scrollTop;
 			} else {
 				position.x = (window.pageXOffset) ?
-					window.pageXOffset :
-					(document.documentElement) ?
-						document.documentElement.scrollLeft :
-						document.body.scrollLeft;
+				window.pageXOffset :
+				(document.documentElement) ?
+				document.documentElement.scrollLeft :
+				document.body.scrollLeft;
 				position.y = (window.pageYOffset) ?
-					window.pageYOffset :
-					(document.documentElement) ?
-						document.documentElement.scrollTop :
-						document.body.scrollTop;
+				window.pageYOffset :
+				(document.documentElement) ?
+				document.documentElement.scrollTop :
+				document.body.scrollTop;
 			}
 			// return the object
 			return position;
@@ -363,8 +363,16 @@ var useful = useful || {};
 			// define a position object
 			var position = {x : 0, y : 0};
 			// find the current position on the document
-			position.x = event.pageX || event.clientX + document.body.scrollLeft + document.documentElement.scrollLeft;
-			position.y = event.pageY || event.clientY + document.body.scrollTop + document.documentElement.scrollTop;
+			if (event.touches && event.touches[0]) {
+				position.x = event.touches[0].pageX;
+				position.y = event.touches[0].pageY;
+			} else if (event.pageX !== undefined) {
+				position.x = event.pageX;
+				position.y = event.pageY;
+			} else {
+				position.x = event.clientX + (document.documentElement.scrollLeft || document.body.scrollLeft);
+				position.y = event.clientY + (document.documentElement.scrollTop || document.body.scrollTop);
+			}
 			// if a parent was given
 			if (parent) {
 				// retrieve the position of the parent
@@ -394,50 +402,53 @@ var useful = useful || {};
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
 */
 
-// create the constructor if needed
+// create the global object if needed
 var useful = useful || {};
-useful.ScrollLock = useful.ScrollLock || function () {};
 
-// extend the constructor
-useful.ScrollLock.prototype.init = function (cfg) {
-	// properties
+// extend the global object
+useful.ScrollLock = function (config) {
+
+	// PROPERTIES
+
 	"use strict";
-	this.cfg = cfg;
-	this.obj = cfg.element;
-	// methods
-	this.events = function () {
-		var context = this;
+
+	// METHODS
+
+	this.init = function (config) {
+		// store the config
+		this.config = config;
+		this.element = config.element;
 		// set the event handlers
 		window.addEventListener('scroll', this.onReposition(), false);
 		window.addEventListener('resize', this.onReposition(), false);
 		// measure the trigger position if none was given
-		this.cfg.threshold = this.cfg.threshold || useful.positions.object(this.obj);
-		// disable the start function so it can't be started twice
-		this.init = function () {};
+		this.config.threshold = this.config.threshold || useful.positions.object(this.element);
+		// return the object
+		return this;
 	};
-	// events
+
+	// EVENTS
+
 	this.onReposition = function () {
 		var _this = this;
 		return function () {
 			// get the current scroll position
 			var scrolled = useful.positions.document();
 			// if scrolled far enough
-			if (scrolled.y > _this.cfg.threshold.y || scrolled.x > _this.cfg.threshold.x) {
+			if (scrolled.y > _this.config.threshold.y || scrolled.x > _this.config.threshold.x) {
 				// apply the scroll lock class
-				if (!_this.obj.className.match(/scroll-locked/gi)) {
-					_this.obj.className = _this.obj.className.replace(/scroll-unlocked/g, '').replace(/  /g, ' ') + ' scroll-locked';
+				if (!_this.element.className.match(/scroll-locked/gi)) {
+					_this.element.className = _this.element.className.replace(/scroll-unlocked/g, '').replace(/  /g, ' ') + ' scroll-locked';
 				}
 			} else {
 				// remove the scroll lock style
-				if (!_this.obj.className.match(/scroll-unlocked/gi)) {
-					_this.obj.className = _this.obj.className.replace(/scroll-locked/g, '').replace(/  /g, ' ') + ' scroll-unlocked';
+				if (!_this.element.className.match(/scroll-unlocked/gi)) {
+					_this.element.className = _this.element.className.replace(/scroll-locked/g, '').replace(/  /g, ' ') + ' scroll-unlocked';
 				}
 			}
 		};
 	};
-	// go
-	this.events();
-	return this;
+
 };
 
 // return as a require.js module
@@ -462,55 +473,55 @@ useful.Toggles.prototype.Articles = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// store the articles
-		this.cfg.outlets.articles = [];
+		this.config.outlets.articles = [];
 		// for all the links
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if this link has a href and an #
-			if (this.cfg.outlets.buttons[a].href && this.cfg.outlets.buttons[a].href.match('#')) {
+			if (this.config.outlets.buttons[a].href && this.config.outlets.buttons[a].href.match('#')) {
 				// store the referenced article
-				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].href.split('#')[1]);
+				this.config.outlets.articles[a] = document.getElementById(this.config.outlets.buttons[a].href.split('#')[1]);
 			// else if this link is a button with a value
-			} else if (this.cfg.outlets.buttons[a].value && this.cfg.outlets.buttons[a].value.match('#')) {
+			} else if (this.config.outlets.buttons[a].value && this.config.outlets.buttons[a].value.match('#')) {
 				// store the referenced article
-				this.cfg.outlets.articles[a] = document.getElementById(this.cfg.outlets.buttons[a].value.split('#')[1]);
+				this.config.outlets.articles[a] = document.getElementById(this.config.outlets.buttons[a].value.split('#')[1]);
 			// else
 			} else {
 				// store the next sibling as the article
-				var target = this.cfg.outlets.buttons[a].nextSibling, tries = 0;
+				var target = this.config.outlets.buttons[a].nextSibling, tries = 0;
 				while (target.nodeName.match(/#/) && tries < 50) {
 					target = target.nextSibling;
 					tries += 1;
 				}
-				this.cfg.outlets.articles[a] = target;
+				this.config.outlets.articles[a] = target;
 			}
 			// apply the default class name
-			this.cfg.outlets.articles[a].className += ' ' + this.cfg.classes.closed;
+			this.config.outlets.articles[a].className += ' ' + this.config.classes.closed;
 		}
 		// initial update
 		this.update();
+		// return the object
+		return this;
 	};
 	this.update = function () {
 		// formulate regular expressions for the class names
-		var active = new RegExp(this.cfg.classes.active, 'gi');
+		var active = new RegExp(this.config.classes.active, 'gi');
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if the element is active
-			if (this.cfg.outlets.buttons[a].className.match(active)) {
+			if (this.config.outlets.buttons[a].className.match(active)) {
 				// open its content section
-				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.closed, this.cfg.classes.open);
+				useful.transitions.byClass(this.config.outlets.articles[a], this.config.classes.closed, this.config.classes.open);
 			// else
 			} else {
 				// close its content section
-				useful.transitions.byClass(this.cfg.outlets.articles[a], this.cfg.classes.open, this.cfg.classes.closed);
+				useful.transitions.byClass(this.config.outlets.articles[a], this.config.classes.open, this.config.classes.closed);
 			}
 		}
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module
@@ -535,11 +546,13 @@ useful.Toggles.prototype.Automatic = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// set the event handlers for (un)pausing
 		// start the interval
+		// return the object
+		return this;
 	};
 	this.start = function () {
 		// cancel any interval
@@ -548,8 +561,6 @@ useful.Toggles.prototype.Automatic = function (parent) {
 	this.pause = function () {
 		// cancel any interval
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module
@@ -574,20 +585,22 @@ useful.Toggles.prototype.Buttons = function (parent) {
 	// properties
 	"use strict";
 	this.parent = parent;
-	this.cfg = parent.cfg;
+	this.config = parent.config;
 	// methods
-	this.setup = function () {
+	this.init = function () {
 		// store the links in this group
-		this.cfg.outlets.buttons = useful.transitions.select(this.cfg.buttons, this.cfg.outlets.parent);
+		this.config.outlets.buttons = useful.transitions.select(this.config.buttons, this.config.outlets.parent);
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// apply the default class name
-			this.cfg.outlets.buttons[a].className += ' ' + this.cfg.classes.passive;
+			this.config.outlets.buttons[a].className += ' ' + this.config.classes.passive;
 			// set the event handlers
-			this.cfg.outlets.buttons[a].addEventListener('click', this.onClicked(a), false);
+			this.config.outlets.buttons[a].addEventListener('click', this.onClicked(a), false);
 		}
 		// initial update
 		this.update();
+		// return the object
+		return this;
 	};
 	this.onClicked = function (index) {
 		var _this = this;
@@ -600,38 +613,36 @@ useful.Toggles.prototype.Buttons = function (parent) {
 	};
 	this.change = function (index) {
 		// update the index
-		this.cfg.index = index;
+		this.config.index = index;
 		// redraw the parent
 		this.parent.update();
 	};
 	this.update = function () {
 		// formulate regular expressions for the class names
-		var passive = new RegExp(this.cfg.classes.passive, 'gi');
-		var active = new RegExp(this.cfg.classes.active, 'gi');
+		var passive = new RegExp(this.config.classes.passive, 'gi');
+		var active = new RegExp(this.config.classes.active, 'gi');
 		// for each link
-		for (var a = 0, b = this.cfg.outlets.buttons.length; a < b; a += 1) {
+		for (var a = 0, b = this.config.outlets.buttons.length; a < b; a += 1) {
 			// if this is the active index
-			if (a === this.cfg.index) {
+			if (a === this.config.index) {
 				// if toggling is allowed
-				if (this.cfg.toggle) {
+				if (this.config.toggle) {
 					// toggle the class name
-					this.cfg.outlets.buttons[a].className = (this.cfg.outlets.buttons[a].className.match(active)) ?
-						this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive):
-						this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+					this.config.outlets.buttons[a].className = (this.config.outlets.buttons[a].className.match(active)) ?
+						this.config.outlets.buttons[a].className.replace(active, this.config.classes.passive):
+						this.config.outlets.buttons[a].className.replace(passive, this.config.classes.active);
 				// else
 				} else {
 					// activate the link
-					this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(passive, this.cfg.classes.active);
+					this.config.outlets.buttons[a].className = this.config.outlets.buttons[a].className.replace(passive, this.config.classes.active);
 				}
 			// else if grouping is allowed
-			} else if (this.cfg.grouped) {
+			} else if (this.config.grouped) {
 				// deactivate the link
-				this.cfg.outlets.buttons[a].className = this.cfg.outlets.buttons[a].className.replace(active, this.cfg.classes.passive);
+				this.config.outlets.buttons[a].className = this.config.outlets.buttons[a].className.replace(active, this.config.classes.passive);
 			}
 		}
 	};
-	// go
-	this.setup();
 };
 
 // return as a require.js module
@@ -652,21 +663,23 @@ var useful = useful || {};
 useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.Main = function (cfg, parent) {
+useful.Toggles.prototype.Main = function (config, context) {
 	// properties
 	"use strict";
-	this.cfg = cfg;
-	this.parent = parent;
+	this.config = config;
+	this.context = context;
 	// methods
-	this.start = function () {
-		// setup the parent
-		this.cfg.outlets = {};
-		this.cfg.outlets.parent = this.cfg.element;
-		this.cfg.index = this.cfg.index || 0;
+	this.init = function () {
+		// setup the context
+		this.config.outlets = {};
+		this.config.outlets.parent = this.config.element;
+		this.config.index = this.config.index || 0;
 		// setup the components
-		this.automatic = new this.parent.Automatic(this);
-		this.buttons = new this.parent.Buttons(this);
-		this.articles = new this.parent.Articles(this);
+		this.automatic = new this.context.Automatic(this).init();
+		this.buttons = new this.context.Buttons(this).init();
+		this.articles = new this.context.Articles(this).init();
+		// return the object
+		return this;
 	};
 	this.update = function () {
 		// update the components
@@ -677,8 +690,6 @@ useful.Toggles.prototype.Main = function (cfg, parent) {
 		// activate the element
 		this.buttons.change(index);
 	};
-	// go
-	this.start();
 };
 
 // return as a require.js module
@@ -699,32 +710,32 @@ var useful = useful || {};
 useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.init = function (cfg) {
+useful.Toggles.prototype.init = function (config) {
 	// properties
 	"use strict";
 	// methods
-	this.only = function (cfg) {
+	this.only = function (config) {
 		// start an instance of the script
-		return new this.Main(cfg, this);
+		return new this.Main(config, this).init();
 	};
-	this.each = function (cfg) {
-		var _cfg, instances = [];
+	this.each = function (config) {
+		var _config, _context = this, instances = [];
 		// for all element
-		for (var a = 0, b = cfg.elements.length; a < b; a += 1) {
-			// clone the cfguration
-			_cfg = Object.create(cfg);
+		for (var a = 0, b = config.elements.length; a < b; a += 1) {
+			// clone the configuration
+			_config = Object.create(config);
 			// insert the current element
-			_cfg.element = cfg.elements[a];
+			_config.element = config.elements[a];
 			// delete the list of elements from the clone
-			delete _cfg.elements;
+			delete _config.elements;
 			// start a new instance of the object
-			instances[a] = new this.Main(_cfg, this);
+			instances[a] = new this.Main(_config, _context).init();
 		}
 		// return the instances
 		return instances;
 	};
 	// return a single or multiple instances of the script
-	return (cfg.elements) ? this.each(cfg) : this.only(cfg);
+	return (config.elements) ? this.each(config) : this.only(config);
 };
 
 // return as a require.js module
