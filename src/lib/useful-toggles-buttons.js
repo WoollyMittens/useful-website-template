@@ -12,11 +12,15 @@ useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
 useful.Toggles.prototype.Buttons = function (parent) {
-	// properties
+
+	// PROPERTIES
+	
 	"use strict";
 	this.parent = parent;
 	this.config = parent.config;
-	// methods
+
+	// METHODS
+	
 	this.init = function () {
 		// store the links in this group
 		this.config.outlets.buttons = useful.transitions.select(this.config.buttons, this.config.outlets.parent);
@@ -32,6 +36,7 @@ useful.Toggles.prototype.Buttons = function (parent) {
 		// return the object
 		return this;
 	};
+	
 	this.onClicked = function (index) {
 		var _this = this;
 		return function (event) {
@@ -41,12 +46,14 @@ useful.Toggles.prototype.Buttons = function (parent) {
 			event.preventDefault();
 		};
 	};
+	
 	this.change = function (index) {
 		// update the index
 		this.config.index = index;
 		// redraw the parent
 		this.parent.update();
 	};
+	
 	this.update = function () {
 		// formulate regular expressions for the class names
 		var passive = new RegExp(this.config.classes.passive, 'gi');

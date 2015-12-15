@@ -1,13 +1,11 @@
-@import "compass/css3";
-@import "compass/utilities";
 /*
 	central Page
 */
 body {
-	@include background(#ccc linear-gradient(#eee 0%, #ccc 256px, #ccc 100%) no-repeat);
+	background: #ccc linear-gradient(#eee 0%, #ccc 256px, #ccc 100%) no-repeat;
 }
 #layout {
-	@include box-shadow(0 0 32px rgba(0, 0, 0, 0.1));
+	box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
 	background : #fff;
 	border-left : solid 1px #e4e4e4;
 	border-right : solid 1px #e4e4e4;
@@ -20,11 +18,11 @@ body {
 		background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
 		display : block;
 		img.demoIcon {
-			@include border-radius(3px);
-			@include box-shadow(0 0 5px #333);
-			@include transition-property(all);
-			@include transition-duration(0.3s);
-			@include transition-timing-function(ease);
+			border-radius: 3px;
+			box-shadow: 0 0 5px #333;
+			transition-property: all;
+			transition-duration: 0.3s;
+			transition-timing-function: ease;
 			@include rems('margin', 0, 0, 0, 1);
 			background : #fff;
 			border : solid 1px #000;
@@ -38,7 +36,7 @@ body {
 	header bar
 */
 #masthead {
-	@include opacity(0.9);
+	opacity: 0.9;
 	background : #333 url(../img/documentHeader.jpg) 0px -100px;
 	height : 96px;
 	margin : 0 0 36px 0;

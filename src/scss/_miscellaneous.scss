@@ -1,5 +1,3 @@
-@import "compass/css3";
-@import "compass/utilities";
 /*
 	Clear fix
 */
@@ -18,7 +16,7 @@
 	Box sizing
 */
 *, *:before, *:after {
-	@include box-sizing(border-box);
+	box-sizing: border-box;
 }
 /*
 	Bicubic image scaling

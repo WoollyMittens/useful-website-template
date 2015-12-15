@@ -12,11 +12,15 @@ useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
 useful.Toggles.prototype.Articles = function (parent) {
-	// properties
+
+	// PROPERTIES
+	
 	"use strict";
 	this.parent = parent;
 	this.config = parent.config;
-	// methods
+
+	// METHODS
+	
 	this.init = function () {
 		// store the articles
 		this.config.outlets.articles = [];
@@ -48,6 +52,7 @@ useful.Toggles.prototype.Articles = function (parent) {
 		// return the object
 		return this;
 	};
+	
 	this.update = function () {
 		// formulate regular expressions for the class names
 		var active = new RegExp(this.config.classes.active, 'gi');

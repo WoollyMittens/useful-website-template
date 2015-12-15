@@ -12,21 +12,27 @@ useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
 useful.Toggles.prototype.Automatic = function (parent) {
-	// properties
+
+	// PROPERTIES
+	
 	"use strict";
 	this.parent = parent;
 	this.config = parent.config;
-	// methods
+
+	// METHODS
+	
 	this.init = function () {
 		// set the event handlers for (un)pausing
 		// start the interval
 		// return the object
 		return this;
 	};
+	
 	this.start = function () {
 		// cancel any interval
 		// resume the interval
 	};
+	
 	this.pause = function () {
 		// cancel any interval
 	};

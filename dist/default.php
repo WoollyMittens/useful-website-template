@@ -4,20 +4,20 @@
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
 		<title>useful.js: JavaScript examples, too useful not to share.</title>
-		<link rel="stylesheet" href="./inc/css/styles.css"/>
-		<link rel="apple-touch-icon" href="./inc/img/favicon.png"/>
-		<link rel="icon" href="./inc/img/favicon.png"/>
-		<!--[if IE]><link rel="shortcut icon" href="./inc/img/favicon.ico"><![endif]-->
+		<link rel="stylesheet" href="./css/styles.css"/>
+		<link rel="apple-touch-icon" href="./img/favicon.png"/>
+		<link rel="icon" href="./img/favicon.png"/>
+		<!--[if IE]><link rel="shortcut icon" href="./img/favicon.ico"><![endif]-->
 		<meta name="msapplication-TileColor" content="#000000"/>
-		<meta name="msapplication-TileImage" content="./inc/img/favicon.png"/>
-		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width, user-scalable=yes"/>
+		<meta name="msapplication-TileImage" content="./img/favicon.png"/>
+		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width"/>
 		<!--[if lte IE 9]>
 			<meta http-equiv="imagetoolbar" content="no"/>
             <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
 			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
 		<![endif]-->
-		<script src="./inc/js/useful-interface.js"></script>
+		<script src="./js/useful.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -38,20 +38,20 @@
 			</header>
 			<?php
 				// check for example urls passed to this document
-				$dir = '../';
+				$root = './';
 				$urls = @$_REQUEST['url'];
 				// strips incoming HTML of its header and footer (I know it's not efficient)
 				function displayHTML($url, $tag)
 				{
-					global $dir;
-					$contents = file_get_contents($dir . $url . "/index.html");
+					global $root;
+					$contents = file_get_contents($root . $url . "/dist/index.html");
 					$contents = preg_split('/<' . $tag . '>/i', $contents);
 					$contents = $contents[1];
 					$contents = preg_split('/<\/' . $tag . '>/i', $contents);
 					$contents = $contents[0];
-					$contents = str_replace("../", "qqq", $contents);
-					$contents = str_replace("./", "../" . $url . "/", $contents);
-					$contents = str_replace("qqq", "../", $contents);
+					$contents = str_replace('../', "TEMP", $contents);
+					$contents = str_replace("./", $root . $url . "/dist/", $contents);
+					$contents = str_replace("TEMP", '../', $contents);
 					return $contents;
 				}
 				// if urls were passed to this document
@@ -64,11 +64,11 @@
 					}
 				} else {
 					// include all project folders in the root
-					$files = scandir($dir);
+					$files = scandir($root);
 					for ($a = 0; $a < count($files); $a++) {
 						if (preg_match("/useful-/i", $files[$a])) {
-							//include($dir.$files[$a]);
-							$demoIcon = '<img class="demoIcon" alt="" src="../' . $files[$a] . '/inc/img/favicon.png"/>';
+							//include($root.$files[$a]);
+							$demoIcon = '<img class="demoIcon" alt="" src="' . $root . $files[$a] . '/dist/img/favicon.png"/>';
 							$demoHTML = displayHTML($files[$a], 'article');
 							$demoHTML = '<article>' . $demoIcon . $demoHTML . '</article>';
 							$demoHTML = str_replace('http://github.com/WoollyMittens/', './default.php?url=', $demoHTML);
@@ -81,16 +81,16 @@
 			?>
 			<nav id="shortcuts" class="nav-closed">
 				<menu>
-					<li><a href="./default.php"><img alt="" src="./inc/img/all.png"/><span>all</span></a></li>
+					<li><a href="./default.php"><img alt="" src="./img/all.png"/><span>all</span></a></li>
 					<?php
 						// make a menu entry for all html examples in the folder
-						$files = scandir($dir);
+						$files = scandir($root);
 						for ($a = 0; $a < count($files); $a++) {
 							if(preg_match("/useful-/i", $files[$a])){
 								$path = preg_split('/[\/.]+/', $files[$a]);
 								$short = preg_replace('/useful-/', '', $path);
 								//	print_r($path);
-								?><li><a href="./default.php?url=<?php echo $files[$a]?>"><img alt="" src="<?php echo $dir?><?php echo $path[0]?>/inc/img/favicon.png"/><span><?php echo $short[0]?></span></a></li><?php
+								?><li><a href="./default.php?url=<?php echo $files[$a]?>"><img alt="" src="<?php echo $root?><?php echo $path[0]?>/dist/img/favicon.png"/><span><?php echo $short[0]?></span></a></li><?php
 							}
 						}
 					?>
@@ -123,7 +123,7 @@
 			<footer id="footnotes">
 				<ul>
 					<li>
-						<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./inc/img/banner_cc.png" /></a>
+						<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./img/banner_cc.png" /></a>
 						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
 					</li>
 				</ul>

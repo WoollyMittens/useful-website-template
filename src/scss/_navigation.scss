@@ -1,13 +1,11 @@
-@import "compass/css3";
-@import "compass/utilities";
 /*
 	navigation
 */
 #shortcuts {
-	@include box-shadow(0 1px 3px #999);
-	@include transition-property(max-height);
-	@include transition-duration(0.3s);
-	@include transition-timing-function(ease);
+	box-shadow: 0 1px 3px #999;
+	transition-property: max-height;
+	transition-duration: 0.3s;
+	transition-timing-function: ease;
 	background : #333 url(../img/documentHeader.jpg) 0px -196px;
 	overflow : hidden;
 	position : absolute;
@@ -35,11 +33,11 @@
 				text-decoration : none;
 				text-shadow : 0 0 1px #333;
 				img {
-					@include border-radius(3px);
-					@include box-shadow(0 0 5px #333);
-					@include transition-property(all);
-					@include transition-duration(0.3s);
-					@include transition-timing-function(ease);
+					border-radius: 3px;
+					box-shadow: 0 0 5px #333;
+					transition-property: all;
+					transition-duration: 0.3s;
+					transition-timing-function: ease;
 					background : #fff;
 					border : solid 1px #000;
 					height : 64px;
@@ -54,15 +52,15 @@
 				text-decoration : none;
 				text-shadow : 0 0 5px #fff;
 				img {
-					@include box-shadow(0 0 5px #fff);
+					box-shadow: 0 0 5px #fff;
 				}
 			}
 		}
 	}
 	a.opener {
-		@include transition-property(max-height);
-		@include transition-duration(0.3s);
-		@include transition-timing-function(ease);
+		transition-property: max-height;
+		transition-duration: 0.3s;
+		transition-timing-function: ease;
 		color : #fff;
 		bottom : 0;
 		display : block;
@@ -77,10 +75,10 @@
 		width : 100%;
 	}
 	a.nav-active {
-		@include transform(rotate(0deg));
+		transform: rotate(0deg);
 	}
 	a.nav-passive {
-		@include transform(rotate(180deg));
+		transform: rotate(180deg);
 	}
 	&.nav-closed {
 		max-height : 36px;

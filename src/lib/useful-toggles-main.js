@@ -12,11 +12,15 @@ useful.Toggles = useful.Toggles || function () {};
 
 // extend the constructor
 useful.Toggles.prototype.Main = function (config, context) {
-	// properties
+
+	// PROPERTIES
+	
 	"use strict";
 	this.config = config;
 	this.context = context;
-	// methods
+
+	// METHODS
+	
 	this.init = function () {
 		// setup the context
 		this.config.outlets = {};
@@ -29,11 +33,13 @@ useful.Toggles.prototype.Main = function (config, context) {
 		// return the object
 		return this;
 	};
+	
 	this.update = function () {
 		// update the components
 		this.buttons.update();
 		this.articles.update();
 	};
+	
 	this.focus = function (index) {
 		// activate the element
 		this.buttons.change(index);
