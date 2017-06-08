@@ -61,6 +61,7 @@ html {
 	All elements
 */
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   -webkit-box-decoration-break: clone;
   box-decoration-break: clone; }
@@ -331,6 +332,7 @@ input, button, select, textarea {
   vertical-align: baseline; }
 
 input[type=date], input[type=email], input[type=number], input[type=text], input[type=password], select, textarea {
+  -webkit-box-shadow: inset 0 0 5px #ccc;
   box-shadow: inset 0 0 5px #ccc;
   height: 36px;
   height: 3rem;
@@ -373,8 +375,11 @@ textarea {
   padding: 0.7rem; }
 
 button, .button {
+  -webkit-transition-property: background-color;
   transition-property: background-color;
+  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   height: 36px;
   height: 3rem;
@@ -463,6 +468,7 @@ div {
 	Box sizing
 */
 *, *:before, *:after {
+  -webkit-box-sizing: border-box;
   box-sizing: border-box; }
 
 /*
@@ -503,6 +509,7 @@ body {
   background: #ccc linear-gradient(#eee 0%, #ccc 256px, #ccc 100%) no-repeat; }
 
 #layout {
+  -webkit-box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
   box-shadow: 0 0 32px rgba(0, 0, 0, 0.1);
   background: #fff;
   border-left: solid 1px #e4e4e4;
@@ -524,9 +531,13 @@ body {
     display: block; }
     #layout > article img.demoIcon {
       border-radius: 3px;
+      -webkit-box-shadow: 0 0 5px #333;
       box-shadow: 0 0 5px #333;
+      -webkit-transition-property: all;
       transition-property: all;
+      -webkit-transition-duration: 0.3s;
       transition-duration: 0.3s;
+      -webkit-transition-timing-function: ease;
       transition-timing-function: ease;
       margin-top: 0px;
       margin-top: 0rem;
@@ -741,9 +752,13 @@ section.example-no {
 	navigation
 */
 #shortcuts {
+  -webkit-box-shadow: 0 1px 3px #999;
   box-shadow: 0 1px 3px #999;
+  -webkit-transition-property: max-height;
   transition-property: max-height;
+  -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease;
   transition-timing-function: ease;
   background: #333 url(../img/documentHeader.jpg) 0px -196px;
   overflow: hidden;
@@ -773,9 +788,13 @@ section.example-no {
         text-shadow: 0 0 1px #333; }
         #shortcuts menu li a img {
           border-radius: 3px;
+          -webkit-box-shadow: 0 0 5px #333;
           box-shadow: 0 0 5px #333;
+          -webkit-transition-property: all;
           transition-property: all;
+          -webkit-transition-duration: 0.3s;
           transition-duration: 0.3s;
+          -webkit-transition-timing-function: ease;
           transition-timing-function: ease;
           background: #fff;
           border: solid 1px #000;
@@ -788,10 +807,14 @@ section.example-no {
         text-decoration: none;
         text-shadow: 0 0 5px #fff; }
         #shortcuts menu li a:hover img {
+          -webkit-box-shadow: 0 0 5px #fff;
           box-shadow: 0 0 5px #fff; }
   #shortcuts a.opener {
+    -webkit-transition-property: max-height;
     transition-property: max-height;
+    -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease;
     transition-timing-function: ease;
     color: #fff;
     bottom: 0;

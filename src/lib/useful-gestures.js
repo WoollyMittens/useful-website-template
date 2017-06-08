@@ -1,6 +1,6 @@
 /*
 	Source:
-	van Creij, Maurice (2014). "useful.toggles.js: Simple collapsible content", version 20141127, http://www.woollymittens.nl/.
+	van Creij, Maurice (2014). "useful.gestures.js: A library of useful functions to ease working with touch and gestures.", version 20141127, http://www.woollymittens.nl/.
 
 	License:
 	This work is licensed under a Creative Commons Attribution 3.0 Unported License.
@@ -8,10 +8,10 @@
 
 // create the constructor if needed
 var useful = useful || {};
-useful.Toggles = useful.Toggles || function () {};
+useful.Gestures = useful.Gestures || function () {};
 
 // extend the constructor
-useful.Toggles.prototype.init = function (config) {
+useful.Gestures.prototype.init = function (config) {
 
 	// PROPERTIES
 	
@@ -49,5 +49,5 @@ useful.Toggles.prototype.init = function (config) {
 
 // return as a require.js module
 if (typeof module !== 'undefined') {
-	exports = module.exports = useful.Toggles;
+	exports = module.exports = useful.Gestures;
 }
