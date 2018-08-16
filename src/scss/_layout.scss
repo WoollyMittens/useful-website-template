@@ -66,21 +66,28 @@ body {
 	clear : both;
 	background : #fff url(../img/texture_shadow_top.png) no-repeat 50% 0;
 	height : 60px;
-	line-height : 60px;
 	position : relative;
-	ul {
-		margin : 0;
-		padding : 0 3%;
-		li {
-			display : inline;
-			list-style-type : none;
-			a {
-				img {
-					margin-right : 1em;
-					vertical-align : middle;
-				}
+	display: flex;
+	align-items: center;
+	padding: 1em;
+	figure {
+		display: flex;
+		justify-content: flex-start;
+		align-items: center;
+		margin: 0;
+		> a {
+			display: inline-block;
+			flex: 0 1 auto;
+			padding: 0 1em;
+			img {
+				vertical-align: top;
 			}
-			a:hover {}
+		}
+		figcaption {
+			display: inline-block;
+			flex: 1 1 auto;
+			padding: 0 1em;
+			line-height: 1.5;
 		}
 	}
 }

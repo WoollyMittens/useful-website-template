@@ -4,6 +4,8 @@
 html {
 	font-family : Tahoma, Verdana, Arial, Sans-Serif;
 	font-size : 75%;
+	-webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 	height : 100%;
 }
 /*

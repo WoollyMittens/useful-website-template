@@ -19,14 +19,16 @@
 		overflow-x : hidden;
 		-webkit-overflow-scrolling : touch;
 		padding : 15px 0 15px 15px;
+		display: flex;
+		flex-wrap: wrap;
+		align-items: stretch;
+		justify-content: flex-start;
 		li {
-			float : left;
-			height : 100px;
+			flex: 0 1 10%;
 			list-style-type : none;
-			margin-right : 15px;
 			overflow : visible;
 			text-align : center;
-			width : 88px;
+			padding: 10px;
 			a {
 				color : #fff;
 				font-weight : normal;

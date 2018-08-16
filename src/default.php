@@ -11,12 +11,6 @@
 		<meta name="msapplication-TileColor" content="#000000"/>
 		<meta name="msapplication-TileImage" content="./img/favicon.png"/>
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width"/>
-		<!--[if lte IE 9]>
-			<meta http-equiv="imagetoolbar" content="no"/>
-            <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-			<script src="//ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script>
-			<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.9.2/jquery-ui.min.js"></script>
-		<![endif]-->
 		<script src="./js/useful.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -100,7 +94,7 @@
 			<script>
 			//<!--
 				// navigation bar
-				var shortcutsToggles = new useful.Toggles().init({
+				var shortcutsToggles = new Toggles({
 					'elements' : [document.getElementById('shortcuts')],
 					'buttons' : 'a.opener',
 					'classes' : {
@@ -115,18 +109,16 @@
 					'auto' : null
 				});
 				// scroll lock
-				var shortcutsScrolllock = new useful.ScrollLock().init({
+				var shortcutsScrolllock = new ScrollLock({
 					'element' : document.getElementById('shortcuts')
 				});
 			//-->
 			</script>
 			<footer id="footnotes">
-				<ul>
-					<li>
-						<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./img/banner_cc.png" /></a>
-						This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.
-					</li>
-				</ul>
+				<figure>
+					<a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US"><img alt="Creative Commons License" style="border-width:0" src="./img/banner_cc.png" /></a>
+					<figcaption>This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/3.0/deed.en_US">Creative Commons Attribution 3.0 Unported License</a>.</figcaption>
+				</figure>
 			</footer>
 		</section>
 	</body>
