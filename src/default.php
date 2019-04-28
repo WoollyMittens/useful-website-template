@@ -11,7 +11,10 @@
 		<meta name="msapplication-TileColor" content="#000000"/>
 		<meta name="msapplication-TileImage" content="./img/favicon.png"/>
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width"/>
-		<script src="./js/useful.js"></script>
+		<script src="dist/lib/positions.js"></script>
+		<script src="dist/lib/scrolllock.js"></script>
+		<script src="dist/lib/toggles.js"></script>
+		<script src="dist/lib/transitions.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
