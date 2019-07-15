@@ -2,17 +2,25 @@
 	"name": "gulp-boilerplate",
 	"version": "0.0.0",
 	"devDependencies": {
+		"canvas": "",
+		"del": "",
+		"exif": "",
+		"fs": "",
+		"gm": "",
 		"gulp": "",
-		"gulp-connect": "",
+		"gulp-autoprefixer": "",
+		"gulp-clean": "",
+		"gulp-concat": "",
 		"gulp-connect": "",
 		"gulp-connect-php": "",
-		"gulp-sass": "",
-		"gulp-autoprefixer": "",
-		"gulp-uglify": "",
-		"gulp-concat": "",
 		"gulp-imagemin": "",
+		"gulp-sass": "",
+		"gulp-sourcemaps": "",
 		"gulp-special-html": "",
+		"gulp-uglify": "",
 		"imagemin-pngquant": "",
-		"gulp-clean": ""
+		"jsdom": "",
+		"request": "",
+		"xmldom": ""
 	}
 }
