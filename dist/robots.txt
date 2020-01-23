@@ -1,0 +1,5 @@
+Sitemap: https://www.woollymittens.nl/sitemap.php
+User-agent: *
+Disallow: /_biography/
+Disallow: /_resume/
+Disallow: /_itinerary/

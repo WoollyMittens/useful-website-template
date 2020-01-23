@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>useful.js: JavaScript examples, too useful not to share.</title>
+		<title>Woolly Mittens - JavaScript examples, too useful not to share</title>
 		<link rel="stylesheet" href="./css/styles.css"/>
 		<link rel="apple-touch-icon" href="./img/favicon.png"/>
 		<link rel="icon" href="./img/favicon.png"/>
@@ -28,7 +28,7 @@
 		<section id="layout">
 			<header id="masthead">
 				<div class="hgroup">
-					<h1>useful.js</h1>
+					<h1>Woolly Mittens</h1>
 					<h2>JavaScript examples, too useful not to share.</h2>
 				</div>
 				<a href="https://github.com/WoollyMittens"><img style="position: absolute; top: 0; left: 0; height:107px; width:auto; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>

@@ -3,7 +3,7 @@
 	<head>
 		<meta charset="UTF-8"/>
 		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<title>useful.js: JavaScript examples, too useful not to share.</title>
+		<title>Woolly Mittens - JavaScript examples, too useful not to share</title>
 		<link rel="stylesheet" href="./css/styles.css"/>
 		<link rel="apple-touch-icon" href="./img/favicon.png"/>
 		<link rel="icon" href="./img/favicon.png"/>
@@ -11,10 +11,10 @@
 		<meta name="msapplication-TileColor" content="#000000"/>
 		<meta name="msapplication-TileImage" content="./img/favicon.png"/>
 		<meta name="viewport" content="initial-scale=1, minimum-scale=1, maximum-scale=1, width=device-width"/>
-		<script src="dist/lib/positions.js"></script>
-		<script src="dist/lib/scrolllock.js"></script>
-		<script src="dist/lib/toggles.js"></script>
-		<script src="dist/lib/transitions.js"></script>
+		<script src="lib/positions.js"></script>
+		<script src="lib/scrolllock.js"></script>
+		<script src="lib/toggles.js"></script>
+		<script src="lib/transitions.js"></script>
 		<script>
 		  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
 		  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
@@ -28,7 +28,7 @@
 		<section id="layout">
 			<header id="masthead">
 				<div class="hgroup">
-					<h1>useful.js</h1>
+					<h1>Woolly Mittens</h1>
 					<h2>JavaScript examples, too useful not to share.</h2>
 				</div>
 				<a href="https://github.com/WoollyMittens"><img style="position: absolute; top: 0; left: 0; height:107px; width:auto; border: 0;" src="https://s3.amazonaws.com/github/ribbons/forkme_left_orange_ff7600.png" alt="Fork me on GitHub"></a>
