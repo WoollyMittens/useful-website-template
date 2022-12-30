@@ -2,8 +2,6 @@
 
 A website template for the demonstration of useful-* scripts.
 
-Try the <a href="http://www.woollymittens.nl/">demo</a>.
-
 ## How to install
 
 The template displays all useful- scripts if organised in the following manner:
